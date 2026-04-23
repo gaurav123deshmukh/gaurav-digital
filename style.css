@@ -33,30 +33,30 @@ h1, h2, h3 {
     display: inline-block;
 }
 
-/* Navigation */
+/* Updated Navigation / Header */
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1.5rem 5%;
+    padding: 1rem 5%;
     position: fixed;
     width: 100%;
     top: 0;
-    background: rgba(3, 3, 5, 0.85);
-    backdrop-filter: blur(12px);
-    border-bottom: 1px solid var(--border-subtle);
+    /* Changed to the tech gradient as requested */
+    background: var(--tech-gradient);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
     z-index: 100;
 }
 
-/* Updated Logo Image Styling */
 .logo {
     display: flex;
     align-items: center;
     text-decoration: none;
 }
 
+/* Made the logo significantly bigger */
 .logo-img {
-    height: 40px; /* Adjust this value to make your logo bigger or smaller */
+    height: 75px; 
     width: auto;
     object-fit: contain;
 }
@@ -68,17 +68,18 @@ h1, h2, h3 {
 }
 
 .nav-links a {
-    color: var(--text-main);
+    color: #ffffff; /* Swapped to white for contrast against the gradient */
     text-decoration: none;
-    font-size: 0.9rem;
-    font-weight: 500;
+    font-size: 0.95rem;
+    font-weight: 600;
     transition: color 0.3s ease;
     text-transform: uppercase;
     letter-spacing: 1px;
+    text-shadow: 0 1px 3px rgba(0,0,0,0.2);
 }
 
 .nav-links a:hover, .nav-links a.active {
-    color: #4facfe;
+    color: #030305; /* Changes to dark black on hover */
 }
 
 /* Hero Section */
@@ -178,7 +179,6 @@ h1, h2, h3 {
     z-index: 1;
 }
 
-/* Tech Hover Border Effect */
 .service-card::before {
     content: '';
     position: absolute;
@@ -211,4 +211,69 @@ h1, h2, h3 {
     color: var(--text-muted);
     line-height: 1.7;
     font-size: 0.95rem;
+}
+
+/* --- NEW FOOTER STYLES --- */
+.footer {
+    background: var(--bg-card);
+    border-top: 1px solid var(--border-subtle);
+    padding: 4rem 5% 2rem;
+    margin-top: 4rem;
+}
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 2rem;
+}
+
+.footer-logo-img {
+    height: 40px; /* Small logo for the footer */
+    width: auto;
+}
+
+.footer-contact p {
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+}
+
+.footer-contact a {
+    color: var(--text-main);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-contact a:hover {
+    color: #4facfe;
+}
+
+.footer-social {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.footer-social a img {
+    height: 24px;
+    width: 24px;
+    transition: transform 0.3s ease, filter 0.3s ease;
+    /* Optional: This adds a white tint to black PNGs so they show up on a dark background */
+    filter: brightness(0) invert(1); 
+}
+
+.footer-social a:hover img {
+    transform: translateY(-3px);
+    filter: brightness(0) invert(1) drop-shadow(0 0 5px #00f2fe);
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--border-subtle);
+    color: var(--text-muted);
+    font-size: 0.85rem;
 }
