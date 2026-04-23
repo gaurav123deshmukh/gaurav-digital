@@ -110,7 +110,7 @@ h1, h2, h3 {
 }
 
 .hero-content {
-    margin-top: 0; /* Reduced space before the headline */
+    margin-top: 0; 
     perspective: 1000px;
 }
 
@@ -686,7 +686,7 @@ h1, h2, h3 {
         justify-content: space-between; 
         padding: 1rem 5%;
         background: rgba(3, 3, 5, 0.98); 
-        position: relative;
+        position: fixed;
     }
 
     .logo {
@@ -694,7 +694,7 @@ h1, h2, h3 {
     }
 
     .logo-img {
-        height: 110px; /* Much bigger mobile logo */
+        height: 120px; /* Logo is significantly bigger on mobile */
         margin-bottom: 0;
     }
 
@@ -747,24 +747,34 @@ h1, h2, h3 {
         display: block;
     }
 
-    /* Hero Section */
-    .hero-content {
-        margin-top: 4rem; /* Reduced space before the headline for mobile */
-        text-align: center; 
+    /* Hero Section Fix - Align top to eliminate dead space */
+    .hero {
+        align-items: flex-start; /* Stops the hero from centering in the middle of the screen */
+        padding-top: 160px; /* Safely clears the new larger mobile navbar */
     }
+
+    .hero-content {
+        margin-top: 0; 
+        text-align: center; 
+        width: 100%;
+    }
+    
     .hero-content h1 {
         font-size: 3rem;
     }
+    
     .hero-content p {
         font-size: 1.1rem;
         margin: 0 auto 2.5rem;
     }
+    
     .cta-group {
         flex-direction: column; 
         align-items: center;
         width: 100%;
         gap: 1rem;
     }
+    
     .btn {
         width: 100%;
         max-width: 300px;
@@ -816,7 +826,10 @@ h1, h2, h3 {
         font-size: 2.5rem;
     }
     .logo-img {
-        height: 95px; /* Bigger logo for small mobile */
+        height: 100px; /* Big logo for small mobile screens too */
+    }
+    .hero {
+        padding-top: 140px; 
     }
     .contact-form-centered {
         padding: 2.5rem 1.5rem;
