@@ -4,6 +4,8 @@
     --text-main: #f0f2f5;
     --text-muted: #8b929e;
     --tech-gradient: linear-gradient(135deg, #00f2fe 0%, #4facfe 100%);
+    /* New variable for the 60% transparent footer gradient */
+    --tech-gradient-transparent: linear-gradient(135deg, rgba(0, 242, 254, 0.4) 0%, rgba(79, 172, 254, 0.4) 100%);
     --tech-glow: rgba(0, 242, 254, 0.3);
     --border-subtle: rgba(255, 255, 255, 0.05);
 }
@@ -38,12 +40,16 @@ h1, h2, h3 {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0.5rem 5%; /* Reduced padding slightly to accommodate the bigger logo */
+    padding: 0.5rem 5%; 
     position: fixed;
     width: 100%;
     top: 0;
-    background: var(--tech-gradient); /* Gradient Header */
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    /* Made completely transparent */
+    background: transparent; 
+    /* Added a glass-morphism blur so links stay readable when scrolling */
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--border-subtle);
     z-index: 100;
 }
 
@@ -53,9 +59,8 @@ h1, h2, h3 {
     text-decoration: none;
 }
 
-/* --- BIGGER LOGO SIZE --- */
 .logo-img {
-    height: 100px; /* Increased to 100px for a much larger logo */
+    height: 100px; 
     width: auto;
     object-fit: contain;
 }
@@ -67,7 +72,7 @@ h1, h2, h3 {
 }
 
 .nav-links a {
-    color: #ffffff; /* White links for the gradient background */
+    color: #ffffff; 
     text-decoration: none;
     font-size: 0.95rem;
     font-weight: 600;
@@ -78,7 +83,7 @@ h1, h2, h3 {
 }
 
 .nav-links a:hover, .nav-links a.active {
-    color: #030305; /* Changes to black on hover */
+    color: #00f2fe; /* Changed hover color to match the tech theme since the background is transparent now */
 }
 
 /* --- HERO SECTION --- */
@@ -214,7 +219,8 @@ h1, h2, h3 {
 
 /* --- FOOTER STYLES --- */
 .footer {
-    background: var(--bg-card);
+    /* Applied the 60% transparent gradient */
+    background: var(--tech-gradient-transparent);
     border-top: 1px solid var(--border-subtle);
     padding: 4rem 5% 2rem;
     margin-top: 4rem;
@@ -231,23 +237,25 @@ h1, h2, h3 {
 }
 
 .footer-logo-img {
-    height: 40px; /* Keep footer logo smaller and neat */
+    height: 40px; 
     width: auto;
 }
 
 .footer-contact p {
     margin-bottom: 0.5rem;
     font-size: 1rem;
+    color: #fff; /* Ensures contact text is readable on the new gradient */
 }
 
 .footer-contact a {
-    color: var(--text-main);
+    color: #fff;
     text-decoration: none;
+    font-weight: 500;
     transition: color 0.3s ease;
 }
 
 .footer-contact a:hover {
-    color: #4facfe;
+    color: #030305; /* Dark hover effect on the bright footer */
 }
 
 .footer-social {
@@ -259,19 +267,20 @@ h1, h2, h3 {
     height: 24px;
     width: 24px;
     transition: transform 0.3s ease, filter 0.3s ease;
-    filter: brightness(0) invert(1); /* Tints icons white */
+    filter: brightness(0) invert(1); 
 }
 
 .footer-social a:hover img {
     transform: translateY(-3px);
-    filter: brightness(0) invert(1) drop-shadow(0 0 5px #00f2fe);
+    /* Dark drop shadow for contrast against the blue footer */
+    filter: brightness(0) invert(1) drop-shadow(0 0 5px rgba(0,0,0,0.5)); 
 }
 
 .footer-bottom {
     text-align: center;
     margin-top: 3rem;
     padding-top: 2rem;
-    border-top: 1px solid var(--border-subtle);
-    color: var(--text-muted);
+    border-top: 1px solid rgba(255, 255, 255, 0.1); /* Lighter border for gradient */
+    color: rgba(255, 255, 255, 0.8); /* Slightly faded white for copyright text */
     font-size: 0.85rem;
 }
