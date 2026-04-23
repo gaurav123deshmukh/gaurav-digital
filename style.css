@@ -110,7 +110,7 @@ h1, h2, h3 {
 }
 
 .hero-content {
-    margin-top: 0; 
+    margin-top: 0;
     perspective: 1000px;
 }
 
@@ -686,7 +686,7 @@ h1, h2, h3 {
         justify-content: space-between; 
         padding: 1rem 5%;
         background: rgba(3, 3, 5, 0.98); 
-        position: fixed;
+        position: relative;
     }
 
     .logo {
@@ -694,7 +694,7 @@ h1, h2, h3 {
     }
 
     .logo-img {
-        height: 120px; /* Logo is significantly bigger on mobile */
+        height: 110px; 
         margin-bottom: 0;
     }
 
@@ -747,16 +747,15 @@ h1, h2, h3 {
         display: block;
     }
 
-    /* Hero Section Fix - Align top to eliminate dead space */
+    /* Hero Section - FIXED SPACING */
     .hero {
-        align-items: flex-start; /* Stops the hero from centering in the middle of the screen */
-        padding-top: 160px; /* Safely clears the new larger mobile navbar */
+        align-items: flex-start; /* Stops vertical centering */
+        padding-top: 160px; /* Sets exact spacing below the navbar */
     }
 
     .hero-content {
         margin-top: 0; 
         text-align: center; 
-        width: 100%;
     }
     
     .hero-content h1 {
@@ -778,6 +777,10 @@ h1, h2, h3 {
     .btn {
         width: 100%;
         max-width: 300px;
+    }
+
+    .btn-secondary {
+        margin-left: 0; /* Ensures the secondary button aligns perfectly center */
     }
 
     /* Typography & Spacing */
@@ -822,14 +825,14 @@ h1, h2, h3 {
 }
 
 @media screen and (max-width: 480px) {
+    .hero {
+        padding-top: 140px; /* Even tighter spacing for small mobile screens */
+    }
     .hero-content h1 {
         font-size: 2.5rem;
     }
     .logo-img {
-        height: 100px; /* Big logo for small mobile screens too */
-    }
-    .hero {
-        padding-top: 140px; 
+        height: 95px; 
     }
     .contact-form-centered {
         padding: 2.5rem 1.5rem;
