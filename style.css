@@ -82,6 +82,23 @@ h1, h2, h3 {
     color: #00f2fe; 
 }
 
+/* Hamburger Menu (Hidden on Desktop) */
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+.hamburger .bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: #fff;
+    border-radius: 3px;
+}
+
 /* --- HERO SECTION --- */
 .hero {
     height: 100vh;
@@ -647,7 +664,6 @@ h1, h2, h3 {
    RESPONSIVE DESIGN (TABLET & MOBILE)
    ======================================================== */
 
-/* Tablet & Smaller Laptops */
 @media screen and (max-width: 1024px) {
     .hero-content h1 {
         font-size: 4rem;
@@ -663,31 +679,65 @@ h1, h2, h3 {
     }
 }
 
-/* Mobile Devices */
 @media screen and (max-width: 768px) {
-    /* Navbar Adjustment - Logo Left, Links Right */
+    /* Navbar Adjustment - Logo Center, Hamburger Right */
     .navbar {
-        flex-direction: row; /* Keeps items side-by-side */
-        justify-content: space-between; 
-        align-items: center;
+        display: flex;
+        justify-content: center; /* Forces the logo perfectly to the center */
         padding: 1rem 5%;
-        background: rgba(3, 3, 5, 0.95);
+        background: rgba(3, 3, 5, 0.98); 
+        position: relative;
     }
-    .logo {
-        align-self: center; 
-    }
+
     .logo-img {
-        height: 80px; /* Big, noticeable logo on the left */
-        margin-bottom: 0; 
+        height: 85px; /* Big, noticeable logo */
     }
+
+    .hamburger {
+        display: block; /* Turns on the 3 lines */
+        position: absolute;
+        right: 5%; /* Forces the hamburger to the far right corner */
+    }
+
+    /* Transform Hamburger into 'X' when active */
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    /* Hide links by default, drop them down when active */
     .nav-links {
-        width: auto;
-        gap: 0.8rem;
-        flex-wrap: wrap; /* Wraps links if they are too tight */
-        justify-content: flex-end; /* Pushes links neatly to the right */
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: rgba(10, 11, 16, 0.98);
+        flex-direction: column;
+        text-align: center;
+        gap: 0;
+        max-height: 0; /* Hidden */
+        overflow: hidden;
+        transition: max-height 0.4s ease-in-out;
+        border-bottom: none;
     }
+
+    .nav-links.active {
+        max-height: 400px; /* Slides down */
+        border-bottom: 1px solid var(--tech-glow);
+    }
+
+    .nav-links li {
+        margin: 1.5rem 0;
+    }
+
     .nav-links a {
-        font-size: 0.8rem; /* Scaled down slightly to fit all links inline */
+        font-size: 1.2rem;
+        display: block;
     }
 
     /* Hero Section */
@@ -754,23 +804,12 @@ h1, h2, h3 {
     }
 }
 
-/* Small Mobile Screens */
 @media screen and (max-width: 480px) {
     .hero-content h1 {
         font-size: 2.5rem;
     }
-    .navbar {
-        padding: 0.8rem 3%; /* Slightly tighter padding for tiny screens */
-    }
     .logo-img {
-        height: 70px; /* Scaled slightly so it doesn't overlap text */
-    }
-    .nav-links {
-        gap: 0.5rem; 
-    }
-    .nav-links a {
-        font-size: 0.7rem; /* Small enough to fit all 5 inline smoothly */
-        letter-spacing: 0.5px;
+        height: 75px; 
     }
     .contact-form-centered {
         padding: 2.5rem 1.5rem;
