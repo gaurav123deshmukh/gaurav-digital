@@ -6,7 +6,11 @@
     
     <title>Contact | Gauravv Digital</title>
     <meta name="title" content="Contact | Gauravv Digital">
-    <meta name="description" content="Get in touch with Gauravv Digital. We are a premier digital marketing agency offering SEO, SEM, web development, and branding services.">
+    <meta name="description" content="Get in touch with Gauravv Digital. Based in Mumbai & Navi Mumbai, we provide premium digital marketing, SEO, SEM, and web development services.">
+    
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://gauravdeshmukh.co.in/contact.html">
+    <meta property="og:title" content="Contact | Gauravv Digital">
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -28,49 +32,79 @@
         </ul>
     </nav>
 
-    <header class="hero" style="height: 60vh;">
-        <div class="hero-content">
+    <header class="hero" style="height: 50vh; min-height: 400px;">
+        <div class="hero-content" style="margin-top: 2rem;">
             <h1 class="anim-hero">Let's <span class="gradient-text">Connect</span></h1>
-            <p class="anim-hero">Ready to scale your business? Reach out to us to discuss your digital marketing strategy today.</p>
+            <p class="anim-hero">Ready to scale your business? Reach out to us to discuss your digital growth strategy today.</p>
         </div>
     </header>
 
     <section class="contact-section">
         <div class="contact-container">
+            
             <div class="contact-info anim-card">
                 <h3>Contact Information</h3>
-                <p>Fill out the form to send us a direct message, or reach out using the details below. We typically respond within 24 hours.</p>
-                <ul>
-                    <li><strong>Email:</strong> <a href="mailto:contact@gauravdeshmukh.co.in">contact@gauravdeshmukh.co.in</a></li>
-                    <li><strong>Phone:</strong> <a href="tel:+918850480687">+91 88504 80687</a></li>
-                    <li><strong>Location:</strong> Mumbai / Navi Mumbai, Maharashtra</li>
+                <p>Fill out the form to send a direct message, or reach out using the details below. We typically respond within 24 hours.</p>
+                <ul style="margin-top: 2rem;">
+                    <li style="margin-bottom: 1.5rem; display: flex; align-items: center; gap: 10px;">
+                        <span style="font-size: 1.5rem;">✉️</span>
+                        <div>
+                            <strong>Email</strong><br>
+                            <a href="mailto:contact@gauravdeshmukh.co.in">contact@gauravdeshmukh.co.in</a>
+                        </div>
+                    </li>
+                    <li style="margin-bottom: 1.5rem; display: flex; align-items: center; gap: 10px;">
+                        <span style="font-size: 1.5rem;">📞</span>
+                        <div>
+                            <strong>Phone / WhatsApp</strong><br>
+                            <a href="tel:+918850480687">+91 88504 80687</a>
+                        </div>
+                    </li>
+                    <li style="display: flex; align-items: center; gap: 10px;">
+                        <span style="font-size: 1.5rem;">📍</span>
+                        <div>
+                            <strong>Location</strong><br>
+                            <span style="color: var(--text-main);">Mumbai / Navi Mumbai, India</span>
+                        </div>
+                    </li>
                 </ul>
             </div>
 
             <div class="contact-form-wrapper anim-card">
                 <form action="#" method="POST" class="contact-form">
-                    <div class="input-group">
-                        <input type="text" id="name" name="name" required placeholder="Your Full Name">
+                    
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-bottom: 1.5rem;">
+                        <div class="input-group">
+                            <input type="text" id="name" name="name" required placeholder="Your Full Name">
+                        </div>
+                        <div class="input-group">
+                            <input type="tel" id="phone" name="phone" required placeholder="Phone Number">
+                        </div>
                     </div>
-                    <div class="input-group">
+
+                    <div class="input-group" style="margin-bottom: 1.5rem;">
                         <input type="email" id="email" name="email" required placeholder="Your Email Address">
                     </div>
-                    <div class="input-group">
+
+                    <div class="input-group" style="margin-bottom: 1.5rem;">
                         <select id="service" name="service" required>
                             <option value="" disabled selected>Select a Service of Interest</option>
                             <option value="seo">SEO & Organic Traffic</option>
-                            <option value="sem">SEM / PPC Advertising</option>
-                            <option value="social">Social Media Marketing</option>
-                            <option value="branding">Graphic Design & Branding</option>
-                            <option value="web">Website Development</option>
+                            <option value="google-ads">Google Ads & SEM</option>
+                            <option value="social-media">Social Media Advertising</option>
+                            <option value="branding">Branding & Graphic Design</option>
+                            <option value="web-dev">Website Development</option>
                         </select>
                     </div>
-                    <div class="input-group">
-                        <textarea id="message" name="message" rows="6" required placeholder="Tell us about your project..."></textarea>
+
+                    <div class="input-group" style="margin-bottom: 1.5rem;">
+                        <textarea id="message" name="message" rows="5" required placeholder="Tell us about your project or goals..."></textarea>
                     </div>
-                    <button type="submit" class="btn btn-primary">Send Message</button>
+
+                    <button type="submit" class="btn btn-primary" style="width: 100%; border: none; cursor: pointer;">Send Message</button>
                 </form>
             </div>
+            
         </div>
     </section>
 
