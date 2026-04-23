@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <title>Blog & Insights | Gaurav Digital</title>
-    <meta name="title" content="Blog & Insights | Gaurav Digital">
-    <meta name="description" content="Stay updated with the latest digital marketing trends, SEO strategies, and business growth insights from Gaurav Digital.">
+    <title>Blog & Insights | Gauravv Digital</title>
+    <meta name="title" content="Blog & Insights | Gauravv Digital">
+    <meta name="description" content="Stay updated with the latest digital marketing trends, SEO strategies, and business growth insights from Gauravv Digital.">
     
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://gauravdeshmukh.co.in/blog/">
-    <meta property="og:title" content="Blog & Insights | Gaurav Digital">
-    <meta property="og:description" content="Stay updated with the latest digital marketing trends, SEO strategies, and business growth insights from Gaurav Digital.">
+    <meta property="og:title" content="Blog & Insights | Gauravv Digital">
+    <meta property="og:description" content="Stay updated with the latest digital marketing trends, SEO strategies, and business growth insights from Gauravv Digital.">
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -96,7 +96,6 @@
             justify-content: center;
         }
 
-        /* You can replace the div above with an actual img tag when you have thumbnails */
         .blog-image-placeholder svg {
             width: 40px;
             height: 40px;
@@ -161,12 +160,26 @@
         .read-more:hover::after {
             transform: translateX(5px);
         }
+        
+        @media screen and (max-width: 768px) {
+            .blog-header {
+                padding: 140px 5% 4rem; /* Match mobile hero spacing */
+            }
+            .blog-header h1 {
+                font-size: 3rem;
+            }
+        }
+        @media screen and (max-width: 480px) {
+            .blog-header h1 {
+                font-size: 2.5rem;
+            }
+        }
     </style>
 </head>
 <body>
     <nav class="navbar">
         <a href="index.html" class="logo">
-            <img src="logo.png" alt="Gaurav Digital Logo" class="logo-img">
+            <img src="logo.png" alt="Gauravv Digital Logo" class="logo-img">
         </a>
         <ul class="nav-links">
             <li><a href="index.html">Home</a></li>
@@ -175,6 +188,11 @@
             <li><a href="blog.html" class="active">Blog</a></li>
             <li><a href="contact.html">Contact</a></li>
         </ul>
+        <div class="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
     </nav>
 
     <header class="blog-header">
@@ -193,7 +211,8 @@
                     <div class="blog-meta">March 27, 2026</div>
                     <h2>Digital Marketing Services for Manufacturing Company</h2>
                     <p>The manufacturing industry is changing rapidly. Today, buyers, procurement managers, and decision-makers no longer depend only on exhibitions, agents, or references...</p>
-                    <a href="#" class="read-more">Read Article</a>
+                    
+                    <a href="digital-marketing-services-for-manufacturing-company.html" class="read-more">Read Article</a>
                 </div>
             </article>
 
@@ -204,8 +223,9 @@
                 <div class="blog-content">
                     <div class="blog-meta">March 27, 2026</div>
                     <h2>Digital Marketing Freelancer in Navi Mumbai</h2>
-                    <p>Boost Your Business with Gaurav Digital: Your Go-To Digital Marketing Freelancer in Navi Mumbai. Discover how localized strategies can skyrocket your brand visibility...</p>
-                    <a href="#" class="read-more">Read Article</a>
+                    <p>Boost Your Business with Gauravv Digital: Your Go-To Digital Marketing Freelancer in Navi Mumbai. Discover how localized strategies can skyrocket your brand visibility...</p>
+                    
+                    <a href="digital-marketing-freelancer-in-navi-mumbai.html" class="read-more">Read Article</a>
                 </div>
             </article>
 
@@ -217,7 +237,8 @@
                     <div class="blog-meta">July 30, 2024</div>
                     <h2>Advantages Of Facebook Lead Generation Ads</h2>
                     <p>In today's digital landscape, effective lead generation is key to business growth. Learn how Facebook Lead Generation Ads can streamline your sales funnel and capture high-intent audiences...</p>
-                    <a href="#" class="read-more">Read Article</a>
+                    
+                    <a href="advantages-of-facebook-lead-generation-ads.html" class="read-more">Read Article</a>
                 </div>
             </article>
 
@@ -228,7 +249,7 @@
         <div class="footer-content">
             <div class="footer-logo">
                 <a href="index.html">
-                    <img src="logo.png" alt="Gaurav Digital Logo" class="footer-logo-img">
+                    <img src="logo.png" alt="Gauravv Digital Logo" class="footer-logo-img">
                 </a>
             </div>
             
@@ -260,7 +281,7 @@
         </div>
         
         <div class="footer-bottom">
-            <p>&copy; 2026 Gaurav Digital. All rights reserved.</p>
+            <p>&copy; 2026 Gauravv Digital. All rights reserved.</p>
         </div>
     </footer>
 
@@ -271,6 +292,20 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     <script>
+        // Hamburger Menu Logic
+        const hamburger = document.querySelector(".hamburger");
+        const navMenu = document.querySelector(".nav-links");
+
+        hamburger.addEventListener("click", () => {
+            hamburger.classList.toggle("active");
+            navMenu.classList.toggle("active");
+        });
+
+        document.querySelectorAll(".nav-links a").forEach(n => n.addEventListener("click", () => {
+            hamburger.classList.remove("active");
+            navMenu.classList.remove("active");
+        }));
+
         gsap.registerPlugin(ScrollTrigger);
 
         // Header Fade Up
