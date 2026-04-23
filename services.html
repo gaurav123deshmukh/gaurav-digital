@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Digital Marketing Services in Mumbai | Gauravv Digital</title>
+    <meta name="title" content="Digital Marketing Services in Mumbai | Gauravv Digital">
+    <meta name="description" content="In the ever-evolving world of digital marketing, staying ahead requires a strategic approach. I offer a comprehensive range of digital marketing services in mumbai designed to help your business thrive online.">
+    
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://gauravdeshmukh.co.in/services/">
+    <meta property="og:title" content="Digital Marketing Services in Mumbai | Gauravv Digital">
+    <meta property="og:description" content="In the ever-evolving world of digital marketing, staying ahead requires a strategic approach. I offer a comprehensive range of digital marketing services in mumbai designed to help your business thrive online.">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+    
+    <style>
+        .services-header {
+            padding: 12rem 5% 5rem;
+            text-align: center;
+            background: radial-gradient(circle at top center, rgba(0, 242, 254, 0.05), transparent 60%);
+        }
+
+        .services-header h1 {
+            font-size: 4.5rem;
+            margin-bottom: 1.5rem;
+            letter-spacing: -1px;
+        }
+
+        .services-header p {
+            color: var(--text-muted);
+            font-size: 1.25rem;
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.7;
+        }
+
+        .detailed-services {
+            padding: 5rem 5% 8rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .services-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 3rem;
+            perspective: 1000px;
+        }
+
+        .service-detail-card {
+            background: var(--bg-card);
+            padding: 3rem;
+            border-radius: 12px;
+            border: 1px solid var(--border-subtle);
+            position: relative;
+            overflow: hidden;
+            transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            z-index: 1;
+        }
+
+        .service-detail-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0;
+            height: 3px;
+            background: var(--tech-gradient);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+            z-index: 2;
+        }
+
+        .service-detail-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .service-detail-card:hover {
+            transform: translateY(-10px) scale(1.02);
+            border-color: rgba(79, 172, 254, 0.3);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.8), 0 0 20px rgba(0, 242, 254, 0.1);
+        }
+
+        .service-detail-card h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: #fff;
+        }
+
+        .service-detail-card p {
+            color: var(--text-muted);
+            line-height: 1.7;
+            margin-bottom: 1.5rem;
+            font-size: 1rem;
+        }
+
+        .service-features {
+            list-style: none;
+            margin-top: 1.5rem;
+            border-top: 1px solid var(--border-subtle);
+            padding-top: 1.5rem;
+        }
+
+        .service-features li {
+            color: #e2e8f0;
+            margin-bottom: 0.8rem;
+            font-size: 0.95rem;
+            display: flex;
+            align-items: center;
+        }
+
+        .service-features li::before {
+            content: '▹';
+            color: #00f2fe;
+            margin-right: 10px;
+            font-size: 1.2rem;
+        }
+
+        .cta-banner {
+            text-align: center;
+            padding: 6rem 5%;
+            background: linear-gradient(to right, rgba(10, 11, 16, 0.9), rgba(10, 11, 16, 0.9)), url('data:image/svg+xml,%3Csvg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="%2300f2fe" fill-opacity="0.05" fill-rule="evenodd"%3E%3Ccircle cx="3" cy="3" r="3"/%3E%3Ccircle cx="13" cy="13" r="3"/%3E%3C/g%3E%3C/svg%3E');
+            border-top: 1px solid var(--border-subtle);
+            border-bottom: 1px solid var(--border-subtle);
+            margin-bottom: 4rem;
+        }
+
+        .cta-banner h2 {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <a href="index.html" class="logo">
+            <img src="logo.png" alt="Gauravv Digital Logo" class="logo-img">
+        </a>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html" class="active">Services</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <header class="services-header">
+        <h1 class="anim-fade-up gradient-text">Digital Marketing Services</h1>
+        <p class="anim-fade-up">In the ever-evolving world of digital marketing, staying ahead requires a strategic approach and a deep understanding of the digital landscape. Whether you aim to boost brand awareness, drive traffic to your website, or convert visitors into loyal customers, we are here to make it happen.</p>
+    </header>
+
+    <section class="detailed-services">
+        <div class="services-container">
+            
+            <div class="service-detail-card anim-card">
+                <h2>Search Engine Optimization</h2>
+                <p>Rank higher on Google and grow your website traffic fast. Our data-driven SEO strategies push your website to the top of search engine results, ensuring long-term visibility.</p>
+                <ul class="service-features">
+                    <li>Comprehensive Keyword Research</li>
+                    <li>Technical & On-Page SEO</li>
+                    <li>High-Authority Link Building</li>
+                    <li>Local SEO & Google Business Profile</li>
+                </ul>
+            </div>
+
+            <div class="service-detail-card anim-card">
+                <h2>Search Engine Marketing</h2>
+                <p>Drive instant leads with high-converting Google Ads. Maximize your immediate return on investment with laser-targeted PPC campaigns that capture high-converting leads.</p>
+                <ul class="service-features">
+                    <li>Google Ads Campaign Management</li>
+                    <li>A/B Testing & Bid Optimization</li>
+                    <li>Retargeting & Display Ads</li>
+                    <li>Conversion Rate Optimization (CRO)</li>
+                </ul>
+            </div>
+
+            <div class="service-detail-card anim-card">
+                <h2>Social Media Marketing</h2>
+                <p>Boost engagement and sales through social media ads. Transform your social platforms into lead-generating machines. We craft engaging content and manage highly targeted campaigns.</p>
+                <ul class="service-features">
+                    <li>Strategic Content Creation</li>
+                    <li>Facebook & Instagram Advertising</li>
+                    <li>Community Management</li>
+                    <li>Performance Analytics & Reporting</li>
+                </ul>
+            </div>
+
+            <div class="service-detail-card anim-card">
+                <h2>Website Development</h2>
+                <p>Build modern, fast, and mobile-friendly websites that work. We build custom-coded websites engineered from the ground up for seamless user experience and high conversions.</p>
+                <ul class="service-features">
+                    <li>Custom HTML/CSS/JavaScript</li>
+                    <li>Advanced UI/UX Implementation</li>
+                    <li>Mobile-First Responsive Design</li>
+                    <li>Speed & Performance Optimization</li>
+                </ul>
+            </div>
+
+            <div class="service-detail-card anim-card">
+                <h2>Graphic Designing</h2>
+                <p>Eye-catching designs for branding, ads, and social media. Visual communication is at the core of a premium brand. We create stunning, high-fidelity graphics that capture attention.</p>
+                <ul class="service-features">
+                    <li>Marketing Collateral & Banners</li>
+                    <li>Social Media Visuals</li>
+                    <li>Logo & Identity Elements</li>
+                    <li>High-End Image Manipulation</li>
+                </ul>
+            </div>
+
+            <div class="service-detail-card anim-card">
+                <h2>Digital Marketing Consultation</h2>
+                <p>Expert guidance to navigate the digital landscape. We help you define, design, and deploy a unique brand strategy that resonates with your target audience and dominates your niche.</p>
+                <ul class="service-features">
+                    <li>Comprehensive Site Audits</li>
+                    <li>Competitor Analysis</li>
+                    <li>Long-term Strategy Roadmaps</li>
+                    <li>Brand Positioning & Growth Tactics</li>
+                </ul>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="cta-banner anim-fade-up">
+        <h2>Ready to <span class="gradient-text">Dominate</span> Your Market?</h2>
+        <p style="color: var(--text-muted); margin-bottom: 2rem; font-size: 1.1rem;">Let's discuss how our tailored strategies can transform your business.</p>
+        <a href="contact.html" class="btn btn-primary">Start Your Project Today</a>
+    </section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script>
+        gsap.registerPlugin(ScrollTrigger);
+
+        // Header and CTA Fade Up
+        gsap.fromTo(".anim-fade-up", 
+            { y: 40, opacity: 0 },
+            { y: 0, opacity: 1, duration: 1, stagger: 0.2, ease: "power3.out", delay: 0.1 }
+        );
+
+        // Tech 3D Flip Reveal for Service Cards
+        gsap.fromTo(".anim-card",
+            {
+                y: 80,
+                opacity: 0,
+                rotationX: -15,
+                transformPerspective: 800
+            },
+            {
+                scrollTrigger: {
+                    trigger: ".services-container",
+                    start: "top 75%",
+                },
+                y: 0,
+                opacity: 1,
+                rotationX: 0,
+                duration: 1,
+                stagger: 0.15,
+                ease: "back.out(1.2)"
+            }
+        );
+    </script>
+</body>
+</html>
