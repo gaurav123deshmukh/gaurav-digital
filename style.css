@@ -4,8 +4,6 @@
     --text-main: #f0f2f5;
     --text-muted: #8b929e;
     --tech-gradient: linear-gradient(135deg, #00f2fe 0%, #4facfe 100%);
-    /* New variable for the 60% transparent footer gradient */
-    --tech-gradient-transparent: linear-gradient(135deg, rgba(0, 242, 254, 0.4) 0%, rgba(79, 172, 254, 0.4) 100%);
     --tech-glow: rgba(0, 242, 254, 0.3);
     --border-subtle: rgba(255, 255, 255, 0.05);
 }
@@ -44,9 +42,7 @@ h1, h2, h3 {
     position: fixed;
     width: 100%;
     top: 0;
-    /* Made completely transparent */
     background: transparent; 
-    /* Added a glass-morphism blur so links stay readable when scrolling */
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
     border-bottom: 1px solid var(--border-subtle);
@@ -83,7 +79,7 @@ h1, h2, h3 {
 }
 
 .nav-links a:hover, .nav-links a.active {
-    color: #00f2fe; /* Changed hover color to match the tech theme since the background is transparent now */
+    color: #00f2fe; 
 }
 
 /* --- HERO SECTION --- */
@@ -219,8 +215,8 @@ h1, h2, h3 {
 
 /* --- FOOTER STYLES --- */
 .footer {
-    /* Applied the 60% transparent gradient */
-    background: var(--tech-gradient-transparent);
+    /* 50% transparent gradient */
+    background: linear-gradient(135deg, rgba(0, 242, 254, 0.5) 0%, rgba(79, 172, 254, 0.5) 100%);
     border-top: 1px solid var(--border-subtle);
     padding: 4rem 5% 2rem;
     margin-top: 4rem;
@@ -236,51 +232,83 @@ h1, h2, h3 {
     gap: 2rem;
 }
 
+/* Left side - Logo */
+.footer-logo {
+    flex: 1;
+    display: flex;
+    justify-content: flex-start;
+}
+
 .footer-logo-img {
-    height: 40px; 
+    height: 60px; 
     width: auto;
+    object-fit: contain;
+}
+
+/* Middle - Contact Info */
+.footer-contact {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
 }
 
 .footer-contact p {
     margin-bottom: 0.5rem;
     font-size: 1rem;
-    color: #fff; /* Ensures contact text is readable on the new gradient */
+    color: #fff; 
 }
 
 .footer-contact a {
     color: #fff;
     text-decoration: none;
-    font-weight: 500;
+    font-weight: 600;
     transition: color 0.3s ease;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.2);
 }
 
 .footer-contact a:hover {
-    color: #030305; /* Dark hover effect on the bright footer */
+    color: #030305; 
 }
 
+/* Right side - Social Media Icons */
 .footer-social {
+    flex: 1;
     display: flex;
-    gap: 1.5rem;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 1.2rem;
+}
+
+.footer-social a {
+    display: inline-block;
+    border-radius: 50%;
+    background: #ffffff; /* White background circle for icon visibility */
+    padding: 6px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    line-height: 0;
 }
 
 .footer-social a img {
     height: 24px;
     width: 24px;
-    transition: transform 0.3s ease, filter 0.3s ease;
-    filter: brightness(0) invert(1); 
+    object-fit: contain;
+    border-radius: 50%;
 }
 
-.footer-social a:hover img {
-    transform: translateY(-3px);
-    /* Dark drop shadow for contrast against the blue footer */
-    filter: brightness(0) invert(1) drop-shadow(0 0 5px rgba(0,0,0,0.5)); 
+.footer-social a:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0,0,0,0.2);
 }
 
 .footer-bottom {
     text-align: center;
     margin-top: 3rem;
     padding-top: 2rem;
-    border-top: 1px solid rgba(255, 255, 255, 0.1); /* Lighter border for gradient */
-    color: rgba(255, 255, 255, 0.8); /* Slightly faded white for copyright text */
+    border-top: 1px solid rgba(255, 255, 255, 0.2); 
+    color: #fff; 
     font-size: 0.85rem;
+    font-weight: 500;
 }
