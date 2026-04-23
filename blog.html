@@ -87,19 +87,24 @@
             box-shadow: 0 20px 40px rgba(0, 0, 0, 0.8), 0 0 20px rgba(0, 242, 254, 0.1);
         }
 
-        .blog-image-placeholder {
-            height: 200px;
-            background: linear-gradient(135deg, rgba(10, 11, 16, 1) 0%, rgba(0, 242, 254, 0.1) 100%);
+        /* New Cover Image Styles */
+        .blog-image-wrapper {
+            height: 220px;
+            overflow: hidden;
             border-bottom: 1px solid var(--border-subtle);
-            display: flex;
-            align-items: center;
-            justify-content: center;
         }
 
-        .blog-image-placeholder svg {
-            width: 40px;
-            height: 40px;
-            fill: rgba(255,255,255,0.1);
+        .blog-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        /* Premium Zoom effect on hover */
+        .blog-card:hover .blog-image {
+            transform: scale(1.05);
         }
 
         .blog-content {
@@ -163,7 +168,7 @@
         
         @media screen and (max-width: 768px) {
             .blog-header {
-                padding: 140px 5% 4rem; /* Match mobile hero spacing */
+                padding: 140px 5% 4rem; 
             }
             .blog-header h1 {
                 font-size: 3rem;
@@ -204,40 +209,37 @@
         <div class="blog-grid">
             
             <article class="blog-card anim-card">
-                <div class="blog-image-placeholder">
-                    <svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V5h14v14zm-5.04-6.71l-2.75 3.54-1.96-2.36L6.5 17h11l-3.54-4.71z"/></svg>
+                <div class="blog-image-wrapper">
+                    <img src="Digital Marketing Services for Manufacturing Company.webp" alt="Digital Marketing Services for Manufacturing Company" class="blog-image">
                 </div>
                 <div class="blog-content">
                     <div class="blog-meta">March 27, 2026</div>
                     <h2>Digital Marketing Services for Manufacturing Company</h2>
                     <p>The manufacturing industry is changing rapidly. Today, buyers, procurement managers, and decision-makers no longer depend only on exhibitions, agents, or references...</p>
-                    
                     <a href="digital-marketing-services-for-manufacturing-company.html" class="read-more">Read Article</a>
                 </div>
             </article>
 
             <article class="blog-card anim-card">
-                <div class="blog-image-placeholder">
-                    <svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V5h14v14zm-5.04-6.71l-2.75 3.54-1.96-2.36L6.5 17h11l-3.54-4.71z"/></svg>
+                <div class="blog-image-wrapper">
+                    <img src="Digital Marketing Freelancer in Navi Mumbai.webp" alt="Digital Marketing Freelancer in Navi Mumbai" class="blog-image">
                 </div>
                 <div class="blog-content">
                     <div class="blog-meta">March 27, 2026</div>
                     <h2>Digital Marketing Freelancer in Navi Mumbai</h2>
                     <p>Boost Your Business with Gauravv Digital: Your Go-To Digital Marketing Freelancer in Navi Mumbai. Discover how localized strategies can skyrocket your brand visibility...</p>
-                    
                     <a href="digital-marketing-freelancer-in-navi-mumbai.html" class="read-more">Read Article</a>
                 </div>
             </article>
 
             <article class="blog-card anim-card">
-                <div class="blog-image-placeholder">
-                    <svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V5h14v14zm-5.04-6.71l-2.75 3.54-1.96-2.36L6.5 17h11l-3.54-4.71z"/></svg>
+                <div class="blog-image-wrapper">
+                    <img src="Advantages Of Facebook Lead Generation Ads.webp" alt="Advantages Of Facebook Lead Generation Ads" class="blog-image">
                 </div>
                 <div class="blog-content">
                     <div class="blog-meta">July 30, 2024</div>
                     <h2>Advantages Of Facebook Lead Generation Ads</h2>
                     <p>In today's digital landscape, effective lead generation is key to business growth. Learn how Facebook Lead Generation Ads can streamline your sales funnel and capture high-intent audiences...</p>
-                    
                     <a href="advantages-of-facebook-lead-generation-ads.html" class="read-more">Read Article</a>
                 </div>
             </article>
