@@ -665,20 +665,25 @@ h1, h2, h3 {
 
 /* Mobile Devices */
 @media screen and (max-width: 768px) {
-    /* Navbar Adjustment */
+    /* Navbar Adjustment - Logo Left, Links Below */
     .navbar {
-        flex-direction: column; /* Stacks logo and links */
+        flex-direction: column; 
+        align-items: flex-start; /* Forces the logo strictly to the left corner */
         padding: 1rem 5%;
-        background: rgba(3, 3, 5, 0.9); /* Adds darker background on mobile so links are readable */
+        background: rgba(3, 3, 5, 0.95); /* Dark background for readability */
+    }
+    .logo {
+        align-self: flex-start; /* Ensures logo stays pinned left */
     }
     .logo-img {
-        height: 80px;
+        height: 95px; /* Increased height so it's noticeably bigger on mobile */
         margin-bottom: 1rem;
     }
     .nav-links {
+        width: 100%;
         gap: 1.2rem;
         flex-wrap: wrap;
-        justify-content: center;
+        justify-content: center; /* Centers the navigation links below the logo */
     }
     .nav-links a {
         font-size: 0.85rem;
@@ -686,8 +691,8 @@ h1, h2, h3 {
 
     /* Hero Section */
     .hero-content {
-        margin-top: 8rem; /* Pushes content down below stacked navbar */
-        text-align: center; /* Centers everything for mobile */
+        margin-top: 8rem; 
+        text-align: center; 
     }
     .hero-content h1 {
         font-size: 3rem;
@@ -697,7 +702,7 @@ h1, h2, h3 {
         margin: 0 auto 2.5rem;
     }
     .cta-group {
-        flex-direction: column; /* Stacks buttons */
+        flex-direction: column; 
         align-items: center;
         width: 100%;
         gap: 1rem;
@@ -754,7 +759,7 @@ h1, h2, h3 {
         font-size: 2.5rem;
     }
     .logo-img {
-        height: 65px;
+        height: 85px; /* Made even larger for smaller screens compared to previous styling */
     }
     .contact-form-centered {
         padding: 2.5rem 1.5rem;
