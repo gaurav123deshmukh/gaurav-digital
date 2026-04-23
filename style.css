@@ -6,6 +6,8 @@
     --tech-gradient: linear-gradient(135deg, #00f2fe 0%, #4facfe 100%);
     --tech-glow: rgba(0, 242, 254, 0.3);
     --border-subtle: rgba(255, 255, 255, 0.05);
+    /* New variable for footer elements readability */
+    --text-on-light: #0a0b10;
 }
 
 * {
@@ -33,18 +35,16 @@ h1, h2, h3 {
     display: inline-block;
 }
 
-/* --- NAVIGATION / HEADER --- */
+/* Updated Navigation / Header */
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0.5rem 5%; 
+    padding: 1rem 5%;
     position: fixed;
     width: 100%;
     top: 0;
-    background: transparent; 
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
+    background: var(--bg-dark); /* Solid background now, with border */
     border-bottom: 1px solid var(--border-subtle);
     z-index: 100;
 }
@@ -56,7 +56,7 @@ h1, h2, h3 {
 }
 
 .logo-img {
-    height: 100px; 
+    height: 75px; 
     width: auto;
     object-fit: contain;
 }
@@ -68,21 +68,21 @@ h1, h2, h3 {
 }
 
 .nav-links a {
-    color: #ffffff; 
+    color: var(--text-muted);
     text-decoration: none;
     font-size: 0.95rem;
     font-weight: 600;
     transition: color 0.3s ease;
     text-transform: uppercase;
     letter-spacing: 1px;
-    text-shadow: 0 1px 3px rgba(0,0,0,0.2);
 }
 
 .nav-links a:hover, .nav-links a.active {
-    color: #00f2fe; 
+    color: #fff;
+    border-bottom: 2px solid #00f2fe;
 }
 
-/* --- HERO SECTION --- */
+/* Hero Section (applied to About/Services pages as well) */
 .hero {
     height: 100vh;
     display: flex;
@@ -149,28 +149,23 @@ h1, h2, h3 {
     transform: translateY(-3px);
 }
 
-/* --- SERVICES SECTION --- */
-.services {
-    padding: 8rem 5%;
-    position: relative;
+/* Services Page Card Grid */
+.detailed-services {
+    padding: 5rem 5% 8rem;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-.services h2 {
-    font-size: 3.5rem;
-    margin-bottom: 4rem;
-    text-align: center;
-}
-
-.service-grid {
+.services-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 3rem;
     perspective: 1000px;
 }
 
-.service-card {
+.service-detail-card {
     background: var(--bg-card);
-    padding: 3rem 2.5rem;
+    padding: 3rem;
     border-radius: 12px;
     border: 1px solid var(--border-subtle);
     position: relative;
@@ -179,7 +174,7 @@ h1, h2, h3 {
     z-index: 1;
 }
 
-.service-card::before {
+.service-detail-card::before {
     content: '';
     position: absolute;
     top: 0; left: 0; right: 0;
@@ -191,175 +186,248 @@ h1, h2, h3 {
     z-index: 2;
 }
 
-.service-card:hover::before {
+.service-detail-card:hover::before {
     transform: scaleX(1);
 }
 
-.service-card:hover {
+.service-detail-card:hover {
     transform: translateY(-10px) scale(1.02);
     border-color: rgba(79, 172, 254, 0.3);
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.8), 0 0 20px rgba(0, 242, 254, 0.1);
 }
 
-.service-card h3 {
-    font-size: 1.6rem;
+.service-detail-card h2 {
+    font-size: 2rem;
     margin-bottom: 1rem;
-    color: #fff;
 }
 
-.service-card p {
+.service-detail-card p {
     color: var(--text-muted);
     line-height: 1.7;
-    font-size: 0.95rem;
+    margin-bottom: 1.5rem;
+    font-size: 1rem;
 }
 
-/* --- FOOTER STYLES --- */
+.service-features {
+    list-style: none;
+    margin-top: 1.5rem;
+    border-top: 1px solid var(--border-subtle);
+    padding-top: 1.5rem;
+}
+
+.service-features li {
+    color: #e2e8f0;
+    margin-bottom: 0.8rem;
+    font-size: 0.95rem;
+    display: flex;
+    align-items: center;
+}
+
+.service-features li::before {
+    content: '▹';
+    color: #00f2fe;
+    margin-right: 10px;
+    font-size: 1.2rem;
+}
+
+/* About Page narrative content style */
+.about-content-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4rem;
+    padding: 5rem 5% 8rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    align-items: center;
+}
+
+.about-text {
+    flex: 1;
+    min-width: 300px;
+    perspective: 1000px;
+}
+
+.about-text h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.about-text p {
+    color: var(--text-muted);
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+    font-size: 1.05rem;
+}
+
+.about-stats {
+    flex: 1;
+    min-width: 300px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    perspective: 1000px;
+}
+
+.stat-box {
+    background: var(--bg-card);
+    padding: 2.5rem 1.5rem;
+    border-radius: 12px;
+    border: 1px solid var(--border-subtle);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.stat-box::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 3px;
+    background: var(--tech-gradient);
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.stat-box:hover::before {
+    transform: scaleX(1);
+}
+
+.stat-box:hover {
+    transform: translateY(-10px);
+    border-color: rgba(79, 172, 254, 0.3);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.8), 0 0 20px rgba(0, 242, 254, 0.1);
+}
+
+.stat-number {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    background: var(--tech-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.stat-label {
+    color: #fff;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 0.85rem;
+}
+
+/* --- NEW TRANSPARENT WATERY FOOTER STYLES --- */
 .footer {
-    /* Tech gradient with high transparency (0.2 opacity) to give a glassy blue effect */
-    background: linear-gradient(135deg, rgba(0, 242, 254, 0.2) 0%, rgba(79, 172, 254, 0.2) 100%);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    border-top: 1px solid rgba(0, 242, 254, 0.3); /* Subtle blue glow on the top border */
-    box-shadow: 0 -4px 30px rgba(0, 0, 0, 0.2);
+    /* Iridescent, transparent watery gradient and complex rgba blend */
+    background: 
+        linear-gradient(135deg, rgba(160, 240, 240, 0.1) 0%, rgba(180, 220, 240, 0.05) 50%, rgba(200, 180, 240, 0.1) 100%),
+        rgba(255, 255, 255, 0.03);
+    border-top: 1px solid rgba(120, 180, 220, 0.2); /* Very subtle iridescent border */
     padding: 4rem 5% 2rem;
     margin-top: 4rem;
+    position: relative;
+    /* Crucial for glassy effect: backdrop blur */
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px); 
+    box-shadow: 0 -4px 30px rgba(0, 0, 0, 0.1); /* Subtle shadow defined against background */
 }
 
 .footer-content {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    align-items: center;
+    align-items: start;
     max-width: 1200px;
     margin: 0 auto;
-    gap: 2rem;
+    gap: 3rem;
 }
 
-/* Left side - Logo */
+.footer-main {
+    flex: 2;
+    min-width: 300px;
+}
+
 .footer-logo {
-    flex: 1;
-    display: flex;
-    justify-content: flex-start;
+    display: block;
+    margin-bottom: 1.5rem;
 }
 
-.footer-logo-img {
-    height: 120px; 
-    width: auto;
+.footer-logo img {
+    height: 50px;
     object-fit: contain;
 }
 
-/* Middle - Tagline & Social Media */
-.footer-middle {
-    flex: 1.5;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    gap: 1.5rem;
+.footer-details {
+    color: var(--text-on-light);
+    line-height: 1.7;
+    margin-bottom: 1rem;
+    font-size: 0.95rem;
 }
 
-.footer-tagline {
-    font-family: 'Space Grotesk', sans-serif;
-    font-size: 1.1rem;
-    font-weight: 700;
-    color: #ffffff;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    text-shadow: 0 2px 5px rgba(0,0,0,0.5);
+.footer-contact {
+    color: var(--text-on-light);
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.footer-contact a {
+    color: var(--text-on-light);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-contact a:hover {
+    color: #00f2fe; /* Still use tech color on hover */
+}
+
+.footer-features {
+    flex: 1;
+    list-style: none;
+}
+
+.footer-features li {
+    color: var(--text-on-light);
+    margin-bottom: 0.8rem;
+    font-size: 0.95rem;
+    display: flex;
+    align-items: center;
+}
+
+.footer-features li::before {
+    content: '✓';
+    color: #4facfe; /* Iridescent cool tone */
+    margin-right: 10px;
+    font-size: 1rem;
 }
 
 .footer-social {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 2rem; 
+    gap: 1.2rem;
+    margin-top: 1.5rem;
 }
 
-/* Strict sizing wrapper to ensure all social media icons are exactly the same size */
-.footer-social a {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 40px;
-    height: 40px;
-    transition: transform 0.3s ease;
-    text-decoration: none;
-}
-
+/* Simplified social icons to work on light transparent background */
 .footer-social a img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain; 
-    display: block;
+    height: 24px;
+    width: 24px;
+    transition: transform 0.3s ease, filter 0.3s ease;
+    /* Optional: filter to make dark/solid-color icons look cool on glassy texture. Set to dark by default. */
+    filter: brightness(0) invert(0); 
 }
 
-.footer-social a:hover {
-    transform: translateY(-5px);
-}
-
-/* Right side - Contact Info */
-.footer-contact {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end; 
-    text-align: right;
-}
-
-.footer-contact p {
-    margin-bottom: 0.5rem;
-    font-size: 1rem;
-    color: #fff; 
-}
-
-.footer-contact a {
-    color: #fff;
-    text-decoration: none;
-    font-weight: 600;
-    transition: color 0.3s ease;
-    text-shadow: 0 1px 2px rgba(0,0,0,0.2);
-}
-
-.footer-contact a:hover {
-    color: #030305; 
+.footer-social a:hover img {
+    transform: translateY(-3px);
+    /* Change to the tech-iridescent color on hover */
+    filter: brightness(0) invert(1) drop-shadow(0 0 5px #00f2fe);
 }
 
 .footer-bottom {
     text-align: center;
     margin-top: 3rem;
     padding-top: 2rem;
-    border-top: 1px solid rgba(255, 255, 255, 0.1); 
-    color: rgba(255, 255, 255, 0.7); 
+    border-top: 1px solid rgba(120, 180, 220, 0.15); /* Light cool tone border */
+    color: #000; /* Use dark for text defined against background */
     font-size: 0.85rem;
-    font-weight: 500;
-}
-
-/* --- WHATSAPP FLOATING BUTTON --- */
-.whatsapp-float {
-    position: fixed;
-    width: 60px;
-    height: 60px;
-    bottom: 30px;
-    right: 30px;
-    background-color: #25D366; 
-    color: #FFF;
-    border-radius: 50px;
-    text-align: center;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
-    z-index: 999; 
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: all 0.3s ease;
-}
-
-.whatsapp-float img {
-    width: 35px; 
-    height: 35px;
-    object-fit: contain;
-}
-
-.whatsapp-float:hover {
-    transform: translateY(-5px) scale(1.05);
-    box-shadow: 0 8px 25px rgba(37, 211, 102, 0.6); 
 }
