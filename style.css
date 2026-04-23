@@ -112,6 +112,11 @@ h1, h2, h3 {
     line-height: 1.6;
 }
 
+.cta-group {
+    display: flex;
+    gap: 1rem;
+}
+
 .btn {
     padding: 1rem 2.5rem;
     text-decoration: none;
@@ -122,6 +127,7 @@ h1, h2, h3 {
     text-transform: uppercase;
     letter-spacing: 1px;
     font-size: 0.85rem;
+    text-align: center;
 }
 
 .btn-primary {
@@ -138,7 +144,6 @@ h1, h2, h3 {
 .btn-secondary {
     border: 1px solid rgba(255, 255, 255, 0.2);
     color: var(--text-main);
-    margin-left: 1rem;
     background: rgba(255, 255, 255, 0.02);
     backdrop-filter: blur(5px);
 }
@@ -404,7 +409,6 @@ h1, h2, h3 {
     border: 1px solid var(--border-subtle);
 }
 
-/* Beautiful Top Gradient Accent Line */
 .contact-form-centered::before {
     content: '';
     position: absolute;
@@ -637,4 +641,128 @@ h1, h2, h3 {
 .whatsapp-float:hover {
     transform: translateY(-5px) scale(1.05);
     box-shadow: 0 8px 25px rgba(37, 211, 102, 0.6); 
+}
+
+/* ========================================================
+   RESPONSIVE DESIGN (TABLET & MOBILE)
+   ======================================================== */
+
+/* Tablet & Smaller Laptops */
+@media screen and (max-width: 1024px) {
+    .hero-content h1 {
+        font-size: 4rem;
+    }
+    .services {
+        padding: 6rem 5%;
+    }
+    .about-content-wrapper {
+        gap: 2rem;
+    }
+    .contact-form-centered {
+        padding: 3rem 2rem;
+    }
+}
+
+/* Mobile Devices */
+@media screen and (max-width: 768px) {
+    /* Navbar Adjustment */
+    .navbar {
+        flex-direction: column; /* Stacks logo and links */
+        padding: 1rem 5%;
+        background: rgba(3, 3, 5, 0.9); /* Adds darker background on mobile so links are readable */
+    }
+    .logo-img {
+        height: 80px;
+        margin-bottom: 1rem;
+    }
+    .nav-links {
+        gap: 1.2rem;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .nav-links a {
+        font-size: 0.85rem;
+    }
+
+    /* Hero Section */
+    .hero-content {
+        margin-top: 8rem; /* Pushes content down below stacked navbar */
+        text-align: center; /* Centers everything for mobile */
+    }
+    .hero-content h1 {
+        font-size: 3rem;
+    }
+    .hero-content p {
+        font-size: 1.1rem;
+        margin: 0 auto 2.5rem;
+    }
+    .cta-group {
+        flex-direction: column; /* Stacks buttons */
+        align-items: center;
+        width: 100%;
+        gap: 1rem;
+    }
+    .btn {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    /* Typography & Spacing */
+    .services h2 {
+        font-size: 2.5rem;
+    }
+    .services {
+        padding: 4rem 5%;
+    }
+    .about-text h2 {
+        font-size: 2rem;
+    }
+
+    /* Footer Adjustments */
+    .footer {
+        padding: 3rem 5% 2rem;
+    }
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 2.5rem;
+    }
+    .footer-logo {
+        justify-content: center;
+    }
+    .footer-contact {
+        align-items: center;
+        text-align: center;
+    }
+
+    /* WhatsApp Button */
+    .whatsapp-float {
+        width: 50px;
+        height: 50px;
+        bottom: 20px;
+        right: 20px;
+    }
+    .whatsapp-float img {
+        width: 30px;
+        height: 30px;
+    }
+}
+
+/* Small Mobile Screens */
+@media screen and (max-width: 480px) {
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+    .logo-img {
+        height: 65px;
+    }
+    .contact-form-centered {
+        padding: 2.5rem 1.5rem;
+    }
+    .contact-form-centered h2 {
+        font-size: 1.6rem;
+    }
+    .stat-number {
+        font-size: 2.2rem;
+    }
 }
