@@ -665,33 +665,34 @@ h1, h2, h3 {
 
 /* Mobile Devices */
 @media screen and (max-width: 768px) {
-    /* Navbar Adjustment - Logo Left, Links Below */
+    /* Navbar Adjustment - Logo Left, Links Right */
     .navbar {
-        flex-direction: column; 
-        align-items: flex-start; /* Forces the logo strictly to the left corner */
+        flex-direction: row; /* Keeps items side-by-side */
+        justify-content: space-between; 
+        align-items: center;
         padding: 1rem 5%;
-        background: rgba(3, 3, 5, 0.95); /* Dark background for readability */
+        background: rgba(3, 3, 5, 0.95);
     }
     .logo {
-        align-self: flex-start; /* Ensures logo stays pinned left */
+        align-self: center; 
     }
     .logo-img {
-        height: 95px; /* Increased height so it's noticeably bigger on mobile */
-        margin-bottom: 1rem;
+        height: 80px; /* Big, noticeable logo on the left */
+        margin-bottom: 0; 
     }
     .nav-links {
-        width: 100%;
-        gap: 1.2rem;
-        flex-wrap: wrap;
-        justify-content: center; /* Centers the navigation links below the logo */
+        width: auto;
+        gap: 0.8rem;
+        flex-wrap: wrap; /* Wraps links if they are too tight */
+        justify-content: flex-end; /* Pushes links neatly to the right */
     }
     .nav-links a {
-        font-size: 0.85rem;
+        font-size: 0.8rem; /* Scaled down slightly to fit all links inline */
     }
 
     /* Hero Section */
     .hero-content {
-        margin-top: 8rem; 
+        margin-top: 6rem; 
         text-align: center; 
     }
     .hero-content h1 {
@@ -758,8 +759,18 @@ h1, h2, h3 {
     .hero-content h1 {
         font-size: 2.5rem;
     }
+    .navbar {
+        padding: 0.8rem 3%; /* Slightly tighter padding for tiny screens */
+    }
     .logo-img {
-        height: 85px; /* Made even larger for smaller screens compared to previous styling */
+        height: 70px; /* Scaled slightly so it doesn't overlap text */
+    }
+    .nav-links {
+        gap: 0.5rem; 
+    }
+    .nav-links a {
+        font-size: 0.7rem; /* Small enough to fit all 5 inline smoothly */
+        letter-spacing: 0.5px;
     }
     .contact-form-centered {
         padding: 2.5rem 1.5rem;
