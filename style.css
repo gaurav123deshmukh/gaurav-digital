@@ -33,17 +33,16 @@ h1, h2, h3 {
     display: inline-block;
 }
 
-/* Updated Navigation / Header */
+/* --- NAVIGATION / HEADER --- */
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem 5%;
+    padding: 0.5rem 5%; /* Reduced padding slightly to accommodate the bigger logo */
     position: fixed;
     width: 100%;
     top: 0;
-    /* Changed to the tech gradient as requested */
-    background: var(--tech-gradient);
+    background: var(--tech-gradient); /* Gradient Header */
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
     z-index: 100;
 }
@@ -54,9 +53,9 @@ h1, h2, h3 {
     text-decoration: none;
 }
 
-/* Made the logo significantly bigger */
+/* --- BIGGER LOGO SIZE --- */
 .logo-img {
-    height: 75px; 
+    height: 100px; /* Increased to 100px for a much larger logo */
     width: auto;
     object-fit: contain;
 }
@@ -68,7 +67,7 @@ h1, h2, h3 {
 }
 
 .nav-links a {
-    color: #ffffff; /* Swapped to white for contrast against the gradient */
+    color: #ffffff; /* White links for the gradient background */
     text-decoration: none;
     font-size: 0.95rem;
     font-weight: 600;
@@ -79,10 +78,10 @@ h1, h2, h3 {
 }
 
 .nav-links a:hover, .nav-links a.active {
-    color: #030305; /* Changes to dark black on hover */
+    color: #030305; /* Changes to black on hover */
 }
 
-/* Hero Section */
+/* --- HERO SECTION --- */
 .hero {
     height: 100vh;
     display: flex;
@@ -149,7 +148,7 @@ h1, h2, h3 {
     transform: translateY(-3px);
 }
 
-/* Services Section */
+/* --- SERVICES SECTION --- */
 .services {
     padding: 8rem 5%;
     position: relative;
@@ -213,7 +212,7 @@ h1, h2, h3 {
     font-size: 0.95rem;
 }
 
-/* --- NEW FOOTER STYLES --- */
+/* --- FOOTER STYLES --- */
 .footer {
     background: var(--bg-card);
     border-top: 1px solid var(--border-subtle);
@@ -232,7 +231,7 @@ h1, h2, h3 {
 }
 
 .footer-logo-img {
-    height: 40px; /* Small logo for the footer */
+    height: 40px; /* Keep footer logo smaller and neat */
     width: auto;
 }
 
@@ -260,8 +259,7 @@ h1, h2, h3 {
     height: 24px;
     width: 24px;
     transition: transform 0.3s ease, filter 0.3s ease;
-    /* Optional: This adds a white tint to black PNGs so they show up on a dark background */
-    filter: brightness(0) invert(1); 
+    filter: brightness(0) invert(1); /* Tints icons white */
 }
 
 .footer-social a:hover img {
