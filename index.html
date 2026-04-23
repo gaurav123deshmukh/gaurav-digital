@@ -1,279 +1,120 @@
-:root {
-    --bg-dark: #030305;
-    --bg-card: #0a0b10;
-    --text-main: #f0f2f5;
-    --text-muted: #8b929e;
-    --tech-gradient: linear-gradient(135deg, #00f2fe 0%, #4facfe 100%);
-    --tech-glow: rgba(0, 242, 254, 0.3);
-    --border-subtle: rgba(255, 255, 255, 0.05);
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Digital marketing freelancer in mumbai | Gauravv Digital</title>
+    <meta name="title" content="Digital marketing freelancer in mumbai | Gauravv Digital">
+    <meta name="description" content="Boost Your Online Presence with a Digital Marketing Freelancer in Mumbai. Gauravv Digital boasts a proven track record in SEO, SEM, Social Media Marketing, Graphic Design, and Website Development.">
+    
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://gauravdeshmukh.co.in/">
+    <meta property="og:title" content="Digital marketing freelancer in mumbai | Gauravv Digital">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <a href="index.html" class="logo">
+            <img src="logo.png" alt="Gauravv Digital Logo" class="logo-img">
+        </a>
+        <ul class="nav-links">
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+    <header class="hero">
+        <div class="hero-content">
+            <h1 class="anim-hero">Transform Your <br><span class="gradient-text">Digital Landscape</span></h1>
+            <p class="anim-hero">Boost your online presence with data-driven marketing, transparent processes, and exceptional results.</p>
+            <div class="cta-group anim-hero">
+                <a href="contact.html" class="btn btn-primary">Let's Connect</a>
+                <a href="services.html" class="btn btn-secondary">Our Services</a>
+            </div>
+        </div>
+    </header>
 
-body {
-    background-color: var(--bg-dark);
-    color: var(--text-main);
-    font-family: 'Inter', sans-serif;
-    overflow-x: hidden;
-}
+    <section class="services">
+        <h2 class="anim-scroll gradient-text">Our Expertise</h2>
+        <div class="service-grid">
+            <div class="service-card anim-card">
+                <div class="card-glow"></div>
+                <h3>SEO</h3>
+                <p>Dominate search rankings and drive consistent organic traffic.</p>
+            </div>
+            <div class="service-card anim-card">
+                <div class="card-glow"></div>
+                <h3>SEM</h3>
+                <p>Targeted search engine marketing for immediate ROI.</p>
+            </div>
+            <div class="service-card anim-card">
+                <div class="card-glow"></div>
+                <h3>Social Media</h3>
+                <p>Engaging campaigns that build brand loyalty and generate leads.</p>
+            </div>
+            <div class="service-card anim-card">
+                <div class="card-glow"></div>
+                <h3>Branding</h3>
+                <p>Crafting a unique, memorable, and premium brand identity.</p>
+            </div>
+            <div class="service-card anim-card">
+                <div class="card-glow"></div>
+                <h3>Graphic Design</h3>
+                <p>Visually stunning, high-quality graphics that communicate your brand's message effectively.</p>
+            </div>
+            <div class="service-card anim-card">
+                <div class="card-glow"></div>
+                <h3>Website Development</h3>
+                <p>Custom-coded, lightning-fast websites built for seamless user experience and maximum conversions.</p>
+            </div>
+        </div>
+    </section>
 
-h1, h2, h3 {
-    font-family: 'Space Grotesk', sans-serif;
-}
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <a href="index.html">
+                    <img src="logo.png" alt="Gauravv Digital Logo" class="footer-logo-img">
+                </a>
+            </div>
+            
+            <div class="footer-contact">
+                <p><a href="tel:+918850480687">+91 88504 80687</a></p>
+                <p><a href="mailto:gaurav2deshmukh09@gmail.com">gaurav2deshmukh09@gmail.com</a></p>
+            </div>
+            
+            <div class="footer-social">
+                <a href="https://www.facebook.com/gauravdigitalseo" target="_blank">
+                    <img src="fb.png" alt="Facebook">
+                </a>
+                <a href="https://www.instagram.com/gaurav_digital_ads/" target="_blank">
+                    <img src="insta.png" alt="Instagram">
+                </a>
+                <a href="https://x.com/GauravDigitalad" target="_blank">
+                    <img src="x.png" alt="X">
+                </a>
+                <a href="https://www.youtube.com/@gauravdigitalmarketer" target="_blank">
+                    <img src="yt.png" alt="YouTube">
+                </a>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2026 Gauravv Digital. All rights reserved.</p>
+        </div>
+    </footer>
 
-.gradient-text {
-    background: var(--tech-gradient);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    display: inline-block;
-}
-
-/* Updated Navigation / Header */
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 5%;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    /* Changed to the tech gradient as requested */
-    background: var(--tech-gradient);
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-    z-index: 100;
-}
-
-.logo {
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-}
-
-/* Made the logo significantly bigger */
-.logo-img {
-    height: 75px; 
-    width: auto;
-    object-fit: contain;
-}
-
-.nav-links {
-    list-style: none;
-    display: flex;
-    gap: 2.5rem;
-}
-
-.nav-links a {
-    color: #ffffff; /* Swapped to white for contrast against the gradient */
-    text-decoration: none;
-    font-size: 0.95rem;
-    font-weight: 600;
-    transition: color 0.3s ease;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    text-shadow: 0 1px 3px rgba(0,0,0,0.2);
-}
-
-.nav-links a:hover, .nav-links a.active {
-    color: #030305; /* Changes to dark black on hover */
-}
-
-/* Hero Section */
-.hero {
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    padding: 0 5%;
-    background: radial-gradient(circle at top right, rgba(0, 242, 254, 0.05), transparent 40%),
-                radial-gradient(circle at bottom left, rgba(79, 172, 254, 0.05), transparent 40%);
-}
-
-.hero-content {
-    margin-top: 5rem;
-    perspective: 1000px;
-}
-
-.hero-content h1 {
-    font-size: 5rem;
-    line-height: 1.1;
-    margin-bottom: 1.5rem;
-    letter-spacing: -1px;
-}
-
-.hero-content p {
-    color: var(--text-muted);
-    font-size: 1.25rem;
-    max-width: 600px;
-    margin-bottom: 2.5rem;
-    line-height: 1.6;
-}
-
-.btn {
-    padding: 1rem 2.5rem;
-    text-decoration: none;
-    font-weight: 600;
-    border-radius: 6px;
-    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    display: inline-block;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    font-size: 0.85rem;
-}
-
-.btn-primary {
-    background: var(--tech-gradient);
-    color: #000;
-    box-shadow: 0 4px 15px var(--tech-glow);
-}
-
-.btn-primary:hover {
-    transform: translateY(-3px) scale(1.05);
-    box-shadow: 0 8px 25px var(--tech-glow);
-}
-
-.btn-secondary {
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    color: var(--text-main);
-    margin-left: 1rem;
-    background: rgba(255, 255, 255, 0.02);
-    backdrop-filter: blur(5px);
-}
-
-.btn-secondary:hover {
-    border-color: #4facfe;
-    background: rgba(79, 172, 254, 0.1);
-    transform: translateY(-3px);
-}
-
-/* Services Section */
-.services {
-    padding: 8rem 5%;
-    position: relative;
-}
-
-.services h2 {
-    font-size: 3.5rem;
-    margin-bottom: 4rem;
-    text-align: center;
-}
-
-.service-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-    perspective: 1000px;
-}
-
-.service-card {
-    background: var(--bg-card);
-    padding: 3rem 2.5rem;
-    border-radius: 12px;
-    border: 1px solid var(--border-subtle);
-    position: relative;
-    overflow: hidden;
-    transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    z-index: 1;
-}
-
-.service-card::before {
-    content: '';
-    position: absolute;
-    top: 0; left: 0; right: 0;
-    height: 3px;
-    background: var(--tech-gradient);
-    transform: scaleX(0);
-    transform-origin: left;
-    transition: transform 0.6s cubic-bezier(0.19, 1, 0.22, 1);
-    z-index: 2;
-}
-
-.service-card:hover::before {
-    transform: scaleX(1);
-}
-
-.service-card:hover {
-    transform: translateY(-10px) scale(1.02);
-    border-color: rgba(79, 172, 254, 0.3);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.8), 0 0 20px rgba(0, 242, 254, 0.1);
-}
-
-.service-card h3 {
-    font-size: 1.6rem;
-    margin-bottom: 1rem;
-    color: #fff;
-}
-
-.service-card p {
-    color: var(--text-muted);
-    line-height: 1.7;
-    font-size: 0.95rem;
-}
-
-/* --- NEW FOOTER STYLES --- */
-.footer {
-    background: var(--bg-card);
-    border-top: 1px solid var(--border-subtle);
-    padding: 4rem 5% 2rem;
-    margin-top: 4rem;
-}
-
-.footer-content {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-    gap: 2rem;
-}
-
-.footer-logo-img {
-    height: 40px; /* Small logo for the footer */
-    width: auto;
-}
-
-.footer-contact p {
-    margin-bottom: 0.5rem;
-    font-size: 1rem;
-}
-
-.footer-contact a {
-    color: var(--text-main);
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-.footer-contact a:hover {
-    color: #4facfe;
-}
-
-.footer-social {
-    display: flex;
-    gap: 1.5rem;
-}
-
-.footer-social a img {
-    height: 24px;
-    width: 24px;
-    transition: transform 0.3s ease, filter 0.3s ease;
-    /* Optional: This adds a white tint to black PNGs so they show up on a dark background */
-    filter: brightness(0) invert(1); 
-}
-
-.footer-social a:hover img {
-    transform: translateY(-3px);
-    filter: brightness(0) invert(1) drop-shadow(0 0 5px #00f2fe);
-}
-
-.footer-bottom {
-    text-align: center;
-    margin-top: 3rem;
-    padding-top: 2rem;
-    border-top: 1px solid var(--border-subtle);
-    color: var(--text-muted);
-    font-size: 0.85rem;
-}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
