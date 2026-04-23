@@ -213,16 +213,17 @@ h1, h2, h3 {
     font-size: 0.95rem;
 }
 
-/* --- FOOTER STYLES (White Gradient Update) --- */
+/* --- FOOTER STYLES (90% Transparent White) --- */
 .footer {
-    /* Clean white gradient */
-    background: linear-gradient(135deg, #ffffff 0%, #f0f2f5 100%);
-    border-top: 1px solid #e1e4e8;
-    box-shadow: 0 -4px 30px rgba(0, 0, 0, 0.05);
+    /* 90% transparent white (0.1 opacity) with glass blur */
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 -4px 30px rgba(0, 0, 0, 0.2);
     padding: 4rem 5% 2rem;
     margin-top: 4rem;
-    /* Changing text color to dark so it shows up on the white background */
-    color: #030305; 
+    color: #ffffff; /* Reverted to white text so it is visible against the dark background */
 }
 
 .footer-content {
@@ -262,9 +263,10 @@ h1, h2, h3 {
     font-family: 'Space Grotesk', sans-serif;
     font-size: 1.1rem;
     font-weight: 700;
-    color: #030305; /* Dark text for white background */
+    color: #ffffff; 
     letter-spacing: 2px;
     text-transform: uppercase;
+    text-shadow: 0 2px 5px rgba(0,0,0,0.5);
 }
 
 .footer-social {
@@ -274,35 +276,38 @@ h1, h2, h3 {
     gap: 1.5rem; 
 }
 
-/* Perfect uniform layout for social icons */
+/* Uniform glassy circles for social media icons */
 .footer-social a {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 45px; /* Fixed circular button size */
-    height: 45px; /* Fixed circular button size */
-    background-color: #e8ebee; /* Light grey circle background */
+    width: 45px; 
+    height: 45px; 
+    background-color: rgba(255, 255, 255, 0.1); /* Subtle white glass circle */
+    border: 1px solid rgba(255, 255, 255, 0.2);
     border-radius: 50%;
     transition: all 0.3s ease;
     text-decoration: none;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
 }
 
 .footer-social a img {
-    width: 22px; /* Fixed inner icon size */
-    height: 22px; /* Fixed inner icon size */
+    width: 22px; 
+    height: 22px; 
     object-fit: contain; 
     display: block;
+    filter: brightness(0) invert(1); /* Tints all uploaded icons solid white */
 }
 
 .footer-social a:hover {
     transform: translateY(-5px);
-    background-color: #030305; /* Changes to dark on hover */
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    background-color: #00f2fe; /* Lights up with brand cyan on hover */
+    border-color: #00f2fe;
+    box-shadow: 0 5px 15px rgba(0, 242, 254, 0.3);
 }
 
 .footer-social a:hover img {
-    filter: brightness(0) invert(1); /* Makes the icon white on hover */
+    filter: brightness(0) invert(0); /* Icons turn dark on the bright cyan hover */
 }
 
 /* Right side - Contact Info */
@@ -317,26 +322,27 @@ h1, h2, h3 {
 .footer-contact p {
     margin-bottom: 0.5rem;
     font-size: 1rem;
-    color: #030305; /* Dark text for white background */
+    color: #ffffff; 
 }
 
 .footer-contact a {
-    color: #030305; /* Dark text for white background */
+    color: #ffffff; 
     text-decoration: none;
     font-weight: 600;
     transition: color 0.3s ease;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.2);
 }
 
 .footer-contact a:hover {
-    color: #4facfe; 
+    color: #00f2fe; 
 }
 
 .footer-bottom {
     text-align: center;
     margin-top: 3rem;
     padding-top: 2rem;
-    border-top: 1px solid rgba(0, 0, 0, 0.1); /* Darker border for white background */
-    color: #555555; 
+    border-top: 1px solid rgba(255, 255, 255, 0.1); 
+    color: rgba(255, 255, 255, 0.7); 
     font-size: 0.85rem;
     font-weight: 500;
 }
