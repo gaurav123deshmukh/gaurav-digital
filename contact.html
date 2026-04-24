@@ -6,7 +6,7 @@
     
     <title>Contact Us | Gauravv Digital</title>
     <meta name="title" content="Contact Us | Gauravv Digital">
-    <meta name="description" content="Get in touch with Gauravv Digital for expert SEO, SEM, and Digital Marketing services in Mumbai. Let's grow your business together.">
+    <meta name="description" content="Get in touch with Gauravv Digital for expert SEO, SEM, and Digital Marketing services.">
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,7 +16,7 @@
 
     <style>
         .contact-section {
-            padding: 10rem 5% 8rem; /* Reduced top padding to align better on mobile */
+            padding: 10rem 5% 8rem;
             max-width: 1200px;
             margin: 0 auto;
             display: flex;
@@ -25,10 +25,9 @@
             min-height: 80vh;
         }
 
-        /* Responsive Fix for Header Text if you add one */
         @media screen and (max-width: 768px) {
             .contact-section {
-                padding: 140px 5% 6rem; /* Ensures the form starts below the centered mobile logo */
+                padding: 140px 5% 6rem;
             }
         }
     </style>
@@ -62,6 +61,8 @@
                 
                 <input type="hidden" name="_send_email" value="gaurav2deshmukh089@gmail.com">
                 
+                <input type="hidden" name="x-success" value="contact.html">
+                
                 <div class="input-group">
                     <input type="text" name="Name" required placeholder="Name">
                 </div>
@@ -77,8 +78,6 @@
                 <div class="input-group">
                     <textarea name="Message" rows="5" required placeholder="Message"></textarea>
                 </div>
-                
-                <input type="hidden" name="x-success" value="https://gauravdeshmukh.co.in/contact.html">
                 
                 <button type="submit" class="btn-submit">SUBMIT DETAILS</button>
             </form>
@@ -96,21 +95,11 @@
             <div class="footer-middle">
                 <div class="footer-tagline">Innovate. Dominate. Scale.</div>
                 <div class="footer-social">
-                    <a href="https://www.linkedin.com/company/gaurav-digital/" target="_blank" title="LinkedIn">
-                        <img src="li.png.png" alt="LinkedIn">
-                    </a>
-                    <a href="https://www.facebook.com/gauravdigitalseo/" target="_blank" title="Facebook">
-                        <img src="fb.png.png" alt="Facebook">
-                    </a>
-                    <a href="https://www.instagram.com/gaurav_digital_ads/" target="_blank" title="Instagram">
-                        <img src="insta.png" alt="Instagram">
-                    </a>
-                    <a href="https://x.com/GauravDigitalad" target="_blank" title="X (Twitter)">
-                        <img src="x.png.png" alt="X">
-                    </a>
-                    <a href="https://www.youtube.com/@gauravdigitalmarketer" target="_blank" title="YouTube">
-                        <img src="yt.png.png" alt="YouTube">
-                    </a>
+                    <a href="https://www.linkedin.com/company/gaurav-digital/" target="_blank"><img src="li.png.png" alt="LinkedIn"></a>
+                    <a href="https://www.facebook.com/gauravdigitalseo/" target="_blank"><img src="fb.png.png" alt="Facebook"></a>
+                    <a href="https://www.instagram.com/gaurav_digital_ads/" target="_blank"><img src="insta.png" alt="Instagram"></a>
+                    <a href="https://x.com/GauravDigitalad" target="_blank"><img src="x.png.png" alt="X"></a>
+                    <a href="https://www.youtube.com/@gauravdigitalmarketer" target="_blank"><img src="yt.png.png" alt="YouTube"></a>
                 </div>
             </div>
 
@@ -125,13 +114,10 @@
         </div>
     </footer>
 
-    <a href="https://wa.me/918850480687" class="whatsapp-float" target="_blank" title="Chat with us on WhatsApp">
-        <img src="wa.png" alt="WhatsApp Chat">
-    </a>
+    <a href="https://wa.me/918850480687" class="whatsapp-float" target="_blank"><img src="wa.png" alt="WhatsApp Chat"></a>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script>
-        // Hamburger Menu Logic
         const hamburger = document.querySelector(".hamburger");
         const navMenu = document.querySelector(".nav-links");
 
@@ -145,7 +131,6 @@
             navMenu.classList.remove("active");
         }));
 
-        // Simple Form Fade-in Animation
         gsap.from(".contact-form-centered", {
             duration: 1.2,
             y: 50,
