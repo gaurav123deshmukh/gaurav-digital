@@ -71,6 +71,23 @@ body {
     color: #00f2fe; 
 }
 
+/* --- HAMBURGER MENU (3 LINES) --- */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 6px;
+    z-index: 1001; 
+}
+
+.menu-toggle .bar {
+    width: 30px;
+    height: 3px;
+    background-color: #fff;
+    transition: all 0.3s ease;
+    border-radius: 3px;
+}
+
 /* --- 3. MASSIVE HERO SECTION --- */
 .hero {
     min-height: 100vh;
@@ -228,7 +245,6 @@ body {
     text-align: center;
 }
 
-/* BLACK & WHITE SOCIAL ICONS WITH BLUE GRADIENT HOVER */
 .social-links { 
     display: flex; 
     justify-content: center; 
@@ -240,33 +256,33 @@ body {
     display: flex; 
     align-items: center;
     justify-content: center;
-    width: 50px; /* Uniform circle size */
+    width: 50px; 
     height: 50px; 
     border-radius: 50%;
-    background: rgba(255, 255, 255, 0.05); /* Subtle dark container */
+    background: rgba(255, 255, 255, 0.05); 
     transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
     text-decoration: none;
     border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .social-links a img { 
-    width: 22px; /* Uniform icon size */
+    width: 22px; 
     height: 22px; 
     object-fit: contain;
-    filter: grayscale(1) invert(1); /* Forces Black/White look */
+    filter: grayscale(1) invert(1); 
     opacity: 0.7; 
     transition: all 0.4s ease; 
 }
 
 .social-links a:hover { 
-    background: var(--logo-gradient); /* Background turns Blue Gradient */
+    background: var(--logo-gradient); 
     transform: translateY(-8px);
     border-color: transparent;
     box-shadow: 0 15px 30px rgba(0, 242, 254, 0.4);
 }
 
 .social-links a:hover img {
-    filter: grayscale(0) invert(0); /* Icon turns black for contrast against blue */
+    filter: grayscale(0) invert(0); 
     opacity: 1;
     transform: scale(1.1);
 }
@@ -292,12 +308,48 @@ body {
     opacity: 0.5;
 }
 
-/* --- 7. RESPONSIVE --- */
+/* --- 7. RESPONSIVE MOBILE MENU --- */
 @media (max-width: 992px) {
     .navbar { padding: 15px 5%; }
     .nav-logo { height: 70px; }
-    .hero h1 { font-size: 3.5rem; }
+    
+    /* Reveal the 3 lines on mobile */
+    .menu-toggle { display: flex; }
+
+    /* Slide-out mobile menu */
+    .nav-links { 
+        position: fixed;
+        top: 0;
+        right: -100%; 
+        height: 100vh;
+        width: 250px;
+        background: rgba(10, 18, 25, 0.95);
+        backdrop-filter: blur(25px) saturate(180%);
+        -webkit-backdrop-filter: blur(25px) saturate(180%);
+        border-left: 1px solid rgba(0, 242, 254, 0.2);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+
+    .nav-links.active {
+        right: 0; 
+    }
+
+    /* Animation: Turns the 3 lines into an 'X' */
+    .menu-toggle.is-active .bar:nth-child(1) {
+        transform: translateY(9px) rotate(45deg);
+    }
+    .menu-toggle.is-active .bar:nth-child(2) {
+        opacity: 0;
+    }
+    .menu-toggle.is-active .bar:nth-child(3) {
+        transform: translateY(-9px) rotate(-45deg);
+    }
+
+    .hero h1 { font-size: clamp(2.8rem, 8vw, 4rem); }
     .footer-grid { grid-template-columns: 1fr; text-align: center; }
     .footer-contact-col { text-align: center; }
-    .nav-links { display: none; }
 }
