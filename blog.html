@@ -3,164 +3,67 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Insights & Articles | Gauravv Digital</title>
-    
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700;800;900&display=swap" rel="stylesheet">
-    
+    <title>Insights & Articles | GAURAVV DIGITAL</title>
     <link rel="stylesheet" href="style.css">
-
-    <style>
-        .blog-hero {
-            padding: 180px 10% 60px;
-            text-align: center;
-            background: radial-gradient(circle at top center, rgba(0, 242, 254, 0.1), transparent 70%);
-        }
-
-        .blog-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 40px;
-            padding: 0 10% 100px;
-            max-width: 1400px;
-            margin: 0 auto;
-        }
-
-        .blog-card {
-            background: rgba(255, 255, 255, 0.03);
-            border: 1px solid rgba(255, 255, 255, 0.05);
-            padding: 40px;
-            border-radius: 5px;
-            transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .blog-card:hover {
-            transform: translateY(-10px);
-            border-color: #4facfe;
-            background: rgba(79, 172, 254, 0.05);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
-        }
-
-        .blog-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 2px;
-            background: linear-gradient(90deg, #00f2fe, #4facfe);
-            transform: scaleX(0);
-            transition: 0.4s;
-            transform-origin: left;
-        }
-
-        .blog-card:hover::before {
-            transform: scaleX(1);
-        }
-
-        .blog-date {
-            font-size: 0.75rem;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            color: #4facfe;
-            margin-bottom: 15px;
-            display: block;
-            font-weight: 700;
-        }
-
-        .blog-card h3 {
-            font-size: 1.6rem;
-            color: #fff;
-            margin-bottom: 20px;
-            line-height: 1.3;
-            font-weight: 800;
-        }
-
-        .blog-card p {
-            color: var(--text-dim);
-            font-size: 1rem;
-            line-height: 1.7;
-            margin-bottom: 30px;
-        }
-
-        .read-link {
-            text-decoration: none;
-            color: #fff;
-            font-weight: 700;
-            font-size: 0.85rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            transition: 0.3s;
-        }
-
-        .read-link:hover {
-            color: #00f2fe;
-            gap: 15px;
-        }
-    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800;900&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <!-- NAVIGATION -->
+    <!-- NAVBAR -->
     <nav class="navbar">
-        <a href="index.html"><img src="logo.png" alt="Gauravv Digital" class="nav-logo"></a>
+        <a href="index.html" class="nav-logo">
+            <img src="logo.png" alt="Gauravv Digital Logo" class="logo-img">
+        </a>
         <ul class="nav-links">
             <li><a href="index.html">Home</a></li>
             <li><a href="services.html">Services</a></li>
-            <li><a href="about.html">About</a></li>
             <li><a href="blog.html" class="active">Blog</a></li>
             <li><a href="contact.html">Contact</a></li>
         </ul>
     </nav>
 
-    <!-- BLOG HERO -->
-    <header class="blog-hero">
-        <h1 class="gradient-text" style="font-size: clamp(3rem, 7vw, 5rem); font-weight: 900; margin-bottom: 20px;">INSIGHTS</h1>
-        <p style="color: var(--text-dim); letter-spacing: 3px; text-transform: uppercase; font-weight: 400;">Strategies for the digital age</p>
+    <!-- HERO SECTION -->
+    <header class="hero">
+        <span>Digital Expertise</span>
+        <h1>Latest <span class="gradient-text">Insights</span></h1>
+        <p>Exploring the intersection of data-driven marketing and high-end digital aesthetics.</p>
     </header>
 
     <!-- BLOG GRID -->
-    <section class="blog-grid">
-        
-        <!-- Post 1 -->
-        <article class="blog-card">
-            <div>
-                <span class="blog-date">Oct 24, 2025 • Technical SEO</span>
-                <h3>Top SEO Strategies to Rank Higher in 2026</h3>
-                <p>Discover the latest ranking factors, from AI-driven search to Core Web Vitals, and how to stay ahead of the algorithm.</p>
-            </div>
-            <a href="seo-strategies.html" class="read-link">Read Full Article <span>→</span></a>
-        </article>
+    <section class="blog-container">
+        <div class="services-grid">
+            
+            <!-- Blog 1: Facebook Lead Gen -->
+            <a href="advantages-of-facebook-lead-generation-ads.html" class="service-card blog-card">
+                <div class="card-img">
+                    <img src="facebook-ads-cover.jpg" alt="Facebook Lead Gen Ads">
+                </div>
+                <h3>Advantages of Facebook Lead Generation Ads</h3>
+                <p>Discover how to capture high-quality leads directly within the social platform and maximize your ROI.</p>
+                <span class="read-more">Read Article</span>
+            </a>
 
-        <!-- Post 2 -->
-        <article class="blog-card">
-            <div>
-                <span class="blog-date">July 30, 2024 • Paid Media</span>
-                <h3>Advantages Of Facebook Lead Generation Ads</h3>
-                <p>Learn how to capture high-intent leads natively within Facebook without the friction of external landing pages.</p>
-            </div>
-            <a href="facebook-leads.html" class="read-link">Read Full Article <span>→</span></a>
-        </article>
+            <!-- Blog 2: Freelancer in Navi Mumbai -->
+            <a href="digital-marketing-freelancer-in-navi-mumbai.html" class="service-card blog-card">
+                <div class="card-img">
+                    <img src="freelancer-mumbai-cover.jpg" alt="Digital Marketing Freelancer">
+                </div>
+                <h3>Digital Marketing Freelancer in Navi Mumbai</h3>
+                <p>Strategic digital growth solutions tailored for businesses looking for personalized expert consultation.</p>
+                <span class="read-more">Read Article</span>
+            </a>
 
-        <!-- Post 3 -->
-        <article class="blog-card">
-            <div>
-                <span class="blog-date">Mar 27, 2026 • B2B Strategy</span>
+            <!-- Blog 3: Manufacturing Services -->
+            <a href="digital-marketing-services-for-manufacturing-company.html" class="service-card blog-card">
+                <div class="card-img">
+                    <img src="manufacturing-digital-cover.jpg" alt="Manufacturing Company Marketing">
+                </div>
                 <h3>Digital Marketing for Manufacturing Companies</h3>
-                <p>How B2B industrial firms are using digital funnels to replace traditional trade shows and secure global clients.</p>
-            </div>
-            <a href="manufacturing-b2b.html" class="read-link">Read Full Article <span>→</span></a>
-        </article>
+                <p>Bridging the gap between traditional industrial operations and modern B2B digital lead generation.</p>
+                <span class="read-more">Read Article</span>
+            </a>
 
+        </div>
     </section>
 
     <!-- FOOTER -->
@@ -168,33 +71,21 @@
         <div class="footer-grid">
             <div class="footer-logo-col">
                 <img src="logo.png" alt="Gauravv Digital" class="f-logo">
-                <p style="color: var(--text-dim); font-size: 0.85rem; line-height: 1.8;">
-                    Defining the next era of digital marketing through cinematic excellence and technical dominance.
-                </p>
             </div>
             <div class="footer-social-col">
-                <p style="font-weight: 700; letter-spacing: 2px; font-size: 0.8rem; color: #fff;">STAY CONNECTED</p>
                 <div class="social-links">
-                    <a href="https://x.com/GauravDigitalad" target="_blank"><img src="x.png" alt="X"></a>
-                    <a href="https://www.instagram.com/gaurav_digital_ads/?hl=en" target="_blank"><img src="insta.png" alt="Instagram"></a>
-                    <a href="https://www.youtube.com/@gauravdigitalmarketer" target="_blank"><img src="yt.png" alt="YouTube"></a>
-                    <a href="https://www.facebook.com/gauravdigitalseo" target="_blank"><img src="fb.png" alt="Facebook"></a>
-                    <a href="https://www.linkedin.com/company/gaurav-digital/" target="_blank"><img src="li.png" alt="LinkedIn"></a>
+                    <a href="#"><img src="facebook-icon.png" alt="Facebook"></a>
+                    <a href="#"><img src="instagram-icon.png" alt="Instagram"></a>
+                    <a href="#"><img src="linkedin-icon.png" alt="LinkedIn"></a>
                 </div>
             </div>
             <div class="footer-contact-col">
-                <p style="font-weight: 700; letter-spacing: 2px; font-size: 0.8rem; color: #fff; margin-bottom: 15px;">GET IN TOUCH</p>
-                <p><a href="tel:+918850480687" class="gradient-text">+91 88504 80687</a></p>
-                <p><a href="mailto:contact@gauravdeshmukh.co.in" class="gradient-text">contact@gauravdeshmukh.co.in</a></p>
+                <p>Ready to scale?</p>
+                <a href="mailto:contact@gauravv.com">contact@gauravv.com</a>
             </div>
         </div>
-        <div class="copyright">
-            © 2026 GAURAVV DIGITAL. ALL RIGHTS RESERVED.
-        </div>
+        <p class="copyright">© 2026 GAURAVV DIGITAL. ALL RIGHTS RESERVED.</p>
     </footer>
-
-    <!-- WHATSAPP FLOAT -->
-    <a href="https://wa.me/918850480687" class="whatsapp-float" target="_blank"><img src="wa.png" alt="WhatsApp Chat"></a>
 
 </body>
 </html>
