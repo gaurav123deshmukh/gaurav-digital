@@ -45,13 +45,13 @@
             border-bottom: 1px solid rgba(0, 242, 254, 0.15);
         }
 
-        .nav-logo { height: 80px; width: auto; }
+        .nav-logo { height: 75px; width: auto; }
 
-        .nav-links { display: flex; list-style: none; gap: 35px; }
+        .nav-links { display: flex; list-style: none; gap: 30px; }
         .nav-links a {
             text-decoration: none;
             color: var(--text-dim);
-            font-size: 0.75rem;
+            font-size: 0.7rem;
             font-weight: 700;
             text-transform: uppercase;
             letter-spacing: 2px;
@@ -68,8 +68,6 @@
             align-items: center;
             text-align: center;
             background: radial-gradient(circle at 50% 50%, #0d1a21 0%, #050505 100%);
-            
-            /* INCREASED TOP PADDING FOR BETTER CLEARANCE */
             padding: 180px 10% 80px; 
         }
 
@@ -86,11 +84,17 @@
         .hero h1 {
             font-size: clamp(2.5rem, 8vw, 5.5rem);
             line-height: 1.1; 
-            margin-top: 30px;    
+            margin-top: 35px;    
             margin-bottom: 40px; 
             font-weight: 900;
             text-transform: uppercase;
             letter-spacing: -2px;
+        }
+
+        /* Spacing update for "Precision" */
+        .precision-line {
+            display: block;
+            margin-top: 25px; /* Added line space specifically above Precision */
         }
 
         .gradient-text {
@@ -202,26 +206,32 @@
 </head>
 <body>
 
+    <!-- UPDATED NAVIGATION MENU -->
     <nav class="navbar">
         <a href="#"><img src="logo.png" alt="Gaurav Digital" class="nav-logo"></a>
         <ul class="nav-links">
-            <li><a href="#about">Work</a></li>
-            <li><a href="#services">Expertise</a></li>
+            <li><a href="#">Home</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#blog">Blog</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
 
+    <!-- HIGH-IMPACT HERO -->
     <section class="hero">
         <span>FUTURE-READY BRANDING</span>
-        <h1>Scale Your Vision With <span class="gradient-text">Precision.</span></h1>
+        <h1>Scale Your Vision With <span class="precision-line gradient-text">Precision.</span></h1>
         <p>Harnessing the power of cinematic AI creative and elite SEO strategies to place your brand at the forefront of the digital evolution.</p>
         <a href="#contact" class="cta-btn">Start Your Project</a>
     </section>
 
+    <!-- FLOATING WHATSAPP -->
     <a href="https://wa.me/917506113382" class="whatsapp-float" target="_blank">
         <img src="wa.png" alt="WhatsApp">
     </a>
 
+    <!-- MODERN 3-SECTION FOOTER -->
     <footer class="site-footer">
         <div class="footer-grid">
             <div class="footer-logo-col">
