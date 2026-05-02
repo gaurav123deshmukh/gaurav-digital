@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Insights & Strategy | Gauravv Digital</title>
+    <title>Insights & Articles | Gauravv Digital</title>
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,7 +13,7 @@
 
     <style>
         .blog-hero {
-            padding: 180px 10% 100px;
+            padding: 180px 10% 60px;
             text-align: center;
             background: radial-gradient(circle at top center, rgba(0, 242, 254, 0.1), transparent 70%);
         }
@@ -22,7 +22,7 @@
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
             gap: 40px;
-            padding: 0 10% 120px;
+            padding: 0 10% 100px;
             max-width: 1400px;
             margin: 0 auto;
         }
@@ -30,78 +30,81 @@
         .blog-card {
             background: rgba(255, 255, 255, 0.03);
             border: 1px solid rgba(255, 255, 255, 0.05);
-            border-radius: 20px;
             padding: 40px;
-            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            text-decoration: none;
+            border-radius: 5px;
+            transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
             display: flex;
             flex-direction: column;
+            justify-content: space-between;
             position: relative;
             overflow: hidden;
+        }
+
+        .blog-card:hover {
+            transform: translateY(-10px);
+            border-color: #4facfe;
+            background: rgba(79, 172, 254, 0.05);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
         }
 
         .blog-card::before {
             content: '';
             position: absolute;
-            top: 0; left: 0; width: 100%; height: 100%;
-            background: linear-gradient(45deg, transparent, rgba(0, 242, 254, 0.05));
-            opacity: 0;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(90deg, #00f2fe, #4facfe);
+            transform: scaleX(0);
             transition: 0.4s;
-        }
-
-        .blog-card:hover {
-            transform: translateY(-15px);
-            border-color: #00f2fe;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+            transform-origin: left;
         }
 
         .blog-card:hover::before {
-            opacity: 1;
+            transform: scaleX(1);
         }
 
         .blog-date {
-            color: #4facfe;
-            font-size: 0.8rem;
-            font-weight: 700;
+            font-size: 0.75rem;
             text-transform: uppercase;
             letter-spacing: 2px;
+            color: #4facfe;
             margin-bottom: 15px;
+            display: block;
+            font-weight: 700;
         }
 
         .blog-card h3 {
-            font-size: 1.8rem;
+            font-size: 1.6rem;
             color: #fff;
-            line-height: 1.3;
             margin-bottom: 20px;
+            line-height: 1.3;
             font-weight: 800;
         }
 
         .blog-card p {
             color: var(--text-dim);
             font-size: 1rem;
-            line-height: 1.6;
+            line-height: 1.7;
             margin-bottom: 30px;
         }
 
-        .read-more-link {
-            margin-top: auto;
-            color: #00f2fe;
+        .read-link {
+            text-decoration: none;
+            color: #fff;
             font-weight: 700;
-            text-transform: uppercase;
             font-size: 0.85rem;
+            text-transform: uppercase;
             letter-spacing: 1px;
-            display: flex;
+            display: inline-flex;
             align-items: center;
             gap: 10px;
-        }
-
-        .read-more-link::after {
-            content: '→';
             transition: 0.3s;
         }
 
-        .blog-card:hover .read-more-link::after {
-            transform: translateX(10px);
+        .read-link:hover {
+            color: #00f2fe;
+            gap: 15px;
         }
     </style>
 </head>
@@ -121,38 +124,42 @@
 
     <!-- BLOG HERO -->
     <header class="blog-hero">
-        <h1 class="gradient-text" style="font-size: clamp(3rem, 8vw, 6rem); font-weight: 900;">INSIGHTS</h1>
-        <p style="color: var(--text-dim); font-size: 1.2rem; max-width: 700px; margin: 20px auto;">
-            Strategic thinking on AI, high-conversion advertising, and the future of B2B digital dominance.
-        </p>
+        <h1 class="gradient-text" style="font-size: clamp(3rem, 7vw, 5rem); font-weight: 900; margin-bottom: 20px;">INSIGHTS</h1>
+        <p style="color: var(--text-dim); letter-spacing: 3px; text-transform: uppercase; font-weight: 400;">Strategies for the digital age</p>
     </header>
 
     <!-- BLOG GRID -->
     <section class="blog-grid">
         
-        <!-- ARTICLE 1: MANUFACTURING -->
-        <a href="manufacturing-b2b.html" class="blog-card">
-            <span class="blog-date">March 27, 2026</span>
-            <h3>Digital Marketing for Manufacturing Companies</h3>
-            <p>How modern factories are using digital funnels to replace traditional trade shows and generate high-quality B2B leads.</p>
-            <span class="read-more-link">Read Strategy</span>
-        </a>
+        <!-- Post 1 -->
+        <article class="blog-card">
+            <div>
+                <span class="blog-date">Oct 24, 2025 • Technical SEO</span>
+                <h3>Top SEO Strategies to Rank Higher in 2026</h3>
+                <p>Discover the latest ranking factors, from AI-driven search to Core Web Vitals, and how to stay ahead of the algorithm.</p>
+            </div>
+            <a href="seo-strategies.html" class="read-link">Read Full Article <span>→</span></a>
+        </article>
 
-        <!-- ARTICLE 2: FACEBOOK ADS -->
-        <a href="facebook-lead-ads.html" class="blog-card">
-            <span class="blog-date">July 30, 2024</span>
-            <h3>Advantages of Facebook Lead Generation Ads</h3>
-            <p>Streamline your sales funnel with frictionless native forms and hyper-targeted audience reach.</p>
-            <span class="read-more-link">View Analysis</span>
-        </a>
+        <!-- Post 2 -->
+        <article class="blog-card">
+            <div>
+                <span class="blog-date">July 30, 2024 • Paid Media</span>
+                <h3>Advantages Of Facebook Lead Generation Ads</h3>
+                <p>Learn how to capture high-intent leads natively within Facebook without the friction of external landing pages.</p>
+            </div>
+            <a href="facebook-leads.html" class="read-link">Read Full Article <span>→</span></a>
+        </article>
 
-        <!-- ARTICLE 3: SEO -->
-        <a href="seo-guide.html" class="blog-card">
-            <span class="blog-date">January 15, 2026</span>
-            <h3>The 2026 SEO Blueprint: Beyond Keywords</h3>
-            <p>Why technical authority and user intent have overtaken simple keyword stuffing in the age of AI search.</p>
-            <span class="read-more-link">Master SEO</span>
-        </a>
+        <!-- Post 3 -->
+        <article class="blog-card">
+            <div>
+                <span class="blog-date">Mar 27, 2026 • B2B Strategy</span>
+                <h3>Digital Marketing for Manufacturing Companies</h3>
+                <p>How B2B industrial firms are using digital funnels to replace traditional trade shows and secure global clients.</p>
+            </div>
+            <a href="manufacturing-b2b.html" class="read-link">Read Full Article <span>→</span></a>
+        </article>
 
     </section>
 
@@ -161,8 +168,8 @@
         <div class="footer-grid">
             <div class="footer-logo-col">
                 <img src="logo.png" alt="Gauravv Digital" class="f-logo">
-                <p style="color: var(--text-dim); font-size: 0.85rem;">
-                    Defining the next era of digital marketing through cinematic excellence.
+                <p style="color: var(--text-dim); font-size: 0.85rem; line-height: 1.8;">
+                    Defining the next era of digital marketing through cinematic excellence and technical dominance.
                 </p>
             </div>
             <div class="footer-social-col">
@@ -178,6 +185,7 @@
             <div class="footer-contact-col">
                 <p style="font-weight: 700; letter-spacing: 2px; font-size: 0.8rem; color: #fff; margin-bottom: 15px;">GET IN TOUCH</p>
                 <p><a href="tel:+918850480687" class="gradient-text">+91 88504 80687</a></p>
+                <p><a href="mailto:contact@gauravdeshmukh.co.in" class="gradient-text">contact@gauravdeshmukh.co.in</a></p>
             </div>
         </div>
         <div class="copyright">
