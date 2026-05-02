@@ -5,7 +5,7 @@
     --watery-header: rgba(10, 18, 25, 0.35); 
     --text-main: #ffffff;
     --text-dim: #b0b0b0;
-    --icon-size: 28px;
+    --text-muted: #888888;
 }
 
 * { 
@@ -21,7 +21,7 @@ html {
 body { 
     background-color: var(--dark-bg); 
     color: var(--text-main); 
-    font-family: 'Montserrat', sans-serif; 
+    font-family: 'Montserrat', 'Inter', sans-serif; 
     overflow-x: hidden; 
 }
 
@@ -41,7 +41,7 @@ body {
     border-bottom: 1px solid rgba(0, 242, 254, 0.15);
 }
 
-.nav-logo { 
+.nav-logo, .logo-img { 
     height: 75px; 
     width: auto; 
 }
@@ -55,18 +55,18 @@ body {
 .nav-links a {
     text-decoration: none;
     color: var(--text-dim);
-    font-size: 0.7rem;
+    font-size: 0.75rem;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 2px;
     transition: 0.3s;
 }
 
-.nav-links a:hover { 
+.nav-links a:hover, .nav-links a.active { 
     color: #00f2fe; 
 }
 
-/* --- 3. HERO SECTION (SPACING & LAYOUT) --- */
+/* --- 3. HERO SECTION --- */
 .hero {
     min-height: 100vh;
     display: flex;
@@ -75,7 +75,6 @@ body {
     align-items: center;
     text-align: center;
     background: radial-gradient(circle at 50% 50%, #0d1a21 0%, #050505 100%);
-    /* Space above to clear the fixed navbar */
     padding: 180px 10% 80px; 
 }
 
@@ -99,7 +98,6 @@ body {
     letter-spacing: -2px;
 }
 
-/* Specific line space above "Precision" */
 .precision-line {
     display: block;
     margin-top: 25px; 
@@ -120,7 +118,7 @@ body {
     margin-bottom: 50px;
 }
 
-/* --- 4. CLASSY SERVICE GRID (Inspired by image_b2969a.jpg) --- */
+/* --- 4. CLASSY SERVICE GRID --- */
 .services-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -183,7 +181,7 @@ body {
 }
 
 /* --- 5. BUTTONS & INTERACTIVES --- */
-.cta-btn {
+.cta-btn, .btn {
     padding: 18px 45px;
     border-radius: 50px;
     background: var(--logo-gradient);
@@ -193,10 +191,13 @@ body {
     text-transform: uppercase;
     letter-spacing: 1px;
     transition: 0.4s;
+    display: inline-block;
+    border: none;
+    cursor: pointer;
     box-shadow: 0 10px 20px rgba(0, 242, 254, 0.2);
 }
 
-.cta-btn:hover {
+.cta-btn:hover, .btn:hover {
     transform: translateY(-5px);
     box-shadow: 0 15px 30px rgba(0, 242, 254, 0.4);
 }
@@ -222,103 +223,106 @@ body {
     transform: scale(1.15) rotate(10deg); 
 }
 
-/* --- 6. FOOTER & SOCIALS --- */
-.site-footer {
+/* --- 6. FOOTER & UNIFORM SOCIAL ICONS --- */
+.site-footer, .footer {
     background: #020202;
     padding: 80px 8% 40px;
     border-top: 1px solid rgba(0, 242, 254, 0.1);
 }
 
-.footer-grid {
+.footer-grid, .footer-content {
     display: grid;
     grid-template-columns: 1.2fr 1fr 1.2fr;
     gap: 40px;
     align-items: start;
 }
 
-.f-logo { 
+.f-logo, .footer-logo-img { 
     height: 90px; 
     width: auto; 
     margin-bottom: 15px; 
 }
 
-.footer-social-col { 
+.footer-social-col, .footer-middle { 
     text-align: center; 
 }
 
-.social-links { 
+/* FIXED SOCIAL ICONS - ALL SAME SIZE WITH GRADIENT HOVER */
+.social-links, .footer-social { 
     display: flex; 
     justify-content: center; 
-    gap: 20px; 
+    gap: 15px; 
     margin-top: 15px; 
 }
 
-.social-links a { 
-    display: inline-block; 
-    width: var(--icon-size); 
-    height: var(--icon-size); 
+.social-links a, .footer-social a { 
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+    width: 45px; 
+    height: 45px; 
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.05); /* Subtle dark circle */
+    transition: all 0.4s ease;
+    text-decoration: none;
 }
 
-.social-links img { 
-    width: 100%; 
-    height: 100%; 
-    filter: invert(1); 
-    opacity: 0.5; 
-    transition: 0.3s; 
+.social-links a img, .footer-social a img { 
+    width: 20px; 
+    height: 20px; 
+    object-fit: contain; /* Forces all logos to be exactly uniform */
+    filter: invert(1); /* Makes icons white */
+    opacity: 0.8; 
+    transition: all 0.4s ease; 
 }
 
-.social-links a:hover img { 
-    opacity: 1; 
+.social-links a:hover, .footer-social a:hover { 
+    background: var(--logo-gradient); /* Background turns gradient */
     transform: translateY(-5px);
-    filter: invert(0) drop-shadow(0 0 8px #00f2fe);
+    box-shadow: 0 10px 20px rgba(0, 242, 254, 0.3);
 }
 
-.footer-contact-col { 
+.social-links a:hover img, .footer-social a:hover img {
+    filter: invert(0); /* Icon turns black for high contrast against gradient */
+    opacity: 1;
+}
+
+.footer-contact-col, .footer-contact { 
     text-align: right; 
 }
 
-.footer-contact-col a { 
+.footer-contact-col a, .footer-contact a { 
     text-decoration: none; 
     font-weight: 700; 
     transition: 0.3s; 
+    color: #4facfe;
 }
 
-.copyright {
+.copyright, .footer-bottom {
     text-align: center;
     margin-top: 50px;
     font-size: 0.7rem;
-    color: #ffffff; /* White Color */
+    color: #ffffff;
     letter-spacing: 2px;
     text-transform: uppercase;
 }
 
-/* --- 7. ANIMATIONS & RESPONSIVE --- */
-@keyframes fadeInDown {
-    from { opacity: 0; transform: translateY(-20px); }
-    to { opacity: 1; transform: translateY(0); }
-}
-
+/* --- 7. RESPONSIVE --- */
 @media (max-width: 992px) {
-    .footer-grid { 
+    .footer-grid, .footer-content { 
         grid-template-columns: 1fr; 
         text-align: center; 
     }
-    .footer-contact-col { 
+    .footer-contact-col, .footer-contact { 
         text-align: center; 
     }
     .nav-links { 
         display: none; 
-    }
-    .nav-logo { 
-        height: 65px; 
     }
     .whatsapp-float { 
         bottom: 20px; 
         right: 20px; 
         width: 55px; 
         height: 55px; 
-    }
-    .hero { 
-        padding-top: 140px; 
     }
 }
