@@ -6,3 +6,14 @@ window.onscroll = function() {
         nav.style.background = "rgba(10, 10, 10, 0.7)"; // More transparent at the very top
     }
 };
+
+// Mobile Hamburger Menu Toggle
+const mobileMenu = document.getElementById('mobile-menu');
+const navLinks = document.querySelector('.nav-links');
+
+if (mobileMenu) {
+    mobileMenu.addEventListener('click', () => {
+        mobileMenu.classList.toggle('is-active');
+        navLinks.classList.toggle('active');
+    });
+}
