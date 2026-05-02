@@ -1,28 +1,22 @@
-/* ==========================================================================
-   GAURAVV DIGITAL - PREMIUM THEME VARIABLES
-   ========================================================================== */
+/* --- PREMIUM THEME VARIABLES --- */
 :root {
-    /* Deep Rich Navy / Black */
+    /* Deep Rich Navy */
     --bg-base: #03070d; 
-    --bg-card: rgba(15, 25, 45, 0.4);
     
-    /* Blue Gradients (Replacing Gold for a Tech/SEO Vibe) */
-    --blue-primary: #0072ff;
-    --blue-light: #00c6ff;
-    --tech-gradient: linear-gradient(135deg, #0072ff, #00c6ff);
+    /* Metallic / Champagne Gold */
+    --gold-primary: #d4af37; 
+    --gold-light: #f5e29a;
+    --gold-dark: #aa8c2c;
     
-    /* Soft Text Colors */
+    /* Soft Text */
     --text-main: #f8f9fa; 
     --text-muted: #9aa7bc;
-    --border-subtle: rgba(255, 255, 255, 0.05);
     
     /* Transitions */
     --transition-smooth: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 
-/* ==========================================================================
-   RESET & BASE STYLES
-   ========================================================================== */
+/* --- RESET & BASE --- */
 * {
     margin: 0;
     padding: 0;
@@ -40,66 +34,23 @@ body {
     position: relative;
 }
 
-h1, h2, h3, h4, h5, h6 { 
-    font-family: 'Montserrat', sans-serif; 
-    font-weight: 700; 
-    letter-spacing: -0.5px;
-}
-
-a { 
-    text-decoration: none; 
-    color: inherit; 
-    transition: var(--transition-smooth); 
-}
-
-ul { 
-    list-style: none; 
-}
-
-/* ==========================================================================
-   UTILITY CLASSES & EFFECTS
-   ========================================================================== */
-/* Glassmorphism Panel */
-.glass-panel {
-    background: var(--bg-card);
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
-    border: 1px solid var(--border-subtle);
-    border-radius: 12px;
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
-}
-
-/* Blue Gradient Text */
-.gradient-text, .text-gradient {
-    background: var(--tech-gradient);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    display: inline-block;
-}
-
-.flex-center { 
-    display: flex; 
-    align-items: center; 
-    justify-content: center; 
-}
-
-/* Animated Background Orbs for Depth */
+/* Animated Background Orbs for extra depth */
 .bg-orb {
     position: absolute;
     border-radius: 50%;
     filter: blur(120px);
     z-index: -1;
-    opacity: 0.3;
+    opacity: 0.3; /* Subtle glow */
     animation: float 20s infinite alternate ease-in-out;
 }
 .orb-1 {
     width: 500px; height: 500px;
-    background: rgba(0, 198, 255, 0.15); /* Blue glow */
+    background: rgba(212, 175, 55, 0.15); /* Gold Orb */
     top: -10%; left: -10%;
 }
 .orb-2 {
     width: 600px; height: 600px;
-    background: rgba(10, 40, 90, 0.3); /* Dark navy glow */
+    background: rgba(10, 40, 90, 0.3); /* Blue Orb */
     bottom: 20%; right: -10%;
     animation-delay: -5s;
 }
@@ -109,7 +60,27 @@ ul {
     100% { transform: translate(100px, 100px) scale(1.1); }
 }
 
-/* Smooth Scroll Reveal (Non-GSAP) */
+/* --- TYPOGRAPHY --- */
+h1, h2, h3 { 
+    font-family: 'Montserrat', sans-serif; 
+    font-weight: 700; 
+    letter-spacing: -0.5px;
+}
+
+a { text-decoration: none; color: inherit; transition: var(--transition-smooth); }
+ul { list-style: none; }
+
+/* The Glassmorphism Class */
+.glass-panel {
+    background: rgba(15, 25, 45, 0.4);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+}
+
+/* --- SMOOTH SCROLL REVEAL --- */
 .reveal {
     opacity: 0;
     transform: translateY(40px);
@@ -120,52 +91,9 @@ ul {
     transform: translateY(0);
 }
 
-/* ==========================================================================
-   BUTTONS
-   ========================================================================== */
-.btn {
-    display: inline-block;
-    font-family: 'Montserrat', sans-serif;
-    padding: 16px 45px;
-    font-size: 14px;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    cursor: pointer;
-    border-radius: 4px;
-    transition: var(--transition-smooth);
-    border: none;
-    text-align: center;
-}
-
-.btn-primary, .btn-gold {
-    background: var(--tech-gradient);
-    color: #ffffff;
-    box-shadow: 0 10px 20px rgba(0, 198, 255, 0.15);
-}
-
-.btn-primary:hover, .btn-gold:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 15px 25px rgba(0, 198, 255, 0.3);
-}
-
-.btn-secondary {
-    background: transparent;
-    color: var(--blue-light);
-    border: 1px solid var(--blue-light);
-}
-
-.btn-secondary:hover {
-    background: var(--tech-gradient);
-    color: #fff;
-    border-color: transparent;
-}
-
-/* ==========================================================================
-   HEADER & NAVIGATION
-   ========================================================================== */
-.navbar, header:not(.hero):not(.services-header) {
-    background: rgba(3, 7, 13, 0.85);
+/* --- HEADER & NAVIGATION --- */
+header {
+    background: rgba(3, 7, 13, 0.7);
     padding: 20px 60px;
     display: flex;
     justify-content: space-between;
@@ -175,29 +103,26 @@ ul {
     z-index: 1000;
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
-    border-bottom: 1px solid var(--border-subtle);
+    border-bottom: 1px solid rgba(212, 175, 55, 0.1);
 }
 
-.logo-img {
+.brand-logo {
     height: 60px; 
     width: auto;
     transition: var(--transition-smooth);
+    background-color: rgba(255, 255, 255, 0.04); 
     border-radius: 8px;
-    padding: 5px;
-    background-color: rgba(255, 255, 255, 0.04);
+    padding: 6px;
 }
 
-.logo:hover .logo-img {
+.logo-link:hover .brand-logo {
     transform: scale(1.05);
-    box-shadow: 0 0 20px rgba(0, 198, 255, 0.2);
+    box-shadow: 0 0 20px rgba(212, 175, 55, 0.2);
 }
 
-.nav-links { 
-    display: flex; 
-    gap: 40px; 
-}
+nav ul { display: flex; gap: 40px; }
 
-.nav-links a {
+nav a {
     font-family: 'Montserrat', sans-serif;
     font-size: 13px;
     font-weight: 600;
@@ -208,40 +133,19 @@ ul {
     padding-bottom: 5px;
 }
 
-.nav-links a:hover, .nav-links a.active { 
-    color: var(--blue-light); 
-}
+nav a:hover { color: var(--gold-primary); }
 
-.nav-links a::after {
+nav a::after {
     content: '';
     position: absolute;
     width: 0; height: 2px; bottom: 0; left: 50%;
-    background: var(--tech-gradient);
+    background-color: var(--gold-primary);
     transition: var(--transition-smooth);
     transform: translateX(-50%);
 }
+nav a:hover::after { width: 100%; }
 
-.nav-links a:hover::after, .nav-links a.active::after { 
-    width: 100%; 
-}
-
-/* Hamburger Menu (Mobile) */
-.hamburger {
-    display: none;
-    cursor: pointer;
-    flex-direction: column;
-    gap: 5px;
-}
-.hamburger .bar {
-    width: 25px; height: 3px;
-    background-color: var(--text-main);
-    transition: var(--transition-smooth);
-}
-
-/* ==========================================================================
-   PAGE HEADERS (HERO & SERVICES)
-   ========================================================================== */
-/* Homepage Hero */
+/* --- HERO SECTION --- */
 .hero {
     min-height: 90vh;
     display: flex;
@@ -251,9 +155,17 @@ ul {
     text-align: center;
     padding: 0 20px;
     position: relative;
+    
+    /* OPTIONAL: To use your image background, uncomment the lines below and ensure your image is named correctly in the folder */
+    /* background-image: linear-gradient(rgba(3, 7, 13, 0.7), rgba(3, 7, 13, 0.95)), url('image_abd0cc.jpg'); */
+    /* background-size: cover; */
+    /* background-position: center; */
+    /* background-attachment: fixed; */
 }
 
-.hero-content { z-index: 2; }
+.hero-content {
+    z-index: 2; /* Keeps text above background */
+}
 
 .hero-subtitle {
     font-family: 'Montserrat', sans-serif;
@@ -261,56 +173,65 @@ ul {
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 5px;
-    color: var(--blue-light);
+    color: var(--gold-primary);
     margin-bottom: 20px;
 }
 
 .hero h1 {
-    font-size: 64px;
+    font-size: 64px; /* Adjusted slightly to fit the longer keyword nicely */
     line-height: 1.2;
     margin-bottom: 25px;
     max-width: 900px;
+}
+
+.text-gradient {
+    background: linear-gradient(135deg, var(--gold-light), var(--gold-primary), var(--gold-dark));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .hero p {
     font-size: 19px;
     color: var(--text-muted);
     max-width: 650px;
-    margin: 0 auto 40px auto;
+    margin: 0 auto 50px auto;
 }
 
-.cta-group {
-    display: flex;
-    gap: 20px;
-    justify-content: center;
-    margin-top: 20px;
+/* --- PREMIUM BUTTON --- */
+.btn-gold {
+    display: inline-block;
+    font-family: 'Montserrat', sans-serif;
+    background-color: transparent;
+    color: var(--gold-primary);
+    border: 1px solid var(--gold-primary);
+    padding: 16px 45px;
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: var(--transition-smooth);
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
 }
 
-/* Services Page Header */
-.services-header {
-    padding: 12rem 5% 5rem;
-    text-align: center;
-    background: radial-gradient(circle at top center, rgba(0, 198, 255, 0.05), transparent 60%);
+.btn-gold::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; width: 0%; height: 100%;
+    background-color: var(--gold-primary);
+    transition: var(--transition-smooth);
+    z-index: -1;
 }
 
-.services-header h1 {
-    font-size: 4.5rem;
-    margin-bottom: 1.5rem;
-    letter-spacing: -1px;
-}
+.btn-gold:hover { color: var(--bg-base); border-color: var(--gold-primary); }
+.btn-gold:hover::before { width: 100%; }
 
-.services-header p {
-    color: var(--text-muted);
-    font-size: 1.25rem;
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-/* ==========================================================================
-   MAIN SECTIONS & GRIDS
-   ========================================================================== */
+/* --- MAIN SECTIONS --- */
 section {
-    padding: 100px 20px;
+    padding: 120px 20px;
     max-width: 1200px;
     margin: 0 auto;
 }
@@ -319,11 +240,11 @@ section {
 .section-header h2 { font-size: 46px; color: var(--text-main); margin-bottom: 15px; }
 .section-header .divider {
     width: 50px; height: 3px;
-    background: var(--tech-gradient);
+    background: linear-gradient(90deg, transparent, var(--gold-primary), transparent);
     margin: 0 auto;
 }
 
-/* About Philosophy Section */
+/* --- ABOUT SECTION --- */
 .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: stretch; }
 .about-text p { margin-bottom: 20px; font-size: 17px; color: var(--text-muted); }
 .about-text ul { margin-top: 30px; }
@@ -333,124 +254,75 @@ section {
 .about-text ul li::before {
     content: ''; display: inline-block;
     width: 8px; height: 8px;
-    background-color: var(--blue-light);
+    background-color: var(--gold-primary);
     border-radius: 50%; margin-right: 15px;
-    box-shadow: 0 0 10px var(--blue-light);
+    box-shadow: 0 0 10px var(--gold-primary);
 }
+
+.flex-center { display: flex; align-items: center; justify-content: center; min-height: 300px; }
 .accent-text {
     font-family: 'Montserrat', sans-serif;
-    font-weight: 600; text-transform: uppercase;
-    letter-spacing: 3px; color: var(--blue-light);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: var(--gold-primary);
     font-size: 18px;
 }
 
-/* ==========================================================================
-   SERVICE CARDS (HOME & SERVICES PAGES)
-   ========================================================================== */
-.services-grid, .service-grid, .services-container {
+/* --- SERVICES GRID --- */
+.services-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 30px;
-    perspective: 1000px;
 }
 
-.service-card, .service-detail-card {
-    background: var(--bg-card);
-    backdrop-filter: blur(16px);
-    padding: 50px 40px;
-    border-radius: 12px;
-    border: 1px solid var(--border-subtle);
-    position: relative;
-    overflow: hidden;
-    transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    z-index: 1;
+.service-card {
+    padding: 60px 40px;
+    text-align: center;
+    transition: var(--transition-smooth);
 }
 
-/* The Top Gradient Border Reveal */
-.service-card::before, .service-detail-card::before {
-    content: '';
-    position: absolute;
-    top: 0; left: 0; right: 0;
-    height: 3px;
-    background: var(--tech-gradient);
-    transform: scaleX(0);
-    transform-origin: left;
-    transition: transform 0.6s cubic-bezier(0.19, 1, 0.22, 1);
-    z-index: 2;
+.service-card:hover {
+    transform: translateY(-15px);
+    border-color: rgba(212, 175, 55, 0.3);
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.4);
+    background: rgba(20, 35, 60, 0.6);
 }
 
-.service-card:hover::before, .service-detail-card:hover::before { transform: scaleX(1); }
-
-.service-card:hover, .service-detail-card:hover {
-    transform: translateY(-10px) scale(1.02);
-    border-color: rgba(0, 198, 255, 0.3);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6), 0 0 20px rgba(0, 198, 255, 0.15);
-}
-
-/* Number Styling (Home Page Cards) */
 .service-number {
     font-family: 'Montserrat', sans-serif;
-    font-size: 56px; font-weight: 800;
+    font-size: 56px;
+    font-weight: 800;
     color: rgba(255, 255, 255, 0.03);
     -webkit-text-stroke: 1px rgba(255, 255, 255, 0.1);
     margin-bottom: 20px;
     transition: var(--transition-smooth);
 }
+
 .service-card:hover .service-number {
-    color: var(--blue-light);
+    color: var(--gold-primary);
     -webkit-text-stroke: 0px;
 }
 
-.service-title, .service-detail-card h2, .service-card h3 {
+.service-title {
     font-family: 'Montserrat', sans-serif;
-    font-size: 24px; font-weight: 600;
+    font-size: 20px;
+    font-weight: 600;
     color: var(--text-main);
-    margin-bottom: 15px;
+    letter-spacing: 0.5px;
 }
 
-.service-card p, .service-detail-card p {
-    color: var(--text-muted);
-    font-size: 16px;
-}
-
-/* Bullet Points (Services Page Cards) */
-.service-features {
-    list-style: none;
-    margin-top: 1.5rem;
-    border-top: 1px solid var(--border-subtle);
-    padding-top: 1.5rem;
-}
-.service-features li {
-    color: #e2e8f0; margin-bottom: 0.8rem;
-    font-size: 0.95rem; display: flex; align-items: center;
-}
-.service-features li::before {
-    content: '▹'; color: var(--blue-light);
-    margin-right: 10px; font-size: 1.2rem;
-}
-
-/* ==========================================================================
-   BANNERS & CONTACT FORMS
-   ========================================================================== */
-.cta-banner {
-    text-align: center;
-    padding: 6rem 5%;
-    background: linear-gradient(to right, rgba(3, 7, 13, 0.95), rgba(3, 7, 13, 0.95)), url('data:image/svg+xml,%3Csvg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="%2300c6ff" fill-opacity="0.05" fill-rule="evenodd"%3E%3Ccircle cx="3" cy="3" r="3"/%3E%3Ccircle cx="13" cy="13" r="3"/%3E%3C/g%3E%3C/svg%3E');
-    border-top: 1px solid var(--border-subtle);
-    border-bottom: 1px solid var(--border-subtle);
-    margin: 4rem 0;
-}
-.cta-banner h2 { font-size: 3rem; margin-bottom: 1.5rem; color: #fff; }
-
-/* Contact Form */
+/* --- CONTACT FORM --- */
 .contact-container { padding: 60px; max-width: 800px; margin: 0 auto; }
 .form-group { margin-bottom: 35px; }
+
 .form-group label {
     display: block; margin-bottom: 12px;
     font-family: 'Montserrat', sans-serif; font-size: 13px;
     font-weight: 600; text-transform: uppercase;
-    letter-spacing: 2px; color: var(--blue-light);
+    letter-spacing: 2px; color: var(--gold-primary);
 }
+
 .form-group input, .form-group textarea {
     width: 100%; padding: 15px 20px;
     background-color: rgba(0,0,0,0.2);
@@ -459,129 +331,41 @@ section {
     font-size: 16px; font-family: 'Inter', sans-serif;
     transition: var(--transition-smooth);
 }
+
 .form-group input:focus, .form-group textarea:focus {
-    outline: none; border-color: var(--blue-light);
-    box-shadow: 0 0 15px rgba(0, 198, 255, 0.15);
+    outline: none; border-color: var(--gold-primary);
+    box-shadow: 0 0 15px rgba(212, 175, 55, 0.1);
     background-color: rgba(0,0,0,0.4);
 }
 
-/* ==========================================================================
-   MASTER FOOTER
-   ========================================================================== */
-.footer {
-    border-top: 1px solid var(--border-subtle);
-    padding: 80px 20px 20px;
-    text-align: center;
-    background-color: #020408;
+/* --- FOOTER --- */
+footer {
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    padding: 80px 20px 40px; text-align: center;
 }
 
-.footer-content {
-    max-width: 1200px; margin: 0 auto;
-    display: flex; flex-direction: column;
-    align-items: center; gap: 30px;
+.footer-logo {
+    font-family: 'Montserrat', sans-serif; font-weight: 800;
+    font-size: 28px; color: var(--text-main); margin-bottom: 20px;
+    letter-spacing: 1.5px; text-transform: uppercase;
 }
+.footer-logo span { color: var(--gold-primary); font-weight: 400; }
 
-.footer-logo-img { height: 60px; }
-
-.footer-tagline {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 18px; font-weight: 600;
-    color: var(--text-muted);
-    letter-spacing: 2px; text-transform: uppercase;
+.social-links { display: flex; justify-content: center; gap: 40px; margin: 30px 0; }
+.social-links a { 
+    font-family: 'Montserrat', sans-serif; font-size: 13px; 
+    font-weight: 600; letter-spacing: 2px; 
+    text-transform: uppercase; color: var(--text-muted); 
 }
+.social-links a:hover { color: var(--gold-primary); transform: translateY(-3px); display: inline-block; }
 
-/* Master Footer Social Icons */
-.footer-social {
-    display: flex; gap: 15px;
-    align-items: center; justify-content: center;
-    margin-top: 20px;
-}
-.footer-social a {
-    display: flex; align-items: center; justify-content: center;
-    width: 45px; height: 45px;
-    background-color: rgba(255, 255, 255, 0.08); 
-    color: #ffffff; 
-    border-radius: 50%; text-decoration: none;
-    font-size: 20px; transition: var(--transition-smooth);
-}
-.footer-social a:hover {
-    background: var(--tech-gradient);
-    color: #ffffff; 
-    transform: translateY(-5px);
-    box-shadow: 0 5px 15px rgba(0, 198, 255, 0.4); 
-}
+.copyright { font-size: 14px; color: rgba(255, 255, 255, 0.3); }
 
-.footer-contact p { margin-bottom: 5px; }
-.footer-contact a { color: var(--blue-light); font-weight: 500; }
-.footer-contact a:hover { color: #fff; }
-
-.footer-bottom {
-    margin-top: 60px;
-    padding-top: 20px;
-    border-top: 1px solid var(--border-subtle);
-    font-size: 14px; color: rgba(255, 255, 255, 0.3);
-}
-
-/* ==========================================================================
-   FLOATING WHATSAPP BUTTON
-   ========================================================================== */
-.whatsapp-float {
-    position: fixed;
-    bottom: 30px;
-    right: 30px;
-    width: 60px;
-    height: 60px;
-    background-color: #25d366;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
-    z-index: 1000;
-    transition: var(--transition-smooth);
-}
-
-.whatsapp-float img {
-    width: 35px;
-    height: 35px;
-}
-
-.whatsapp-float:hover {
-    transform: scale(1.1) translateY(-5px);
-    box-shadow: 0px 8px 25px rgba(37, 211, 102, 0.5);
-}
-
-/* ==========================================================================
-   RESPONSIVE DESIGN (TABLETS & MOBILES)
-   ========================================================================== */
+/* --- RESPONSIVE --- */
 @media (max-width: 768px) {
-    /* Navbar / Hamburger Adjustments */
-    .navbar { padding: 15px 20px; }
-    .hamburger { display: flex; z-index: 1001; }
-    .nav-links {
-        position: fixed; top: 0; right: -100%;
-        height: 100vh; width: 100%;
-        background: rgba(3, 7, 13, 0.98);
-        flex-direction: column;
-        justify-content: center; align-items: center;
-        transition: 0.5s ease;
-    }
-    .nav-links.active { right: 0; }
-    .hamburger.active .bar:nth-child(1) { transform: translateY(8px) rotate(45deg); }
-    .hamburger.active .bar:nth-child(2) { opacity: 0; }
-    .hamburger.active .bar:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
-
-    /* Typography Scaling */
-    .hero h1 { font-size: 42px; }
-    .services-header h1 { font-size: 36px; }
-    .section-header h2 { font-size: 32px; }
-    .cta-banner h2 { font-size: 28px; }
-
-    /* Layout Scaling */
+    header { padding: 20px; flex-direction: column; gap: 20px; }
+    nav ul { gap: 15px; flex-wrap: wrap; justify-content: center; }
+    .hero h1 { font-size: 42px; } /* Scales down nicely on mobile */
     .about-grid { grid-template-columns: 1fr; gap: 40px; }
-    .contact-container { padding: 30px 20px; }
-    .cta-group { flex-direction: column; }
-    
-    .whatsapp-float { bottom: 20px; right: 20px; width: 50px; height: 50px; }
-    .whatsapp-float img { width: 30px; height: 30px; }
+    .contact-container { padding: 40px 20px; }
 }
