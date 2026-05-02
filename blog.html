@@ -3,203 +3,82 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <title>Blog & Insights | Gauravv Digital</title>
-    <meta name="title" content="Blog & Insights | Gauravv Digital">
-    <meta name="description" content="Stay updated with the latest digital marketing trends, SEO strategies, and business growth insights from Gauravv Digital.">
-    
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://gauravdeshmukh.co.in/blog/">
-    <meta property="og:title" content="Blog & Insights | Gauravv Digital">
-    <meta property="og:description" content="Stay updated with the latest digital marketing trends, SEO strategies, and business growth insights from Gauravv Digital.">
+    <title>Blog | Insights & Strategies | Gauravv Digital</title>
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
     
     <link rel="stylesheet" href="style.css">
-    
+
     <style>
-        .blog-header {
-            /* Reduced padding to bring cards up and make images visible */
-            padding: 10rem 5% 3rem;
+        .blog-hero {
+            padding: 12rem 5% 6rem;
             text-align: center;
-            background: radial-gradient(circle at top center, rgba(0, 242, 254, 0.05), transparent 60%);
-        }
-
-        .blog-header h1 {
-            font-size: 4.5rem;
-            margin-bottom: 1rem;
-            letter-spacing: -1px;
-        }
-
-        .blog-header p {
-            color: var(--text-muted);
-            font-size: 1.25rem;
-            max-width: 700px;
-            margin: 0 auto;
-            line-height: 1.7;
-        }
-
-        .blog-section {
-            /* Tighter padding between header and grid */
-            padding: 2rem 5% 8rem;
-            max-width: 1200px;
-            margin: 0 auto;
+            background: radial-gradient(circle at top center, rgba(0, 242, 254, 0.1), transparent 70%);
         }
 
         .blog-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
             gap: 3rem;
-            perspective: 1000px;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 5% 10rem;
         }
 
         .blog-card {
-            background: var(--bg-card);
-            border-radius: 12px;
-            border: 1px solid var(--border-subtle);
-            overflow: hidden;
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 2rem;
+            transition: all 0.3s ease;
             display: flex;
             flex-direction: column;
-            transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            position: relative;
-        }
-
-        /* Tech Hover Border Effect */
-        .blog-card::before {
-            content: '';
-            position: absolute;
-            top: 0; left: 0; right: 0;
-            height: 3px;
-            background: var(--tech-gradient);
-            transform: scaleX(0);
-            transform-origin: left;
-            transition: transform 0.6s cubic-bezier(0.19, 1, 0.22, 1);
-            z-index: 2;
-        }
-
-        .blog-card:hover::before {
-            transform: scaleX(1);
+            text-decoration: none;
         }
 
         .blog-card:hover {
             transform: translateY(-10px);
-            border-color: rgba(79, 172, 254, 0.3);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.8), 0 0 20px rgba(0, 242, 254, 0.1);
+            border-color: #00f2fe;
+            background: rgba(255, 255, 255, 0.05);
         }
 
-        /* Cover Image Styles */
-        .blog-image-wrapper {
-            height: 220px;
-            overflow: hidden;
-            border-bottom: 1px solid var(--border-subtle);
-        }
-
-        .blog-image {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            display: block;
-            transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-        }
-
-        /* Zoom effect on hover */
-        .blog-card:hover .blog-image {
-            transform: scale(1.05);
-        }
-
-        .blog-content {
-            padding: 2rem;
-            display: flex;
-            flex-direction: column;
-            flex-grow: 1;
-        }
-
-        .blog-meta {
-            font-size: 0.85rem;
+        .blog-card .date {
             color: #4facfe;
-            text-transform: uppercase;
-            letter-spacing: 1px;
+            font-size: 0.85rem;
             font-weight: 600;
-            margin-bottom: 0.8rem;
+            text-transform: uppercase;
+            margin-bottom: 1rem;
         }
 
-        .blog-content h2 {
+        .blog-card h2 {
             font-size: 1.5rem;
-            margin-bottom: 0.8rem;
             color: #fff;
-            line-height: 1.3;
+            margin-bottom: 1rem;
+            line-height: 1.4;
         }
 
-        .blog-content p {
+        .blog-card p {
             color: var(--text-muted);
+            font-size: 1rem;
             line-height: 1.6;
-            margin-bottom: 1.5rem;
-            font-size: 0.95rem;
-            flex-grow: 1;
+            margin-bottom: 2rem;
         }
 
         .read-more {
-            align-self: flex-start;
-            color: #fff;
-            text-decoration: none;
+            margin-top: auto;
+            color: #00f2fe;
             font-weight: 600;
-            font-size: 0.9rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
             display: flex;
             align-items: center;
-            transition: color 0.3s ease;
-        }
-
-        .read-more:hover {
-            color: #00f2fe;
-        }
-
-        .read-more::after {
-            content: '→';
-            margin-left: 8px;
-            font-size: 1.2rem;
-            transition: transform 0.3s ease;
-        }
-
-        .read-more:hover::after {
-            transform: translateX(5px);
-        }
-        
-        /* Mobile Specific Viewport Adjustment */
-        @media screen and (max-width: 768px) {
-            .blog-header {
-                /* Pulls header up on mobile for maximum visibility */
-                padding: 130px 5% 1rem; 
-            }
-            .blog-header h1 {
-                font-size: 2.8rem;
-            }
-            .blog-header p {
-                font-size: 1.1rem;
-                margin-bottom: 2rem;
-            }
-            .blog-section {
-                /* Reduced section padding to bring image above the fold */
-                padding: 0 5% 8rem;
-            }
-            .blog-image-wrapper {
-                height: 190px; /* Slightly shorter image on mobile to fit text below */
-            }
-        }
-        @media screen and (max-width: 480px) {
-            .blog-header h1 {
-                font-size: 2.2rem;
-            }
-            .blog-image-wrapper {
-                height: 170px;
-            }
+            gap: 0.5rem;
         }
     </style>
 </head>
 <body>
+
+    <!-- NAVIGATION -->
     <nav class="navbar">
         <a href="index.html" class="logo">
             <img src="logo.png" alt="Gauravv Digital Logo" class="logo-img">
@@ -218,143 +97,77 @@
         </div>
     </nav>
 
-    <header class="blog-header">
-        <h1 class="anim-fade-up"><span class="gradient-text">Insights & Strategies</span></h1>
-        <p class="anim-fade-up">Stay ahead of the curve with our latest articles on digital marketing.</p>
+    <!-- HERO -->
+    <header class="blog-hero">
+        <span class="article-meta">Industry Insights</span>
+        <h1 class="gradient-text" style="font-size: 3.5rem; font-weight: 700; margin-top: 1rem;">Mastering the Digital Era</h1>
     </header>
 
-    <section class="blog-section">
-        <div class="blog-grid">
-            
-            <article class="blog-card anim-card">
-                <div class="blog-image-wrapper">
-                    <img src="Digital Marketing Services for Manufacturing Company.webp" alt="Digital Marketing Services for Manufacturing Company" class="blog-image">
-                </div>
-                <div class="blog-content">
-                    <div class="blog-meta">March 27, 2026</div>
-                    <h2>Digital Marketing for Manufacturers</h2>
-                    <p>Buyers are searching online. Discover how manufacturers can generate high-quality B2B leads...</p>
-                    <a href="digital-marketing-services-for-manufacturing-company.html" class="read-more">Read Article</a>
-                </div>
-            </article>
+    <!-- BLOG POSTS GRID -->
+    <main class="blog-grid">
+        
+        <!-- Blog 1: Facebook Ads -->
+        <a href="facebook-lead-ads.html" class="blog-card">
+            <div class="date">July 30, 2024 • Advertising</div>
+            <h2>Advantages Of Facebook Lead Generation Ads</h2>
+            <p>Learn how to capture high-intent audiences with native forms and frictionless lead capture techniques.</p>
+            <span class="read-more">Read Full Article →</span>
+        </a>
 
-            <article class="blog-card anim-card">
-                <div class="blog-image-wrapper">
-                    <img src="Digital Marketing Freelancer in Navi Mumbai.webp" alt="Digital Marketing Freelancer in Navi Mumbai" class="blog-image">
-                </div>
-                <div class="blog-content">
-                    <div class="blog-meta">March 27, 2026</div>
-                    <h2>Freelancer in Navi Mumbai</h2>
-                    <p>Discover how localized strategies skyrocket brand visibility and connect you with local customers...</p>
-                    <a href="digital-marketing-freelancer-in-navi-mumbai.html" class="read-more">Read Article</a>
-                </div>
-            </article>
+        <!-- Blog 2: Freelancer Navi Mumbai -->
+        <a href="freelancer-navi-mumbai.html" class="blog-card">
+            <div class="date">March 27, 2026 • Local SEO</div>
+            <h2>Digital Marketing Freelancer in Navi Mumbai</h2>
+            <p>Discover why personalized localized strategies outperform big agencies for businesses in Maharashtra.</p>
+            <span class="read-more">Read Full Article →</span>
+        </a>
 
-            <article class="blog-card anim-card">
-                <div class="blog-image-wrapper">
-                    <img src="Advantages Of Facebook Lead Generation Ads.webp" alt="Advantages Of Facebook Lead Generation Ads" class="blog-image">
-                </div>
-                <div class="blog-content">
-                    <div class="blog-meta">July 30, 2024</div>
-                    <h2>Advantages Of Facebook Lead Ads</h2>
-                    <p>Learn how Facebook Lead Ads streamline your funnel and capture high-intent audiences without leaving the app...</p>
-                    <a href="advantages-of-facebook-lead-generation-ads.html" class="read-more">Read Article</a>
-                </div>
-            </article>
+        <!-- Blog 3: Manufacturing B2B -->
+        <a href="manufacturing-marketing.html" class="blog-card">
+            <div class="date">March 27, 2026 • B2B Strategy</div>
+            <h2>Digital Marketing for Manufacturing Companies</h2>
+            <p>How the industrial sector is shifting from trade shows to high-ROI digital funnels and LinkedIn advertising.</p>
+            <span class="read-more">Read Full Article →</span>
+        </a>
 
-        </div>
-    </section>
+    </main>
 
+    <!-- FOOTER -->
     <footer class="footer">
         <div class="footer-content">
             <div class="footer-logo">
-                <a href="index.html">
-                    <img src="logo.png" alt="Gauravv Digital Logo" class="footer-logo-img">
-                </a>
+                <a href="index.html"><img src="logo.png" alt="Gauravv Digital Logo" class="footer-logo-img"></a>
             </div>
-            
             <div class="footer-middle">
                 <div class="footer-tagline">Innovate. Dominate. Scale.</div>
                 <div class="footer-social">
-                    <a href="https://www.linkedin.com/company/gaurav-digital/" target="_blank" title="LinkedIn">
-                        <img src="li.png.png" alt="LinkedIn">
-                    </a>
-                    <a href="https://www.facebook.com/gauravdigitalseo/" target="_blank" title="Facebook">
-                        <img src="fb.png.png" alt="Facebook">
-                    </a>
-                    <a href="https://www.instagram.com/gaurav_digital_ads/" target="_blank" title="Instagram">
-                        <img src="insta.png" alt="Instagram">
-                    </a>
-                    <a href="https://x.com/GauravDigitalad" target="_blank" title="X (Twitter)">
-                        <img src="x.png.png" alt="X">
-                    </a>
-                    <a href="https://www.youtube.com/@gauravdigitalmarketer" target="_blank" title="YouTube">
-                        <img src="yt.png.png" alt="YouTube">
-                    </a>
+                    <a href="https://www.linkedin.com/company/gaurav-digital/" target="_blank"><img src="li.png.png" alt="LinkedIn"></a>
+                    <a href="https://www.facebook.com/gauravdigitalseo/" target="_blank"><img src="fb.png.png" alt="Facebook"></a>
+                    <a href="https://www.instagram.com/gaurav_digital_ads/" target="_blank"><img src="insta.png" alt="Instagram"></a>
+                    <a href="https://x.com/GauravDigitalad" target="_blank"><img src="x.png.png" alt="X"></a>
+                    <a href="https://www.youtube.com/@gauravdigitalmarketer" target="_blank"><img src="yt.png.png" alt="YouTube"></a>
                 </div>
             </div>
-
             <div class="footer-contact">
                 <p><a href="mailto:contact@gauravdeshmukh.co.in">contact@gauravdeshmukh.co.in</a></p>
                 <p><a href="tel:+918850480687">+91 88504 80687</a></p>
             </div>
         </div>
-        
         <div class="footer-bottom">
             <p>&copy; 2026 Gauravv Digital. All rights reserved.</p>
         </div>
     </footer>
 
-    <a href="https://wa.me/918850480687" class="whatsapp-float" target="_blank" title="Chat with us on WhatsApp"><img src="wa.png" alt="WhatsApp Chat"></a>
+    <!-- WHATSAPP FLOAT -->
+    <a href="https://wa.me/918850480687" class="whatsapp-float" target="_blank"><img src="wa.png" alt="WhatsApp Chat"></a>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     <script>
-        // Hamburger Menu Logic
         const hamburger = document.querySelector(".hamburger");
         const navMenu = document.querySelector(".nav-links");
-
         hamburger.addEventListener("click", () => {
             hamburger.classList.toggle("active");
             navMenu.classList.toggle("active");
         });
-
-        document.querySelectorAll(".nav-links a").forEach(n => n.addEventListener("click", () => {
-            hamburger.classList.remove("active");
-            navMenu.classList.remove("active");
-        }));
-
-        gsap.registerPlugin(ScrollTrigger);
-
-        // Header Fade Up
-        gsap.fromTo(".anim-fade-up", 
-            { y: 40, opacity: 0 },
-            { y: 0, opacity: 1, duration: 1, stagger: 0.2, ease: "power3.out", delay: 0.1 }
-        );
-
-        // Tech 3D Flip Reveal for Blog Cards
-        gsap.fromTo(".anim-card",
-            {
-                y: 80,
-                opacity: 0,
-                rotationY: 15,
-                scale: 0.95,
-                transformPerspective: 1000
-            },
-            {
-                scrollTrigger: {
-                    trigger: ".blog-grid",
-                    start: "top 80%",
-                },
-                y: 0,
-                opacity: 1,
-                rotationY: 0,
-                scale: 1,
-                duration: 1,
-                stagger: 0.15,
-                ease: "back.out(1.2)"
-            }
-        );
     </script>
 </body>
 </html>
