@@ -3,70 +3,83 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gaurav Digital | Marketing Expert</title>
-    <!-- Google Fonts for High-Tech feel -->
+    <title>Gaurav Digital | High-Tech Marketing</title>
+    <!-- High-tech font integration -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;800&display=swap" rel="stylesheet">
     <style>
         :root {
-            /* Gradient extracted from the 'DIGITAL' text in logo.png */
+            /* Gradient logic from the 'DIGITAL' text in logo.png */
             --logo-gradient: linear-gradient(90deg, #00f2fe 0%, #4facfe 100%);
-            --dark-bg: #0a0a0a;
+            --dark-bg: #050505;
+            /* Watery, translucent header base */
+            --watery-header: rgba(10, 15, 25, 0.35); 
             --card-bg: rgba(255, 255, 255, 0.03);
-            --border-glow: rgba(0, 242, 254, 0.3);
+            --text-main: #ffffff;
+            --text-dim: #b0b0b0;
         }
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
         body {
             background-color: var(--dark-bg);
-            color: #ffffff;
+            color: var(--text-main);
             font-family: 'Inter', sans-serif;
-            line-height: 1.6;
             overflow-x: hidden;
         }
 
-        /* --- NAVIGATION --- */
+        /* --- 3-SECTION WATERY HEADER --- */
         .navbar {
-            display: flex;
-            justify-content: space-between;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr; /* Left, Middle, Right sections */
             align-items: center;
-            padding: 15px 5%;
+            padding: 15px 4%;
             position: fixed;
             width: 100%;
             top: 0;
             z-index: 1000;
-            background: rgba(10, 10, 10, 0.8);
-            backdrop-filter: blur(15px);
-            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            background: var(--watery-header);
+            
+            /* High-tech fluid blur (Watery effect) */
+            backdrop-filter: blur(25px) saturate(200%);
+            -webkit-backdrop-filter: blur(25px) saturate(200%);
+            
+            border-bottom: 1px solid rgba(0, 242, 254, 0.15);
+            transition: all 0.4s ease;
         }
 
+        /* LEFT: BIG LOGO */
+        .nav-left { display: flex; justify-content: flex-start; }
         .nav-logo {
-            height: 50px;
+            height: 90px; /* Big logo as requested */
             width: auto;
+            transition: transform 0.3s ease;
+        }
+        .nav-logo:hover { transform: scale(1.03); }
+
+        /* MIDDLE: SOCIAL MEDIA LINKS */
+        .nav-middle { display: flex; justify-content: center; gap: 20px; }
+        .nav-middle img {
+            width: 24px;
+            filter: invert(1);
+            opacity: 0.7;
+            transition: 0.3s;
+        }
+        .nav-middle a:hover img {
+            opacity: 1;
+            transform: translateY(-3px);
+            filter: drop-shadow(0 0 8px #00f2fe);
         }
 
-        .nav-links {
-            display: flex;
-            list-style: none;
-            gap: 30px;
-        }
-
-        .nav-links a {
+        /* RIGHT: CONTACT DETAILS */
+        .nav-right { display: flex; flex-direction: column; align-items: flex-end; }
+        .nav-right a {
             text-decoration: none;
-            color: #ccc;
-            font-size: 0.9rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            transition: color 0.3s ease;
+            font-size: 0.85rem;
+            font-weight: 700;
+            margin: 2px 0;
+            transition: 0.3s;
         }
-
-        .nav-links a:hover {
-            color: #00f2fe;
-        }
+        .nav-right a:hover { opacity: 0.8; }
 
         /* --- HERO SECTION --- */
         .hero {
@@ -76,11 +89,11 @@
             justify-content: center;
             align-items: center;
             text-align: center;
-            padding: 0 10%;
-            background: radial-gradient(circle at center, #1a1a1a 0%, #0a0a0a 100%);
+            background: radial-gradient(circle at 50% 50%, #101a25 0%, #050505 100%);
+            padding-top: 140px;
         }
 
-        h1, h2, .gradient-text {
+        h1, .gradient-text {
             background: var(--logo-gradient);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
@@ -88,199 +101,87 @@
             text-transform: uppercase;
         }
 
-        .hero h1 { font-size: clamp(2.5rem, 8vw, 5rem); margin-bottom: 10px; }
-        .hero p { font-size: 1.2rem; color: #888; max-width: 600px; }
+        .hero h1 { font-size: clamp(3rem, 10vw, 6.5rem); margin-bottom: 10px; }
+        .hero p { color: var(--text-dim); max-width: 600px; }
 
-        /* --- SECTION GENERIC --- */
-        .section { padding: 100px 10%; }
-        h2 { font-size: 2.5rem; margin-bottom: 40px; text-align: center; }
-
-        /* --- GLASS CARDS --- */
-        .glass-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 30px;
+        /* --- FOOTER --- */
+        .site-footer {
+            padding: 80px 10% 40px;
+            background: #020202;
+            text-align: center;
+            border-top: 1px solid rgba(0, 242, 254, 0.1);
         }
-
-        .glass-card {
-            background: var(--card-bg);
-            border: 1px solid rgba(255, 255, 255, 0.05);
-            padding: 40px;
-            border-radius: 20px;
-            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            backdrop-filter: blur(5px);
-        }
-
-        .glass-card:hover {
-            transform: translateY(-10px);
-            border-color: var(--border-glow);
-            box-shadow: 0 10px 30px rgba(0, 242, 254, 0.1);
-        }
-
-        /* --- BUTTONS --- */
-        .btn {
-            display: inline-block;
-            padding: 15px 35px;
-            margin-top: 25px;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: bold;
-            background: var(--logo-gradient);
-            color: #000;
-            transition: transform 0.3s ease;
-        }
-
-        .btn:hover { transform: scale(1.05); }
-
-        /* --- CONTACT FORM --- */
-        .contact-container { max-width: 600px; margin: 0 auto; }
-        form { display: flex; flex-direction: column; gap: 15px; }
-        input, textarea {
-            background: #151515;
-            border: 1px solid #333;
-            padding: 15px;
-            border-radius: 10px;
-            color: #fff;
-            font-family: inherit;
-        }
-        input:focus, textarea:focus { border-color: #00f2fe; outline: none; }
-
-        /* --- WHATSAPP & FOOTER --- */
+        .f-logo { height: 110px; margin-bottom: 30px; }
+        
+        .footer-contact .contact-item { font-size: 1.2rem; margin: 15px 0; }
+        .footer-contact a { text-decoration: none; font-weight: 700; }
+        
+        /* --- WHATSAPP FLOAT --- */
         .whatsapp-float {
             position: fixed;
-            bottom: 30px;
-            right: 30px;
-            width: 60px;
+            bottom: 40px;
+            right: 40px;
+            width: 70px;
             z-index: 1000;
-            transition: transform 0.3s ease;
+            transition: 0.3s;
         }
-        .whatsapp-float:hover { transform: scale(1.15) rotate(5deg); }
-        .whatsapp-float img { width: 100%; }
-
-        .site-footer {
-            padding: 60px 10%;
-            background: #050505;
-            text-align: center;
-            border-top: 1px solid #222;
-        }
-        .f-logo { height: 60px; margin-bottom: 20px; }
-        .social-links { display: flex; justify-content: center; gap: 20px; margin-top: 20px; }
-        .social-links img { width: 28px; filter: invert(1) opacity(0.6); transition: 0.3s; }
-        .social-links a:hover img { filter: invert(0) opacity(1); transform: translateY(-3px); }
+        .whatsapp-float:hover { transform: scale(1.1); }
 
         /* --- MOBILE RESPONSIVE --- */
-        @media (max-width: 768px) {
-            .nav-links { display: none; }
-            .section { padding: 60px 5%; }
-            .hero h1 { font-size: 3rem; }
+        @media (max-width: 900px) {
+            .navbar { grid-template-columns: 1fr 1fr; padding: 10px 5%; }
+            .nav-middle { display: none; } /* Hide middle links on mobile for space */
+            .nav-logo { height: 60px; }
+            .nav-right a { font-size: 0.7rem; }
         }
     </style>
 </head>
 <body>
 
-    <!-- WHATSAPP -->
-    <a href="https://wa.me/YOUR_NUMBER" class="whatsapp-float">
-        <img src="wa.png" alt="Contact Us">
-    </a>
-
-    <!-- HEADER -->
+    <!-- WATERY 3-SECTION HEADER -->
     <nav class="navbar">
-        <img src="logo.png" alt="Gaurav Digital" class="nav-logo">
-        <ul class="nav-links">
-            <li><a href="#about">About</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#blog">Blog</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
+        <div class="nav-left">
+            <img src="logo.png" alt="Gaurav Digital Logo" class="nav-logo">
+        </div>
+        
+        <div class="nav-middle">
+            <a href="#"><img src="x.png" alt="X"></a>
+            <a href="#"><img src="insta.png" alt="Instagram"></a>
+            <a href="#"><img src="yt.png" alt="YouTube"></a>
+            <a href="#"><img src="fb.png" alt="Facebook"></a>
+        </div>
+        
+        <div class="nav-right">
+            <a href="tel:+917506113382" class="gradient-text">+91 7506113382</a>
+            <a href="mailto:gaurav2deshmukh09@gmail.com" class="gradient-text">gaurav2deshmukh09@gmail.com</a>
+        </div>
     </nav>
 
-    <!-- HERO -->
+    <!-- HERO SECTION -->
     <section class="hero">
         <h1>GAURAV DIGITAL</h1>
-        <p>Expert Digital Marketing solutions in Mumbai with a focus on results, transparency, and cinematic brand storytelling.</p>
-        <a href="#services" class="btn">Explore Services</a>
-    </section>
-
-    <!-- ABOUT -->
-    <section id="about" class="section">
-        <h2>About Us</h2>
-        <div class="glass-card" style="max-width: 800px; margin: 0 auto; text-align: center;">
-            <p>We specialize in building powerful online presences. Our approach is tailored to each client, ensuring that your brand doesn't just exist online, but leads the conversation.</p>
-        </div>
-    </section>
-
-    <!-- SERVICES -->
-    <section id="services" class="section">
-        <h2>Our Services</h2>
-        <div class="glass-grid">
-            <div class="glass-card">
-                <h3 class="gradient-text">SEO</h3>
-                <p>Strategic optimization to ensure your brand ranks where it matters most.</p>
-            </div>
-            <div class="glass-card">
-                <h3 class="gradient-text">SEM</h3>
-                <p>Paid search campaigns designed for maximum ROI and immediate impact.</p>
-            </div>
-            <div class="glass-card">
-                <h3 class="gradient-text">Branding</h3>
-                <p>Creating high-tech, cinematic brand identities that resonate deeply.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- BLOG -->
-    <section id="blog" class="section">
-        <h2>Latest Blog</h2>
-        <div class="glass-grid">
-            <div class="glass-card">
-                <h3>Digital Trends 2026</h3>
-                <p>How AI and cinematic lighting are reshaping the fashion and tech industries.</p>
-            </div>
-            <div class="glass-card">
-                <h3>Marketing Strategy</h3>
-                <p>Why transparency is the most important metric in modern digital growth.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- CONTACT -->
-    <section id="contact" class="section">
-        <h2>Get In Touch</h2>
-        <div class="contact-container glass-card">
-            <form>
-                <input type="text" placeholder="Your Name" required>
-                <input type="email" placeholder="Your Email" required>
-                <textarea rows="5" placeholder="Project Details"></textarea>
-                <button type="submit" class="btn" style="border:none; cursor:pointer; width:100%;">Send Message</button>
-            </form>
-        </div>
+        <p>Expert Digital Marketing solutions in Mumbai with a focus on transparency and tailored growth.</p>
     </section>
 
     <!-- FOOTER -->
-<footer class="site-footer">
-    <!-- Logo in Footer -->
-    <img src="logo.png" alt="Gaurav Digital" class="f-logo">
-    
-    <div class="footer-contact">
-        <p class="contact-item">
-            <strong>WhatsApp / Call:</strong> 
-            <a href="tel:+917506113382" class="gradient-text">+91 7506113382</a>
-        </p>
-        <p class="contact-item">
-            <strong>Email:</strong> 
-            <a href="mailto:gaurav2deshmukh09@gmail.com" class="gradient-text">gaurav2deshmukh09@gmail.com</a>
-        </p>
-    </div>
+    <footer class="site-footer">
+        <img src="logo.png" alt="Gaurav Digital" class="f-logo">
+        
+        <div class="footer-contact">
+            <p class="contact-item">
+                <a href="tel:+917506113382" class="gradient-text">+91 7506113382</a>
+            </p>
+            <p class="contact-item">
+                <a href="mailto:gaurav2deshmukh09@gmail.com" class="gradient-text">gaurav2deshmukh09@gmail.com</a>
+            </p>
+        </div>
+        <p style="color: #444; font-size: 0.8rem; margin-top: 40px;">© 2026 Gaurav Digital. Results-Driven Marketing.</p>
+    </footer>
 
-    <div class="social-links">
-        <a href="#"><img src="x.png" alt="X"></a>
-        <a href="#"><img src="insta.png" alt="Insta"></a>
-        <a href="#"><img src="yt.png" alt="YouTube"></a>
-        <a href="#"><img src="fb.png" alt="FB"></a>
-    </div>
-
-    <p class="copyright">© 2026 Gaurav Digital. High-Tech Marketing Solutions.</p>
-</footer>
+    <!-- FLOATING WHATSAPP -->
+    <a href="https://wa.me/917506113382" class="whatsapp-float">
+        <img src="wa.png" alt="Contact Gaurav" style="width: 100%;">
+    </a>
 
 </body>
 </html>
