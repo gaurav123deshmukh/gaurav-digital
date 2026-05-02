@@ -21,7 +21,7 @@ html {
 body { 
     background-color: var(--dark-bg); 
     color: var(--text-main); 
-    font-family: 'Montserrat', 'Inter', sans-serif; 
+    font-family: 'Montserrat', sans-serif; 
     overflow-x: hidden; 
 }
 
@@ -41,7 +41,8 @@ body {
     border-bottom: 1px solid rgba(0, 242, 254, 0.2);
 }
 
-.nav-logo, .logo-img { 
+/* BIG LOGO */
+.nav-logo { 
     height: 95px; 
     width: auto; 
     transition: transform 0.3s ease;
@@ -71,125 +72,185 @@ body {
     color: #00f2fe; 
 }
 
-/* --- 3. MASSIVE HERO SECTION --- */
-.hero {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+/* --- 3. BLOG HERO SECTION --- */
+.blog-hero {
+    padding: 220px 10% 80px; /* High top padding for big header */
     text-align: center;
-    background: radial-gradient(circle at 50% 30%, #0d1a21 0%, #050505 100%);
-    padding: 220px 10% 120px; 
-}
-
-.hero span {
-    font-size: 1rem; 
-    letter-spacing: 12px; 
-    text-transform: uppercase;
-    color: #4facfe;
-    font-weight: 800;
-    display: block;
-    margin-bottom: 10px;
-}
-
-.hero h1 {
-    font-size: clamp(3.5rem, 10vw, 7.5rem); 
-    line-height: 1.0; 
-    margin-top: 20px;    
-    margin-bottom: 45px; 
-    font-weight: 900;
-    text-transform: uppercase;
-    letter-spacing: -3px; 
-}
-
-.precision-line {
-    display: block;
-    margin-top: 25px; 
+    background: radial-gradient(circle at top center, rgba(0, 242, 254, 0.1), transparent 70%);
 }
 
 .gradient-text {
     background: var(--logo-gradient);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    display: inline-block;
 }
 
-.hero p {
-    color: var(--text-dim);
-    max-width: 850px; 
-    font-size: 1.25rem; 
-    line-height: 1.8;
-    font-weight: 400;
-    margin-bottom: 60px;
-}
-
-/* --- 4. SERVICE GRID --- */
-.services-grid {
+/* --- 4. BLOG GRID & CARDS --- */
+.blog-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     gap: 40px;
-    padding-bottom: 60px;
+    padding: 0 10% 100px;
+    max-width: 1400px;
+    margin: 0 auto;
 }
 
-.service-card {
-    background: rgba(255, 255, 255, 0.02);
-    border: 1px solid rgba(0, 242, 254, 0.05);
-    padding: 30px;
-    border-radius: 20px;
-    text-align: left;
-    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+.blog-card {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    padding: 40px;
+    border-radius: 5px;
+    transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
     overflow: hidden;
+    text-decoration: none; /* Ensure the whole card is a clean link */
 }
 
-.service-card:hover {
-    background: rgba(255, 255, 255, 0.05);
-    border-color: #00f2fe;
-    transform: translateY(-10px);
+.blog-card:hover {
+    transform: translateY(-12px);
+    border-color: #4facfe;
+    background: rgba(79, 172, 254, 0.05);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
 }
 
-.card-img {
+/* TOP LINE ANIMATION ON HOVER */
+.blog-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
-    height: 200px;
-    background: #111; 
-    border-radius: 12px;
-    margin-bottom: 25px;
-    overflow: hidden;
-}
-
-.card-img img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    opacity: 0.7;
-    transition: 0.5s ease;
-}
-
-.service-card:hover .card-img img {
-    opacity: 1;
-    transform: scale(1.1);
-}
-
-/* --- 5. BUTTONS --- */
-.cta-btn, .btn {
-    padding: 22px 60px; 
-    border-radius: 50px;
+    height: 3px;
     background: var(--logo-gradient);
-    color: #000;
-    text-decoration: none;
-    font-weight: 900;
+    transform: scaleX(0);
+    transition: 0.4s ease;
+    transform-origin: left;
+}
+
+.blog-card:hover::before {
+    transform: scaleX(1);
+}
+
+.blog-date {
+    font-size: 0.75rem;
     text-transform: uppercase;
     letter-spacing: 2px;
-    transition: 0.4s;
-    display: inline-block;
-    border: none;
-    box-shadow: 0 15px 30px rgba(0, 242, 254, 0.25);
+    color: #4facfe;
+    margin-bottom: 15px;
+    display: block;
+    font-weight: 700;
 }
 
-.cta-btn:hover, .btn:hover {
-    transform: translateY(-5px) scale(1.02);
-    box-shadow: 0 20px 40px rgba(0, 242, 254, 0.45);
+.blog-card h3 {
+    font-size: 1.6rem;
+    color: #fff;
+    margin-bottom: 20px;
+    line-height: 1.3;
+    font-weight: 900;
 }
 
+.blog-card p {
+    color: var(--text-dim);
+    font-size: 1rem;
+    line-height: 1.7;
+    margin-bottom: 30px;
+}
+
+.read-link {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 800;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    transition: 0.3s;
+}
+
+.blog-card:hover .read-link {
+    color: #00f2fe;
+    gap: 18px; /* Arrow pushes out more on hover */
+}
+
+/* --- 5. FOOTER & UNIFORM SOCIAL ICONS --- */
+.site-footer {
+    background: #020202;
+    padding: 100px 8% 50px;
+    border-top: 1px solid rgba(0, 242, 254, 0.1);
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1.5fr; 
+    gap: 50px;
+    align-items: start;
+}
+
+.f-logo { 
+    height: 110px; /* Large footer logo */
+    width: auto; 
+    margin-bottom: 20px;
+}
+
+.social-links { 
+    display: flex; 
+    justify-content: center; 
+    gap: 15px; 
+    margin-top: 20px; 
+}
+
+.social-links a { 
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+    width: 50px; /* Uniform circle */
+    height: 50px; 
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.05);
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.social-links a img { 
+    width: 22px; 
+    height: 22px; 
+    object-fit: contain;
+    filter: grayscale(1) invert(1); /* Black/White icons */
+    opacity: 0.7; 
+    transition: 0.4s ease; 
+}
+
+.social-links a:hover { 
+    background: var(--logo-gradient); /* Header-colored gradient hover */
+    transform: translateY(-8px);
+    border-color: transparent;
+    box-shadow: 0 15px 30px rgba(0, 242, 254, 0.35);
+}
+
+.social-links a:hover img {
+    filter: grayscale(0) invert(0); /* Icons turn black for visibility on gradient */
+    opacity: 1;
+}
+
+.footer-contact-col { text-align: right; }
+.footer-contact-col a { text-decoration: none; transition: 0.3s; }
+
+.copyright {
+    text-align: center;
+    margin-top: 80px;
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+/* --- 6. UTILITIES --- */
 .whatsapp-float {
     position: fixed;
     bottom: 40px;
@@ -200,103 +261,13 @@ body {
     transition: 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
-.whatsapp-float:hover {
-    transform: scale(1.15) rotate(10deg);
-}
-
-/* --- 6. FOOTER & UNIFORM SOCIAL ICONS --- */
-.site-footer {
-    background: #020202;
-    padding: 100px 8% 50px;
-    border-top: 1px solid rgba(0, 242, 254, 0.1);
-}
-
-.footer-grid {
-    display: grid;
-    grid-template-columns: 1.5fr 1fr 1.5fr; 
-    gap: 40px;
-    align-items: start;
-}
-
-.f-logo { 
-    height: 110px; 
-    width: auto; 
-    margin-bottom: 15px;
-}
-
-.footer-social-col {
-    text-align: center;
-}
-
-/* BLACK & WHITE SOCIAL ICONS WITH BLUE GRADIENT HOVER */
-.social-links { 
-    display: flex; 
-    justify-content: center; 
-    gap: 15px; 
-    margin-top: 15px; 
-}
-
-.social-links a { 
-    display: flex; 
-    align-items: center;
-    justify-content: center;
-    width: 50px; /* Uniform circle size */
-    height: 50px; 
-    border-radius: 50%;
-    background: rgba(255, 255, 255, 0.05); /* Subtle dark container */
-    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
-    text-decoration: none;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.social-links a img { 
-    width: 22px; /* Uniform icon size */
-    height: 22px; 
-    object-fit: contain;
-    filter: grayscale(1) invert(1); /* Forces Black/White look */
-    opacity: 0.7; 
-    transition: all 0.4s ease; 
-}
-
-.social-links a:hover { 
-    background: var(--logo-gradient); /* Background turns Blue Gradient */
-    transform: translateY(-8px);
-    border-color: transparent;
-    box-shadow: 0 15px 30px rgba(0, 242, 254, 0.4);
-}
-
-.social-links a:hover img {
-    filter: grayscale(0) invert(0); /* Icon turns black for contrast against blue */
-    opacity: 1;
-    transform: scale(1.1);
-}
-
-.footer-contact-col { 
-    text-align: right; 
-}
-
-.footer-contact-col a { 
-    text-decoration: none; 
-    font-weight: 700; 
-    color: #4facfe;
-    transition: 0.3s; 
-}
-
-.copyright {
-    text-align: center;
-    margin-top: 60px;
-    font-size: 0.8rem;
-    color: #ffffff;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    opacity: 0.5;
-}
+.whatsapp-float:hover { transform: scale(1.15) rotate(10deg); }
+.whatsapp-float img { width: 100%; height: 100%; }
 
 /* --- 7. RESPONSIVE --- */
 @media (max-width: 992px) {
     .navbar { padding: 15px 5%; }
-    .nav-logo { height: 70px; }
-    .hero h1 { font-size: 3.5rem; }
+    .nav-logo { height: 75px; }
     .footer-grid { grid-template-columns: 1fr; text-align: center; }
     .footer-contact-col { text-align: center; }
     .nav-links { display: none; }
