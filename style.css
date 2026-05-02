@@ -1,6 +1,6 @@
 /* --- ROOT VARIABLES --- */
 :root {
-    /* Gradient inspired by the 'DIGITAL' text in logo.png */
+    /* Gradient logic from Gaurav Digital logo text */
     --logo-gradient: linear-gradient(90deg, #00f2fe 0%, #4facfe 100%);
     --dark-bg: #0a0a0a;
     --card-bg: rgba(255, 255, 255, 0.03);
@@ -28,29 +28,37 @@ body {
     overflow-x: hidden;
 }
 
-/* --- NAVIGATION --- */
+/* --- TRANSPARENT HEADER --- */
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 6%;
+    padding: 20px 6%;
     position: fixed;
     width: 100%;
     top: 0;
     z-index: 1000;
-    background: rgba(10, 10, 10, 0.85);
-    backdrop-filter: blur(15px);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    
+    /* High-tech transparent frosted glass effect */
+    background: rgba(10, 10, 10, 0.7); 
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    transition: all 0.3s ease;
 }
 
+/* BIG LOGO STYLING */
 .nav-logo {
-    height: 45px;
+    height: 65px; /* Enlarged as requested */
     width: auto;
-    transition: transform 0.3s ease;
+    display: block;
+    transition: transform 0.3s ease, filter 0.3s ease;
 }
 
 .nav-logo:hover {
     transform: scale(1.05);
+    filter: drop-shadow(0 0 10px rgba(0, 242, 254, 0.5));
 }
 
 .nav-links {
@@ -74,12 +82,13 @@ body {
     text-shadow: 0 0 10px rgba(0, 242, 254, 0.5);
 }
 
-/* --- TYPOGRAPHY & GRADIENTS --- */
+/* --- TYPOGRAPHY & GRADIENT HEADINGS --- */
 h1, h2, h3, .gradient-text {
     background: var(--logo-gradient);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-weight: 800;
+    text-transform: uppercase;
 }
 
 h2 {
@@ -89,11 +98,7 @@ h2 {
     letter-spacing: -1px;
 }
 
-/* --- SECTIONS --- */
-.section {
-    padding: 120px 10%;
-}
-
+/* --- HERO SECTION --- */
 .hero {
     height: 100vh;
     display: flex;
@@ -101,6 +106,7 @@ h2 {
     justify-content: center;
     align-items: center;
     text-align: center;
+    padding-top: 100px; /* Offset for the bigger header */
     background: radial-gradient(circle at center, #111 0%, #0a0a0a 100%);
 }
 
@@ -112,11 +118,15 @@ h2 {
 
 .hero p {
     color: var(--text-dim);
-    max-width: 600px;
+    max-width: 650px;
     font-size: 1.1rem;
 }
 
-/* --- CARDS & GRID --- */
+/* --- CARDS & HIGH-TECH GRID --- */
+.section {
+    padding: 120px 10%;
+}
+
 .glass-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -139,7 +149,47 @@ h2 {
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
 }
 
-/* --- WHATSAPP FLOATER --- */
+/* --- CONTACT FORM --- */
+.contact-container {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+input, textarea {
+    width: 100%;
+    background: #151515;
+    border: 1px solid #333;
+    padding: 15px;
+    border-radius: 12px;
+    color: #fff;
+    margin-bottom: 15px;
+    font-family: inherit;
+}
+
+input:focus, textarea:focus {
+    border-color: #00f2fe;
+    outline: none;
+    box-shadow: 0 0 10px rgba(0, 242, 254, 0.2);
+}
+
+.btn {
+    display: inline-block;
+    padding: 18px 40px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 700;
+    background: var(--logo-gradient);
+    color: #000;
+    transition: transform 0.3s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+}
+
+/* --- FLOATING WHATSAPP --- */
 .whatsapp-float {
     position: fixed;
     bottom: 40px;
@@ -154,10 +204,6 @@ h2 {
     transform: scale(1.1) rotate(8deg);
 }
 
-.whatsapp-float img {
-    width: 100%;
-}
-
 /* --- FOOTER --- */
 .site-footer {
     padding: 80px 10% 40px;
@@ -167,7 +213,7 @@ h2 {
 }
 
 .f-logo {
-    height: 55px;
+    height: 80px; /* Bigger logo in footer */
     margin-bottom: 25px;
 }
 
@@ -179,7 +225,7 @@ h2 {
 }
 
 .social-links img {
-    width: 24px;
+    width: 28px;
     filter: grayscale(1) invert(1);
     opacity: 0.5;
     transition: 0.3s ease;
@@ -194,9 +240,13 @@ h2 {
 /* --- MOBILE RESPONSIVE --- */
 @media (max-width: 768px) {
     .nav-links {
-        display: none; /* Can be replaced with a hamburger menu */
+        display: none;
     }
     
+    .nav-logo {
+        height: 50px;
+    }
+
     .section {
         padding: 80px 6%;
     }
