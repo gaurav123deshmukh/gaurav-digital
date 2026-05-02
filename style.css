@@ -869,7 +869,8 @@ h1, h2, h3 {
 }
 
 .footer-social a:hover {
-    background-color: #d4af37; /* Gold hover color */
-    color: #03070d; 
+    background: linear-gradient(135deg, #0072ff, #00c6ff); /* Smooth Blue Gradient */
+    color: #ffffff; /* Keeps icon white to pop against blue */
     transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 198, 255, 0.4); /* Blue glowing shadow */
 }
