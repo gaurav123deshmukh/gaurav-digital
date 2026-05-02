@@ -120,7 +120,69 @@ body {
     margin-bottom: 50px;
 }
 
-/* --- 4. BUTTONS & INTERACTIVES --- */
+/* --- 4. CLASSY SERVICE GRID (Inspired by image_b2969a.jpg) --- */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 40px;
+    padding-bottom: 60px;
+}
+
+.service-card {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(0, 242, 254, 0.05);
+    padding: 30px;
+    border-radius: 20px;
+    text-align: left;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    overflow: hidden;
+}
+
+.service-card:hover {
+    background: rgba(255, 255, 255, 0.05);
+    border-color: #00f2fe;
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+}
+
+.card-img {
+    width: 100%;
+    height: 200px;
+    background: #111; 
+    border-radius: 12px;
+    margin-bottom: 25px;
+    overflow: hidden;
+}
+
+.card-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.7;
+    transition: 0.5s ease;
+}
+
+.service-card:hover .card-img img {
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+.service-card h3 {
+    font-size: 1.15rem;
+    font-weight: 800;
+    margin-bottom: 12px;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.service-card p {
+    font-size: 0.88rem;
+    color: var(--text-dim);
+    line-height: 1.7;
+}
+
+/* --- 5. BUTTONS & INTERACTIVES --- */
 .cta-btn {
     padding: 18px 45px;
     border-radius: 50px;
@@ -160,7 +222,7 @@ body {
     transform: scale(1.15) rotate(10deg); 
 }
 
-/* --- 5. FOOTER & SOCIALS --- */
+/* --- 6. FOOTER & SOCIALS --- */
 .site-footer {
     background: #020202;
     padding: 80px 8% 40px;
@@ -225,12 +287,12 @@ body {
     text-align: center;
     margin-top: 50px;
     font-size: 0.7rem;
-    color: #ffffff; /* White Copyright */
+    color: #ffffff; /* White Color */
     letter-spacing: 2px;
     text-transform: uppercase;
 }
 
-/* --- 6. ANIMATIONS & RESPONSIVE --- */
+/* --- 7. ANIMATIONS & RESPONSIVE --- */
 @keyframes fadeInDown {
     from { opacity: 0; transform: translateY(-20px); }
     to { opacity: 1; transform: translateY(0); }
