@@ -3,53 +3,75 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gaurav Digital | Precision Marketing</title>
-    <!-- Montserrat Font -->
+    <title>Gaurav Digital | Precision Marketing & AI Creative</title>
+    
+    <!-- Montserrat Font for a Modern, Premium Look -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700;800;900&display=swap" rel="stylesheet">
+    
     <style>
         :root {
+            /* Brand Colors & Gradients */
             --logo-gradient: linear-gradient(90deg, #00f2fe 0%, #4facfe 100%);
             --dark-bg: #050505;
             --watery-header: rgba(10, 18, 25, 0.35); 
+            --card-bg: rgba(255, 255, 255, 0.03);
             --text-main: #ffffff;
             --text-dim: #b0b0b0;
+            --icon-size: 28px;
         }
 
+        /* --- GLOBAL RESET --- */
         * { margin: 0; padding: 0; box-sizing: border-box; }
         html { scroll-behavior: smooth; }
-        body { background-color: var(--dark-bg); color: var(--text-main); font-family: 'Montserrat', sans-serif; overflow-x: hidden; }
+        
+        body { 
+            background-color: var(--dark-bg); 
+            color: var(--text-main); 
+            font-family: 'Montserrat', sans-serif; 
+            overflow-x: hidden; 
+        }
 
         /* --- WATERY TRANSPARENT HEADER --- */
         .navbar {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 20px 6%;
+            padding: 15px 6%;
             position: fixed;
             width: 100%;
             top: 0;
             z-index: 1000;
             background: var(--watery-header);
-            backdrop-filter: blur(25px) saturate(160%);
-            -webkit-backdrop-filter: blur(25px) saturate(160%);
+            backdrop-filter: blur(20px) saturate(160%);
+            -webkit-backdrop-filter: blur(20px) saturate(160%);
             border-bottom: 1px solid rgba(0, 242, 254, 0.15);
         }
 
-        .nav-logo { height: 85px; width: auto; }
+        .nav-logo { 
+            height: 80px; 
+            width: auto; 
+            transition: 0.3s ease;
+        }
 
-        .nav-links { display: flex; list-style: none; gap: 35px; }
+        .nav-links { 
+            display: flex; 
+            list-style: none; 
+            gap: 35px; 
+        }
+
         .nav-links a {
             text-decoration: none;
             color: var(--text-dim);
-            font-size: 0.8rem;
+            font-size: 0.75rem;
             font-weight: 700;
             text-transform: uppercase;
             letter-spacing: 2px;
             transition: 0.3s;
         }
+
         .nav-links a:hover { color: #00f2fe; }
 
-        /* --- ENGAGING HERO SECTION --- */
+        /* --- HIGH-IMPACT HERO SECTION --- */
         .hero {
             height: 100vh;
             display: flex;
@@ -61,15 +83,15 @@
             padding: 0 10%;
         }
 
-        /* High-Impact Typography */
         .hero span {
-            font-size: 0.9rem;
+            font-size: 0.85rem;
             letter-spacing: 8px;
             text-transform: uppercase;
             color: #4facfe;
             font-weight: 700;
             margin-bottom: 20px;
             display: block;
+            animation: fadeInDown 1s ease;
         }
 
         .hero h1 {
@@ -90,9 +112,9 @@
         .hero p {
             color: var(--text-dim);
             max-width: 700px;
-            font-size: 1.2rem;
+            font-size: 1.1rem;
             line-height: 1.8;
-            font-weight: 300;
+            font-weight: 400;
             margin-bottom: 40px;
         }
 
@@ -114,6 +136,28 @@
             box-shadow: 0 15px 30px rgba(0, 242, 254, 0.4);
         }
 
+        /* --- FLOATING WHATSAPP BUTTON --- */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 40px;
+            right: 40px;
+            width: 65px;
+            height: 65px;
+            z-index: 1000;
+            transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        .whatsapp-float img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            filter: drop-shadow(0 0 10px rgba(0, 242, 254, 0.3));
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.15) rotate(10deg);
+        }
+
         /* --- 3-SECTION FOOTER --- */
         .site-footer {
             background: #020202;
@@ -128,76 +172,128 @@
             align-items: start;
         }
 
-        .f-logo { height: 95px; width: auto; margin-bottom: 15px; }
+        .f-logo { 
+            height: 90px; 
+            width: auto; 
+            margin-bottom: 15px; 
+        }
 
         .footer-social-col { text-align: center; }
-        .social-links { display: flex; justify-content: center; gap: 20px; margin-top: 15px; }
-        .social-links img { width: 28px; filter: invert(1); opacity: 0.5; transition: 0.3s; }
-        .social-links a:hover img { opacity: 1; transform: translateY(-5px); }
+
+        .social-links { 
+            display: flex; 
+            justify-content: center; 
+            gap: 20px; 
+            margin-top: 15px; 
+        }
+
+        .social-links a {
+            display: inline-block;
+            width: var(--icon-size);
+            height: var(--icon-size);
+        }
+
+        .social-links img { 
+            width: 100%; 
+            height: 100%; 
+            filter: invert(1); 
+            opacity: 0.5; 
+            transition: 0.3s; 
+        }
+
+        .social-links a:hover img { 
+            opacity: 1; 
+            transform: translateY(-5px);
+            filter: invert(0) drop-shadow(0 0 8px #00f2fe);
+        }
 
         .footer-contact-col { text-align: right; }
         .footer-contact-col a { text-decoration: none; font-weight: 700; transition: 0.3s; }
 
-        .whatsapp-float { position: fixed; bottom: 40px; right: 40px; width: 70px; z-index: 1000; transition: 0.3s; }
+        .copyright {
+            text-align: center;
+            margin-top: 50px;
+            font-size: 0.7rem;
+            color: #333;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
 
+        /* --- ANIMATIONS --- */
+        @keyframes fadeInDown {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* --- RESPONSIVE DESIGN --- */
         @media (max-width: 992px) {
             .footer-grid { grid-template-columns: 1fr; text-align: center; }
             .footer-contact-col { text-align: center; }
             .nav-links { display: none; }
             .nav-logo { height: 65px; }
+            .whatsapp-float { bottom: 20px; right: 20px; width: 55px; height: 55px; }
         }
     </style>
 </head>
 <body>
 
+    <!-- WATERY NAVIGATION -->
     <nav class="navbar">
         <a href="#"><img src="logo.png" alt="Gaurav Digital" class="nav-logo"></a>
         <ul class="nav-links">
-            <li><a href="#about">About</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#blog">Blog</a></li>
+            <li><a href="#about">Work</a></li>
+            <li><a href="#services">Expertise</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
 
-    <!-- NEW ENGAGING HERO CONTENT -->
+    <!-- HIGH-IMPACT HERO -->
     <section class="hero">
         <span>FUTURE-READY BRANDING</span>
         <h1>Scale Your Vision With <span class="gradient-text">Precision.</span></h1>
-        <p>I blend hyper-realistic AI creative with data-driven SEO strategies to build brands that don’t just compete—they dominate the digital landscape.</p>
+        <p>Harnessing the power of cinematic AI creative and elite SEO strategies to place your brand at the forefront of the digital evolution.</p>
         <a href="#contact" class="cta-btn">Start Your Project</a>
     </section>
 
+    <!-- FLOATING WHATSAPP -->
+    <a href="https://wa.me/917506113382" class="whatsapp-float" target="_blank">
+        <img src="wa.png" alt="WhatsApp">
+    </a>
+
+    <!-- MODERN 3-SECTION FOOTER -->
     <footer class="site-footer">
         <div class="footer-grid">
+            <!-- Left: Logo and Brand Slogan -->
             <div class="footer-logo-col">
                 <img src="logo.png" alt="Gaurav Digital" class="f-logo">
                 <p style="color: var(--text-dim); font-size: 0.85rem; line-height: 1.8;">
-                    Elevating brands through cinematic storytelling and technical excellence.
+                    Defining the next era of digital marketing through cinematic excellence and technical dominance.
                 </p>
             </div>
 
+            <!-- Middle: Uniform Social Links -->
             <div class="footer-social-col">
-                <p style="font-weight: 700; letter-spacing: 2px; font-size: 0.8rem; color: #fff;">FOLLOW THE JOURNEY</p>
+                <p style="font-weight: 700; letter-spacing: 2px; font-size: 0.8rem; color: #fff;">STAY CONNECTED</p>
                 <div class="social-links">
-                    <a href="#"><img src="x.png" alt="X"></a>
-                    <a href="#"><img src="insta.png" alt="Instagram"></a>
-                    <a href="#"><img src="yt.png" alt="YouTube"></a>
-                    <a href="#"><img src="fb.png" alt="Facebook"></a>
+                    <a href="#" target="_blank"><img src="x.png" alt="X"></a>
+                    <a href="#" target="_blank"><img src="insta.png" alt="Instagram"></a>
+                    <a href="#" target="_blank"><img src="yt.png" alt="YouTube"></a>
+                    <a href="#" target="_blank"><img src="fb.png" alt="Facebook"></a>
                 </div>
             </div>
 
+            <!-- Right: Direct Contact Details -->
             <div class="footer-contact-col">
                 <p style="font-weight: 700; letter-spacing: 2px; font-size: 0.8rem; color: #fff; margin-bottom: 15px;">GET IN TOUCH</p>
                 <p><a href="tel:+917506113382" class="gradient-text">+91 7506113382</a></p>
                 <p><a href="mailto:gaurav2deshmukh09@gmail.com" class="gradient-text">gaurav2deshmukh09@gmail.com</a></p>
             </div>
         </div>
+        
+        <div class="copyright">
+            © 2026 GAURAV DIGITAL. ALL RIGHTS RESERVED.
+        </div>
     </footer>
-
-    <a href="https://wa.me/917506113382" class="whatsapp-float">
-        <img src="wa.png" alt="WhatsApp" style="width: 100%;">
-    </a>
 
 </body>
 </html>
