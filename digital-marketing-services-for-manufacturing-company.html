@@ -1,88 +1,119 @@
+I have rebuilt the **Manufacturing B2B** article page to match your updated cinematic aesthetic. This version includes the uniform social icons, the blue gradient hover effects, the "Watery Header," and your specific social media links.
+
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Digital Marketing Services for Manufacturing Company | Gauravv Digital</title>
+    <title>Digital Marketing for Manufacturing Companies | Gauravv Digital</title>
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700;800;900&display=swap" rel="stylesheet">
     
     <link rel="stylesheet" href="style.css">
 
     <style>
-        .article-header {
-            padding: 12rem 5% 4rem;
+        .article-hero {
+            padding: 180px 10% 80px;
             text-align: center;
-            background: radial-gradient(circle at top center, rgba(0, 242, 254, 0.05), transparent 60%);
+            background: radial-gradient(circle at top center, rgba(0, 242, 254, 0.1), transparent 70%);
         }
-        .article-header h1 {
-            font-size: 3.5rem;
-            max-width: 900px;
-            margin: 0 auto 1.5rem;
-            line-height: 1.2;
-        }
+
         .article-meta {
             color: #4facfe;
-            font-weight: 600;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 0.85rem;
+            margin-bottom: 20px;
+            display: block;
+        }
+
+        .article-content {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 8% 100px;
+        }
+
+        .article-content p {
+            font-size: 1.15rem;
+            line-height: 1.8;
+            color: var(--text-dim);
+            margin-bottom: 30px;
+        }
+
+        .article-content h2 {
+            font-size: 2.2rem;
+            font-weight: 800;
+            margin: 60px 0 25px;
+            color: #fff;
+            text-transform: uppercase;
+            letter-spacing: -1px;
+        }
+
+        .article-content ul {
+            margin-bottom: 40px;
+            list-style: none;
+        }
+
+        .article-content li {
+            font-size: 1.1rem;
+            color: var(--text-dim);
+            margin-bottom: 15px;
+            padding-left: 30px;
+            position: relative;
+        }
+
+        .article-content li::before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            color: #00f2fe;
+            font-weight: 900;
+        }
+
+        .back-btn {
+            display: inline-block;
+            margin-top: 50px;
+            text-decoration: none;
+            color: #00f2fe;
+            font-weight: 700;
             text-transform: uppercase;
             letter-spacing: 1px;
-            margin-bottom: 2rem;
+            font-size: 0.9rem;
+            transition: 0.3s;
         }
-        .article-body {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 0 5% 8rem;
-        }
-        .article-body p {
-            font-size: 1.1rem;
-            line-height: 1.8;
-            color: var(--text-muted);
-            margin-bottom: 1.5rem;
-        }
-        .article-body h2 {
-            font-size: 2rem;
-            margin: 3rem 0 1.5rem;
+
+        .back-btn:hover {
+            letter-spacing: 2px;
             color: #fff;
-        }
-        .article-body ul {
-            margin-bottom: 1.5rem;
-            padding-left: 1.5rem;
-        }
-        .article-body li {
-            font-size: 1.1rem;
-            color: var(--text-muted);
-            margin-bottom: 0.5rem;
-            line-height: 1.6;
         }
     </style>
 </head>
 <body>
+
+    <!-- NAVIGATION -->
     <nav class="navbar">
-        <a href="index.html" class="logo">
-            <img src="logo.png" alt="Gauravv Digital Logo" class="logo-img">
-        </a>
+        <a href="index.html"><img src="logo.png" alt="Gauravv Digital" class="nav-logo"></a>
         <ul class="nav-links">
             <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
             <li><a href="services.html">Services</a></li>
+            <li><a href="about.html">About</a></li>
             <li><a href="blog.html" class="active">Blog</a></li>
             <li><a href="contact.html">Contact</a></li>
         </ul>
-        <div class="hamburger">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
-        </div>
     </nav>
 
-    <header class="article-header">
-        <div class="article-meta">March 27, 2026 • B2B Marketing</div>
-        <h1 class="gradient-text">Digital Marketing Services for Manufacturing Company</h1>
+    <!-- ARTICLE HEADER -->
+    <header class="article-hero">
+        <span class="article-meta">March 27, 2026 • B2B Strategy</span>
+        <h1 class="gradient-text" style="font-size: clamp(2.5rem, 6vw, 4.5rem); font-weight: 900; line-height: 1.1;">Digital Marketing for <br>Manufacturing Companies</h1>
     </header>
 
-    <article class="article-body">
+    <!-- ARTICLE BODY -->
+    <article class="article-content">
         <p>The manufacturing industry is changing rapidly. Today, buyers, procurement managers, and decision-makers no longer depend only on exhibitions, agents, or references. They are searching online, conducting heavy research, and evaluating suppliers through their digital footprint.</p>
         
         <h2>Why Manufacturers Need Digital Marketing</h2>
@@ -98,47 +129,42 @@
         <h2>The ROI of Going Digital</h2>
         <p>By shifting budget from traditional offline channels to highly measurable digital campaigns (like Google Ads for specific manufacturing keywords), factories and suppliers can see exactly how much it costs to acquire a new wholesale client. At Gauravv Digital, we engineer these funnels specifically for the industrial sector.</p>
         
-        <a href="blog.html" class="btn btn-secondary" style="margin-top: 3rem;">← Back to Blog</a>
+        <a href="blog.html" class="back-btn">← Back to Insights</a>
     </article>
 
-    <footer class="footer">
-        <div class="footer-content">
-            <div class="footer-logo">
-                <a href="index.html"><img src="logo.png" alt="Gauravv Digital Logo" class="footer-logo-img"></a>
+    <!-- FOOTER -->
+    <footer class="site-footer">
+        <div class="footer-grid">
+            <div class="footer-logo-col">
+                <img src="logo.png" alt="Gauravv Digital" class="f-logo">
+                <p style="color: var(--text-dim); font-size: 0.85rem; line-height: 1.8;">
+                    Defining the next era of digital marketing through cinematic excellence and technical dominance.
+                </p>
             </div>
-            <div class="footer-middle">
-                <div class="footer-tagline">Innovate. Dominate. Scale.</div>
-                <div class="footer-social">
-                    <a href="https://www.linkedin.com/company/gaurav-digital/" target="_blank"><img src="li.png.png" alt="LinkedIn"></a>
-                    <a href="https://www.facebook.com/gauravdigitalseo/" target="_blank"><img src="fb.png.png" alt="Facebook"></a>
-                    <a href="https://www.instagram.com/gaurav_digital_ads/" target="_blank"><img src="insta.png" alt="Instagram"></a>
-                    <a href="https://x.com/GauravDigitalad" target="_blank"><img src="x.png.png" alt="X"></a>
-                    <a href="https://www.youtube.com/@gauravdigitalmarketer" target="_blank"><img src="yt.png.png" alt="YouTube"></a>
+            <div class="footer-social-col">
+                <p style="font-weight: 700; letter-spacing: 2px; font-size: 0.8rem; color: #fff;">STAY CONNECTED</p>
+                <div class="social-links">
+                    <a href="https://x.com/GauravDigitalad" target="_blank"><img src="x.png" alt="X"></a>
+                    <a href="https://www.instagram.com/gaurav_digital_ads/?hl=en" target="_blank"><img src="insta.png" alt="Instagram"></a>
+                    <a href="https://www.youtube.com/@gauravdigitalmarketer" target="_blank"><img src="yt.png" alt="YouTube"></a>
+                    <a href="https://www.facebook.com/gauravdigitalseo" target="_blank"><img src="fb.png" alt="Facebook"></a>
+                    <a href="https://www.linkedin.com/company/gaurav-digital/" target="_blank"><img src="li.png" alt="LinkedIn"></a>
                 </div>
             </div>
-            <div class="footer-contact">
-                <p><a href="mailto:contact@gauravdeshmukh.co.in">contact@gauravdeshmukh.co.in</a></p>
-                <p><a href="tel:+918850480687">+91 88504 80687</a></p>
+            <div class="footer-contact-col">
+                <p style="font-weight: 700; letter-spacing: 2px; font-size: 0.8rem; color: #fff; margin-bottom: 15px;">GET IN TOUCH</p>
+                <p><a href="tel:+918850480687" class="gradient-text">+91 88504 80687</a></p>
+                <p><a href="mailto:contact@gauravdeshmukh.co.in" class="gradient-text">contact@gauravdeshmukh.co.in</a></p>
             </div>
         </div>
-        <div class="footer-bottom">
-            <p>&copy; 2026 Gauravv Digital. All rights reserved.</p>
+        <div class="copyright">
+            © 2026 GAURAVV DIGITAL. ALL RIGHTS RESERVED.
         </div>
     </footer>
 
+    <!-- WHATSAPP FLOAT -->
     <a href="https://wa.me/918850480687" class="whatsapp-float" target="_blank"><img src="wa.png" alt="WhatsApp Chat"></a>
 
-    <script>
-        const hamburger = document.querySelector(".hamburger");
-        const navMenu = document.querySelector(".nav-links");
-        hamburger.addEventListener("click", () => {
-            hamburger.classList.toggle("active");
-            navMenu.classList.toggle("active");
-        });
-        document.querySelectorAll(".nav-links a").forEach(n => n.addEventListener("click", () => {
-            hamburger.classList.remove("active");
-            navMenu.classList.remove("active");
-        }));
-    </script>
 </body>
 </html>
+```
