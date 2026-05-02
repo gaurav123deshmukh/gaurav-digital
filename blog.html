@@ -4,34 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog | Insights & Strategies | Gauravv Digital</title>
-    
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
-    
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 
     <style>
         .blog-hero {
-            padding: 12rem 5% 6rem;
+            padding: 160px 5% 80px;
             text-align: center;
-            background: radial-gradient(circle at top center, rgba(0, 242, 254, 0.1), transparent 70%);
         }
 
         .blog-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 3rem;
+            gap: 40px;
             max-width: 1200px;
             margin: 0 auto;
-            padding: 0 5% 10rem;
+            padding: 0 5% 100px;
         }
 
         .blog-card {
             background: rgba(255, 255, 255, 0.03);
             border: 1px solid rgba(255, 255, 255, 0.1);
             border-radius: 20px;
-            padding: 2rem;
+            padding: 30px;
             transition: all 0.3s ease;
             display: flex;
             flex-direction: column;
@@ -42,20 +37,22 @@
             transform: translateY(-10px);
             border-color: #00f2fe;
             background: rgba(255, 255, 255, 0.05);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
         }
 
         .blog-card .date {
             color: #4facfe;
             font-size: 0.85rem;
-            font-weight: 600;
+            font-weight: 700;
             text-transform: uppercase;
-            margin-bottom: 1rem;
+            margin-bottom: 15px;
+            letter-spacing: 1px;
         }
 
         .blog-card h2 {
             font-size: 1.5rem;
             color: #fff;
-            margin-bottom: 1rem;
+            margin-bottom: 15px;
             line-height: 1.4;
         }
 
@@ -63,50 +60,38 @@
             color: var(--text-muted);
             font-size: 1rem;
             line-height: 1.6;
-            margin-bottom: 2rem;
+            margin-bottom: 30px;
         }
 
         .read-more {
             margin-top: auto;
             color: #00f2fe;
-            font-weight: 600;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            font-size: 0.85rem;
+            letter-spacing: 1px;
         }
     </style>
 </head>
 <body>
 
-    <!-- NAVIGATION -->
     <nav class="navbar">
-        <a href="index.html" class="logo">
-            <img src="logo.png" alt="Gauravv Digital Logo" class="logo-img">
-        </a>
+        <a href="index.html"><img src="logo.png" alt="Gauravv Digital Logo" class="nav-logo"></a>
         <ul class="nav-links">
             <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
             <li><a href="services.html">Services</a></li>
+            <li><a href="about.html">About</a></li>
             <li><a href="blog.html" class="active">Blog</a></li>
             <li><a href="contact.html">Contact</a></li>
         </ul>
-        <div class="hamburger">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
-        </div>
     </nav>
 
-    <!-- HERO -->
     <header class="blog-hero">
-        <span class="article-meta">Industry Insights</span>
-        <h1 class="gradient-text" style="font-size: 3.5rem; font-weight: 700; margin-top: 1rem;">Mastering the Digital Era</h1>
+        <span style="color: #4facfe; font-weight: 700; letter-spacing: 8px; font-size: 0.85rem;">INDUSTRY INSIGHTS</span>
+        <h1 class="gradient-text" style="font-size: 3.5rem; font-weight: 900; margin-top: 1rem; text-transform: uppercase;">Mastering the Digital Era</h1>
     </header>
 
-    <!-- BLOG POSTS GRID -->
     <main class="blog-grid">
-        
-        <!-- Blog 1: Facebook Ads -->
         <a href="facebook-lead-ads.html" class="blog-card">
             <div class="date">July 30, 2024 • Advertising</div>
             <h2>Advantages Of Facebook Lead Generation Ads</h2>
@@ -114,7 +99,6 @@
             <span class="read-more">Read Full Article →</span>
         </a>
 
-        <!-- Blog 2: Freelancer Navi Mumbai -->
         <a href="freelancer-navi-mumbai.html" class="blog-card">
             <div class="date">March 27, 2026 • Local SEO</div>
             <h2>Digital Marketing Freelancer in Navi Mumbai</h2>
@@ -122,52 +106,45 @@
             <span class="read-more">Read Full Article →</span>
         </a>
 
-        <!-- Blog 3: Manufacturing B2B -->
         <a href="manufacturing-marketing.html" class="blog-card">
             <div class="date">March 27, 2026 • B2B Strategy</div>
             <h2>Digital Marketing for Manufacturing Companies</h2>
             <p>How the industrial sector is shifting from trade shows to high-ROI digital funnels and LinkedIn advertising.</p>
             <span class="read-more">Read Full Article →</span>
         </a>
-
     </main>
 
-    <!-- FOOTER -->
-    <footer class="footer">
-        <div class="footer-content">
-            <div class="footer-logo">
-                <a href="index.html"><img src="logo.png" alt="Gauravv Digital Logo" class="footer-logo-img"></a>
+    <!-- FOOTER WITH UPDATED SOCIALS -->
+    <footer class="site-footer">
+        <div class="footer-grid">
+            <div class="footer-logo-col">
+                <img src="logo.png" alt="Gauravv Digital" class="f-logo">
+                <p style="color: var(--text-dim); font-size: 0.85rem; line-height: 1.8;">
+                    Defining the next era of digital marketing through cinematic excellence and technical dominance.
+                </p>
             </div>
-            <div class="footer-middle">
-                <div class="footer-tagline">Innovate. Dominate. Scale.</div>
-                <div class="footer-social">
-                    <a href="https://www.linkedin.com/company/gaurav-digital/" target="_blank"><img src="li.png.png" alt="LinkedIn"></a>
-                    <a href="https://www.facebook.com/gauravdigitalseo/" target="_blank"><img src="fb.png.png" alt="Facebook"></a>
-                    <a href="https://www.instagram.com/gaurav_digital_ads/" target="_blank"><img src="insta.png" alt="Instagram"></a>
-                    <a href="https://x.com/GauravDigitalad" target="_blank"><img src="x.png.png" alt="X"></a>
-                    <a href="https://www.youtube.com/@gauravdigitalmarketer" target="_blank"><img src="yt.png.png" alt="YouTube"></a>
+            <div class="footer-social-col">
+                <p style="font-weight: 700; letter-spacing: 2px; font-size: 0.8rem; color: #fff;">STAY CONNECTED</p>
+                <div class="social-links">
+                    <a href="https://x.com/GauravDigitalad" target="_blank"><img src="x.png" alt="X"></a>
+                    <a href="https://www.instagram.com/gaurav_digital_ads/?hl=en" target="_blank"><img src="insta.png" alt="Instagram"></a>
+                    <a href="https://www.youtube.com/@gauravdigitalmarketer" target="_blank"><img src="yt.png" alt="YouTube"></a>
+                    <a href="https://www.facebook.com/gauravdigitalseo" target="_blank"><img src="fb.png" alt="Facebook"></a>
+                    <a href="https://www.linkedin.com/company/gaurav-digital/" target="_blank"><img src="li.png" alt="LinkedIn"></a>
                 </div>
             </div>
-            <div class="footer-contact">
-                <p><a href="mailto:contact@gauravdeshmukh.co.in">contact@gauravdeshmukh.co.in</a></p>
-                <p><a href="tel:+918850480687">+91 88504 80687</a></p>
+            <div class="footer-contact-col">
+                <p style="font-weight: 700; letter-spacing: 2px; font-size: 0.8rem; color: #fff; margin-bottom: 15px;">GET IN TOUCH</p>
+                <p><a href="tel:+918850480687" class="gradient-text">+91 88504 80687</a></p>
+                <p><a href="mailto:contact@gauravdeshmukh.co.in" class="gradient-text">contact@gauravdeshmukh.co.in</a></p>
             </div>
         </div>
-        <div class="footer-bottom">
-            <p>&copy; 2026 Gauravv Digital. All rights reserved.</p>
+        <div class="copyright">
+            © 2026 GAURAVV DIGITAL. ALL RIGHTS RESERVED.
         </div>
     </footer>
 
-    <!-- WHATSAPP FLOAT -->
     <a href="https://wa.me/918850480687" class="whatsapp-float" target="_blank"><img src="wa.png" alt="WhatsApp Chat"></a>
 
-    <script>
-        const hamburger = document.querySelector(".hamburger");
-        const navMenu = document.querySelector(".nav-links");
-        hamburger.addEventListener("click", () => {
-            hamburger.classList.toggle("active");
-            navMenu.classList.toggle("active");
-        });
-    </script>
 </body>
 </html>
