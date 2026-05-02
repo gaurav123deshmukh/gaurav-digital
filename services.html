@@ -3,71 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Services | Gaurav Digital</title>
+    <title>Services | Gauravv Digital</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <style>
+        .bold-service-title {
+            font-size: 2rem;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            text-align: center;
+            padding: 40px;
+            border: 1px solid rgba(0, 242, 254, 0.1);
+            border-radius: 15px;
+            background: rgba(255, 255, 255, 0.02);
+            transition: 0.4s;
+        }
+        .bold-service-title:hover {
+            border-color: #00f2fe;
+            background: rgba(0, 242, 254, 0.05);
+            transform: scale(1.02);
+        }
+    </style>
 </head>
 <body>
 
-    <!-- NAVIGATION -->
     <nav class="navbar">
-        <a href="index.html"><img src="logo.png" alt="Gaurav Digital" class="nav-logo"></a>
+        <a href="index.html"><img src="logo.png" alt="Gauravv Digital" class="nav-logo"></a>
         <ul class="nav-links">
             <li><a href="index.html">Home</a></li>
-            <li><a href="services.html">Services</a></li>
+            <li><a href="services.html" class="active">Services</a></li>
             <li><a href="about.html">About</a></li>
             <li><a href="blog.html">Blog</a></li>
             <li><a href="contact.html">Contact</a></li>
         </ul>
     </nav>
 
-    <!-- HERO SECTION -->
-    <section class="hero" style="min-height: 60vh;">
+    <section class="hero" style="min-height: 40vh;">
         <span>OUR EXPERTISE</span>
-        <h1>Digital <span class="precision-line gradient-text">Solutions.</span></h1>
+        <h1>Core <span class="precision-line gradient-text">Capabilities.</span></h1>
     </section>
 
-    <!-- SERVICES GRID -->
-    <section style="padding: 100px 8%; background: #050505;">
-        <div class="services-grid">
-            <div class="service-card">
-                <div class="card-img"><img src="seo-thumb.jpg" alt="SEO"></div>
-                <h3>Search Engine Optimization</h3>
-                <p>Rank higher on Google and grow your website traffic fast with data-backed strategies.</p>
-            </div>
-            <div class="service-card">
-                <div class="card-img"><img src="sem-thumb.jpg" alt="SEM"></div>
-                <h3>Search Engine Marketing</h3>
-                <p>Drive instant leads and maximize ROI with high-converting Google Ads campaigns.</p>
-            </div>
-            <div class="service-card">
-                <div class="card-img"><img src="smm-thumb.jpg" alt="SMM"></div>
-                <h3>Social Media Marketing</h3>
-                <p>Boost engagement and sales through high-impact social media ads and content.</p>
-            </div>
-            <div class="service-card">
-                <div class="card-img"><img src="web-thumb.jpg" alt="Web Dev"></div>
-                <h3>Website Development</h3>
-                <p>Build modern, fast, and mobile-friendly websites that work seamlessly across devices.</p>
-            </div>
-            <div class="service-card">
-                <div class="card-img"><img src="consult-thumb.jpg" alt="Consultation"></div>
-                <h3>Digital Marketing Consultation</h3>
-                <p>Strategic guidance to align your digital presence with your long-term business goals.</p>
-            </div>
-            <div class="service-card">
-                <div class="card-img"><img src="graphic-thumb.jpg" alt="Design"></div>
-                <h3>Graphic Designing</h3>
-                <p>Eye-catching designs for branding, ads, and social media that command attention.</p>
-            </div>
+    <section style="padding: 60px 8% 100px;">
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px;">
+            <div class="bold-service-title">Search Engine Optimization</div>
+            <div class="bold-service-title">Search Engine Marketing</div>
+            <div class="bold-service-title">Social Media Marketing</div>
+            <div class="bold-service-title">Website Development</div>
+            <div class="bold-service-title">Content Marketing</div>
+            <div class="bold-service-title">Lead Generation</div>
         </div>
     </section>
 
-    <!-- HOMEPAGE FOOTER -->
+    <!-- FOOTER -->
     <footer class="site-footer">
         <div class="footer-grid">
             <div class="footer-logo-col">
-                <img src="logo.png" alt="Gaurav Digital" class="f-logo">
+                <img src="logo.png" alt="Gauravv Digital" class="f-logo">
                 <p style="color: var(--text-dim); font-size: 0.85rem; line-height: 1.8;">
                     Defining the next era of digital marketing through cinematic excellence and technical dominance.
                 </p>
@@ -75,22 +67,25 @@
             <div class="footer-social-col">
                 <p style="font-weight: 700; letter-spacing: 2px; font-size: 0.8rem; color: #fff;">STAY CONNECTED</p>
                 <div class="social-links">
-                    <a href="#"><img src="x.png" alt="X"></a>
-                    <a href="#"><img src="insta.png" alt="Instagram"></a>
-                    <a href="#"><img src="yt.png" alt="YouTube"></a>
-                    <a href="#"><img src="fb.png" alt="Facebook"></a>
+                    <a href="https://x.com/GauravDigitalad" target="_blank"><img src="x.png" alt="X"></a>
+                    <a href="https://www.instagram.com/gaurav_digital_ads/?hl=en" target="_blank"><img src="insta.png" alt="Instagram"></a>
+                    <a href="https://www.youtube.com/@gauravdigitalmarketer" target="_blank"><img src="yt.png" alt="YouTube"></a>
+                    <a href="https://www.facebook.com/gauravdigitalseo" target="_blank"><img src="fb.png" alt="Facebook"></a>
+                    <a href="https://www.linkedin.com/company/gaurav-digital/" target="_blank"><img src="li.png" alt="LinkedIn"></a>
                 </div>
             </div>
             <div class="footer-contact-col">
                 <p style="font-weight: 700; letter-spacing: 2px; font-size: 0.8rem; color: #fff; margin-bottom: 15px;">GET IN TOUCH</p>
-                <p><a href="tel:+917506113382" class="gradient-text">+91 7506113382</a></p>
-                <p><a href="mailto:gaurav2deshmukh09@gmail.com" class="gradient-text">gaurav2deshmukh09@gmail.com</a></p>
+                <p><a href="tel:+918850480687" class="gradient-text">+91 88504 80687</a></p>
+                <p><a href="mailto:contact@gauravdeshmukh.co.in" class="gradient-text">contact@gauravdeshmukh.co.in</a></p>
             </div>
         </div>
         <div class="copyright">
-            © 2026 GAURAV DIGITAL. ALL RIGHTS RESERVED.
+            © 2026 GAURAVV DIGITAL. ALL RIGHTS RESERVED.
         </div>
     </footer>
+
+    <a href="https://wa.me/918850480687" class="whatsapp-float" target="_blank"><img src="wa.png" alt="WhatsApp Chat"></a>
 
 </body>
 </html>
