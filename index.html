@@ -73,14 +73,15 @@
 
         /* --- HIGH-IMPACT HERO SECTION --- */
         .hero {
-            height: 100vh;
+            min-height: 100vh;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
             text-align: center;
             background: radial-gradient(circle at 50% 50%, #0d1a21 0%, #050505 100%);
-            padding: 0 10%;
+            /* Added padding-top to push everything down below the fixed navbar */
+            padding: 120px 10% 0; 
         }
 
         .hero span {
@@ -93,12 +94,12 @@
             animation: fadeInDown 1s ease;
         }
 
-        /* Spacing updates for the main headline */
+        /* Adjusted spacing for the main headline */
         .hero h1 {
             font-size: clamp(2.5rem, 8vw, 5.5rem);
-            line-height: 1.2; /* Better breathing room between lines */
-            margin-top: 40px;    /* Added space above */
-            margin-bottom: 45px; /* Added space below */
+            line-height: 1.15; 
+            margin-top: 25px;    
+            margin-bottom: 35px; 
             font-weight: 900;
             text-transform: uppercase;
             letter-spacing: -2px;
@@ -233,7 +234,7 @@
             .nav-links { display: none; }
             .nav-logo { height: 65px; }
             .whatsapp-float { bottom: 20px; right: 20px; width: 55px; height: 55px; }
-            .hero h1 { margin-top: 30px; margin-bottom: 30px; }
+            .hero { padding-top: 100px; }
         }
     </style>
 </head>
