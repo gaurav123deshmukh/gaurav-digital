@@ -1,17 +1,18 @@
+// Handle Watery Header Background and WhatsApp Float on Scroll
 window.onscroll = function() {
-    // 1. Watery Header Background Logic
     const nav = document.querySelector('.navbar');
+    const waButton = document.querySelector('.whatsapp-float');
+
+    // Header Background Logic
     if (window.pageYOffset > 50) {
-        nav.style.background = "rgba(10, 10, 10, 0.9)"; // Becomes darker as you scroll
+        nav.style.background = "rgba(10, 10, 10, 0.9)"; 
     } else {
-        nav.style.background = "rgba(10, 10, 10, 0.7)"; // More transparent at the top
+        nav.style.background = "rgba(10, 10, 10, 0.7)"; 
     }
 
-    // 2. WhatsApp Button Scroll Reveal Logic
-    const waButton = document.querySelector('.whatsapp-float');
+    // WhatsApp Reveal Logic (Appears after scrolling 300px)
     if (waButton) {
-        // Button appears after scrolling down 300 pixels
-        if (window.pageYOffset > 300) { 
+        if (window.pageYOffset > 300) {
             waButton.classList.add('show');
         } else {
             waButton.classList.remove('show');
@@ -19,7 +20,7 @@ window.onscroll = function() {
     }
 };
 
-// 3. Mobile Hamburger Menu Toggle Logic
+// Mobile Hamburger Menu Toggle
 const mobileMenu = document.getElementById('mobile-menu');
 const navLinks = document.querySelector('.nav-links');
 
