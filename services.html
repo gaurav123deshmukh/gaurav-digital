@@ -1,52 +1,21 @@
+Bilkul! [cite_start]Yeh lijiye aapka pura **`services.html`** ka code[cite: 318, 324]. [cite_start]Isme maine woh 3 columns wala fix already laga diya hai taaki desktop par ek line mein strictly sirf 3 services hi aayein aur design perfect dikhe[cite: 319, 325].
+
+Aapko bas apni current `services.html` file open karni hai, usme jo bhi purana code hai use delete karke yeh naya code copy-paste karna hai:
+
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Services | Gaurav Digital</title>
+    
+    <title>Our Services | Gaurav Digital</title>
+    <meta name="title" content="Our Services | Gaurav Digital">
+    <meta name="description" content="Explore our core capabilities including SEO, SEM, Graphic Designing, Videography, and more.">
     
     <link rel="icon" type="image/png" href="logo2.png">
-    
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    
-    <style>
-        /* Updated Service Box Styling to accommodate descriptions */
-        .service-box {
-            text-align: center;
-            padding: 40px 30px;
-            border: 1px solid rgba(0, 242, 254, 0.1);
-            border-radius: 15px;
-            background: rgba(255, 255, 255, 0.02);
-            transition: 0.4s;
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-start;
-        }
-        
-        .service-box:hover {
-            border-color: #00f2fe;
-            background: rgba(0, 242, 254, 0.05);
-            transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(0, 242, 254, 0.1);
-        }
-        
-        .service-box h3 {
-            font-size: 1.5rem;
-            font-weight: 900;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            margin-bottom: 15px;
-            color: #fff;
-        }
-        
-        .service-box p {
-            color: #b0b0b0;
-            font-size: 0.95rem;
-            line-height: 1.6;
-            font-weight: 400;
-        }
-    </style>
 </head>
 <body>
 
@@ -68,55 +37,62 @@
         </ul>
     </nav>
 
-    <section class="hero" style="min-height: 40vh;">
-        <span>OUR EXPERTISE</span>
-        <h1>Core <span class="precision-line gradient-text">Capabilities.</span></h1>
+    <section class="hero" style="min-height: 50vh; padding-top: 240px; padding-bottom: 50px;">
+        <span class="hero-tagline gradient-text" style="font-size: 0.9rem; letter-spacing: 5px; margin-bottom: 15px; text-transform: uppercase;">Our Expertise</span>
+        <h1 style="font-size: clamp(3.5rem, 8vw, 5.5rem); margin-top: 0; text-transform: uppercase; font-weight: 900;">CORE <br><span class="precision-line gradient-text">CAPABILITIES.</span></h1>
     </section>
 
-    <section style="padding: 60px 8% 100px;">
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px;">
+    <section class="services-preview" style="padding-top: 0;">
+        
+        <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; max-width: 1200px; margin: 0 auto;">
             
-            <div class="service-box">
-                <h3>Search Engine Optimization</h3>
-                <p>Data-driven SEO strategies to dominate search rankings and drive high-intent organic traffic to your business.</p>
+            <div class="service-card" style="text-align: center;">
+                <h3 style="font-size: 1.3rem; margin-bottom: 15px; color: #fff; text-transform: uppercase;">Search Engine<br>Optimization</h3>
+                <p style="color: #b0b0b0; line-height: 1.6; font-size: 0.95rem;">Data-driven SEO strategies to dominate search rankings and drive high-intent organic traffic to your business.</p>
             </div>
-            
-            <div class="service-box">
-                <h3>Search Engine Marketing</h3>
-                <p>High-conversion paid campaigns that maximize your ROI and put your brand right at the top of search results.</p>
+
+            <div class="service-card" style="text-align: center;">
+                <h3 style="font-size: 1.3rem; margin-bottom: 15px; color: #fff; text-transform: uppercase;">Search Engine<br>Marketing</h3>
+                <p style="color: #b0b0b0; line-height: 1.6; font-size: 0.95rem;">High-conversion paid campaigns that maximize your ROI and put your brand right at the top of search results.</p>
             </div>
-            
-            <div class="service-box">
-                <h3>Social Media Marketing</h3>
-                <p>Engaging social campaigns that build communities, elevate brand loyalty, and spark viral conversations.</p>
+
+            <div class="service-card" style="text-align: center;">
+                <h3 style="font-size: 1.3rem; margin-bottom: 15px; color: #fff; text-transform: uppercase;">Social Media<br>Marketing</h3>
+                <p style="color: #b0b0b0; line-height: 1.6; font-size: 0.95rem;">Engaging social campaigns that build communities, elevate brand loyalty, and spark viral conversations.</p>
             </div>
-            
-            <div class="service-box">
-                <h3>Website Development</h3>
-                <p>Cinematic, fast-loading, and conversion-optimized websites engineered to turn visitors into loyal clients.</p>
+
+            <div class="service-card" style="text-align: center;">
+                <h3 style="font-size: 1.3rem; margin-bottom: 15px; color: #fff; text-transform: uppercase;">Website<br>Development</h3>
+                <p style="color: #b0b0b0; line-height: 1.6; font-size: 0.95rem;">Cinematic, fast-loading, and conversion-optimized websites engineered to turn visitors into loyal clients.</p>
             </div>
-            
-            <div class="service-box">
-                <h3>Content Marketing</h3>
-                <p>Compelling storytelling and valuable content pieces that establish your brand as an undeniable industry authority.</p>
+
+            <div class="service-card" style="text-align: center;">
+                <h3 style="font-size: 1.3rem; margin-bottom: 15px; color: #fff; text-transform: uppercase;">Content<br>Marketing</h3>
+                <p style="color: #b0b0b0; line-height: 1.6; font-size: 0.95rem;">Compelling storytelling and valuable content pieces that establish your brand as an undeniable industry authority.</p>
             </div>
-            
-            <div class="service-box">
-                <h3>Graphic Designing</h3>
-                <p>Striking visual identities, modern UI/UX elements, and thumb-stopping creatives tailored to your brand.</p>
+
+            <div class="service-card" style="text-align: center;">
+                <h3 style="font-size: 1.3rem; margin-bottom: 15px; color: #fff; text-transform: uppercase;">Graphic<br>Designing</h3>
+                <p style="color: #b0b0b0; line-height: 1.6; font-size: 0.95rem;">Visually unforgettable and premium graphic design tailored strictly to your brand identity.</p>
             </div>
-            
-            <div class="service-box">
-                <h3>Videography</h3>
-                <p>High-end cinematic video production that captures your brand's story and engages your audience deeply.</p>
+
+            <div class="service-card" style="text-align: center;">
+                <h3 style="font-size: 1.3rem; margin-bottom: 15px; color: #fff; text-transform: uppercase;">Videography</h3>
+                <p style="color: #b0b0b0; line-height: 1.6; font-size: 0.95rem;">High-end cinematic video production that captures your brand's story and demands immediate attention.</p>
             </div>
-            
-            <div class="service-box">
-                <h3>Branding</h3>
-                <p>Comprehensive brand strategy and identity design to make your business visually unforgettable and unique.</p>
+
+            <div class="service-card" style="text-align: center;">
+                <h3 style="font-size: 1.3rem; margin-bottom: 15px; color: #fff; text-transform: uppercase;">Branding</h3>
+                <p style="color: #b0b0b0; line-height: 1.6; font-size: 0.95rem;">Comprehensive brand strategy and identity design to make your business an unstoppable market leader.</p>
             </div>
 
         </div>
+    </section>
+
+    <section class="final-cta">
+        <h2>Ready to dominate your market?</h2>
+        <p>Let's engineer a custom growth strategy for your brand.</p>
+        <a href="contact.html" class="cta-btn">Get Your Free Strategy Call</a>
     </section>
 
     <footer class="site-footer">
@@ -148,8 +124,11 @@
         </div>
     </footer>
 
-    <a href="https://wa.me/918850480687" class="whatsapp-float" target="_blank"><img src="wa.png" alt="WhatsApp Chat"></a>
+    <a href="https://wa.me/918850480687" class="whatsapp-float" target="_blank">
+        <img src="wa.png" alt="WhatsApp Chat" style="width: 100%; height: 100%; object-fit: contain;">
+    </a>
 
     <script src="script.js"></script>
 </body>
 </html>
+```
