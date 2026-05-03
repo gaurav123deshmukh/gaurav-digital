@@ -207,6 +207,7 @@ body {
     box-shadow: 0 20px 40px rgba(0, 242, 254, 0.45);
 }
 
+/* --- WHATSAPP FLOAT --- */
 .whatsapp-float {
     position: fixed;
     bottom: 40px;
@@ -214,7 +215,16 @@ body {
     width: 70px;
     height: 70px;
     z-index: 1000;
-    transition: 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    opacity: 0; /* Hidden by default */
+    visibility: hidden; /* Prevent clicking when invisible */
+    transform: translateY(20px); /* Push it slightly down */
+    transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.whatsapp-float.show {
+    opacity: 1; /* Fade in */
+    visibility: visible;
+    transform: translateY(0); /* Slide into original position */
 }
 
 .whatsapp-float:hover {
