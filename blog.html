@@ -3,149 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Insights & Articles | Gaurav Digital</title>
+    
+    <title>Our Services | Gaurav Digital</title>
+    <meta name="title" content="Our Services | Gaurav Digital">
+    <meta name="description" content="Explore our core capabilities including SEO, SEM, Graphic Designing, Videography, and more.">
     
     <link rel="icon" type="image/png" href="logo2.png">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700;800;900&display=swap" rel="stylesheet">
-    
     <link rel="stylesheet" href="style.css">
-
-    <style>
-        .blog-hero {
-            /* Increased top padding to 240px to add line space before Insights */
-            padding: 240px 5% 60px;
-            text-align: center;
-            background: radial-gradient(circle at top center, rgba(0, 242, 254, 0.1), transparent 70%);
-        }
-
-        .blog-grid {
-            display: grid;
-            /* FIX: Strictly locks the grid to exactly 3 columns per row */
-            grid-template-columns: repeat(3, 1fr);
-            gap: 40px;
-            padding: 0 5% 100px;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        /* Mobile fallback so the 3 columns stack nicely on phones */
-        @media (max-width: 992px) {
-            .blog-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        .blog-card {
-            background: rgba(255, 255, 255, 0.03);
-            border: 1px solid rgba(255, 255, 255, 0.05);
-            padding: 0; 
-            border-radius: 5px;
-            transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            display: flex;
-            flex-direction: column;
-            position: relative;
-            overflow: hidden;
-            text-decoration: none;
-        }
-
-        .blog-cover-img {
-            width: 100%;
-            height: 220px;
-            overflow: hidden;
-            background: #000;
-        }
-
-        .blog-cover-img img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            opacity: 0.6; 
-            transition: 0.6s ease;
-        }
-
-        .blog-card:hover .blog-cover-img img {
-            opacity: 1;
-            transform: scale(1.1);
-        }
-
-        .blog-content {
-            padding: 30px;
-            display: flex;
-            flex-direction: column;
-            flex-grow: 1;
-        }
-
-        .blog-card:hover {
-            transform: translateY(-10px);
-            border-color: #4facfe;
-            background: rgba(79, 172, 254, 0.05);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
-        }
-
-        .blog-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 2px;
-            background: linear-gradient(90deg, #00f2fe, #4facfe);
-            transform: scaleX(0);
-            transition: 0.4s;
-            transform-origin: left;
-            z-index: 2;
-        }
-
-        .blog-card:hover::before {
-            transform: scaleX(1);
-        }
-
-        .blog-date {
-            font-size: 0.75rem;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            color: #4facfe;
-            margin-bottom: 15px;
-            display: block;
-            font-weight: 700;
-        }
-
-        .blog-card h3 {
-            font-size: 1.5rem;
-            color: #fff;
-            margin-bottom: 15px;
-            line-height: 1.3;
-            font-weight: 800;
-        }
-
-        .blog-card p {
-            color: var(--text-dim);
-            font-size: 0.95rem;
-            line-height: 1.7;
-            margin-bottom: 25px;
-        }
-
-        .read-link {
-            margin-top: auto;
-            text-decoration: none;
-            color: #fff;
-            font-weight: 700;
-            font-size: 0.85rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            transition: 0.3s;
-        }
-
-        .blog-card:hover .read-link {
-            color: #00f2fe;
-            gap: 15px;
-        }
-    </style>
 </head>
 <body>
 
@@ -160,56 +25,69 @@
 
         <ul class="nav-links">
             <li><a href="index.html">Home</a></li>
-            <li><a href="services.html">Services</a></li>
+            <li><a href="services.html" class="active">Services</a></li>
             <li><a href="about.html">About</a></li>
-            <li><a href="blog.html" class="active">Blog</a></li>
+            <li><a href="blog.html">Blog</a></li>
             <li><a href="contact.html">Contact</a></li>
         </ul>
     </nav>
 
-    <header class="blog-hero">
-        <h1 class="gradient-text" style="font-size: clamp(3rem, 7vw, 5rem); font-weight: 900; margin-bottom: 20px;">INSIGHTS</h1>
-        <p style="color: var(--text-dim); letter-spacing: 3px; text-transform: uppercase; font-weight: 400;">Strategies for the digital age</p>
-    </header>
+    <section class="hero" style="min-height: 50vh; padding-top: 240px; padding-bottom: 50px;">
+        <span class="hero-tagline gradient-text" style="font-size: 0.9rem; letter-spacing: 5px; margin-bottom: 15px; text-transform: uppercase;">Our Expertise</span>
+        <h1 style="font-size: clamp(3.5rem, 8vw, 5.5rem); margin-top: 0; text-transform: uppercase; font-weight: 900;">CORE <br><span class="precision-line gradient-text">CAPABILITIES.</span></h1>
+    </section>
 
-    <section class="blog-grid">
+    <section class="services-preview" style="padding-top: 0;">
         
-        <a href="advantages-of-facebook-lead-generation-ads.html" class="blog-card">
-            <div class="blog-cover-img">
-                <img src="Advantages Of Facebook Lead Generation Ads.webp" alt="Facebook Ads">
+        <div class="services-grid" style="max-width: 95%; margin: 0 auto;">
+            
+            <div class="service-card" style="text-align: center; display: flex; flex-direction: column;">
+                <h3 style="font-size: 1.3rem; margin-bottom: 15px; color: #fff; text-transform: uppercase;">Search Engine<br>Optimization</h3>
+                <p style="color: #b0b0b0; line-height: 1.6; font-size: 0.95rem;">Data-driven SEO strategies to dominate search rankings and drive high-intent organic traffic to your business.</p>
             </div>
-            <div class="blog-content">
-                <span class="blog-date">July 30, 2024 • Paid Media</span>
-                <h3>Advantages Of Facebook Lead Generation Ads</h3>
-                <p>Learn how to capture high-intent leads natively within Facebook without the friction of external landing pages.</p>
-                <span class="read-link">Read Full Article <span>→</span></span>
-            </div>
-        </a>
 
-        <a href="digital-marketing-freelancer-in-navi-mumbai.html" class="blog-card">
-            <div class="blog-cover-img">
-                <img src="Digital Marketing Freelancer in Navi Mumbai.webp" alt="Freelancer Navi Mumbai">
+            <div class="service-card" style="text-align: center; display: flex; flex-direction: column;">
+                <h3 style="font-size: 1.3rem; margin-bottom: 15px; color: #fff; text-transform: uppercase;">Search Engine<br>Marketing</h3>
+                <p style="color: #b0b0b0; line-height: 1.6; font-size: 0.95rem;">High-conversion paid campaigns that maximize your ROI and put your brand right at the top of search results.</p>
             </div>
-            <div class="blog-content">
-                <span class="blog-date">Nov 15, 2025 • Local Strategy</span>
-                <h3>Digital Marketing Freelancer in Navi Mumbai</h3>
-                <p>Unlocking local growth: How a dedicated freelancer can transform your Navi Mumbai business presence.</p>
-                <span class="read-link">Read Full Article <span>→</span></span>
-            </div>
-        </a>
 
-        <a href="digital-marketing-services-for-manufacturing-company.html" class="blog-card">
-            <div class="blog-cover-img">
-                <img src="Digital Marketing Services for Manufacturing Company.webp" alt="Manufacturing Digital Marketing">
+            <div class="service-card" style="text-align: center; display: flex; flex-direction: column;">
+                <h3 style="font-size: 1.3rem; margin-bottom: 15px; color: #fff; text-transform: uppercase;">Social Media<br>Marketing</h3>
+                <p style="color: #b0b0b0; line-height: 1.6; font-size: 0.95rem;">Engaging social campaigns that build communities, elevate brand loyalty, and spark viral conversations.</p>
             </div>
-            <div class="blog-content">
-                <span class="blog-date">Mar 27, 2026 • B2B Strategy</span>
-                <h3>Digital Marketing for Manufacturing Companies</h3>
-                <p>How B2B industrial firms are using digital funnels to replace traditional trade shows and secure global clients.</p>
-                <span class="read-link">Read Full Article <span>→</span></span>
-            </div>
-        </a>
 
+            <div class="service-card" style="text-align: center; display: flex; flex-direction: column;">
+                <h3 style="font-size: 1.3rem; margin-bottom: 15px; color: #fff; text-transform: uppercase;">Website<br>Development</h3>
+                <p style="color: #b0b0b0; line-height: 1.6; font-size: 0.95rem;">Cinematic, fast-loading, and conversion-optimized websites engineered to turn visitors into loyal clients.</p>
+            </div>
+
+            <div class="service-card" style="text-align: center; display: flex; flex-direction: column;">
+                <h3 style="font-size: 1.3rem; margin-bottom: 15px; color: #fff; text-transform: uppercase;">Content<br>Marketing</h3>
+                <p style="color: #b0b0b0; line-height: 1.6; font-size: 0.95rem;">Compelling storytelling and valuable content pieces that establish your brand as an undeniable industry authority.</p>
+            </div>
+
+            <div class="service-card" style="text-align: center; display: flex; flex-direction: column;">
+                <h3 style="font-size: 1.3rem; margin-bottom: 15px; color: #fff; text-transform: uppercase;">Graphic<br>Designing</h3>
+                <p style="color: #b0b0b0; line-height: 1.6; font-size: 0.95rem;">Visually unforgettable and premium graphic design tailored strictly to your brand identity.</p>
+            </div>
+
+            <div class="service-card" style="text-align: center; display: flex; flex-direction: column;">
+                <h3 style="font-size: 1.3rem; margin-bottom: 15px; color: #fff; text-transform: uppercase;">Videography</h3>
+                <p style="color: #b0b0b0; line-height: 1.6; font-size: 0.95rem;">High-end cinematic video production that captures your brand's story and demands immediate attention.</p>
+            </div>
+
+            <div class="service-card" style="text-align: center; display: flex; flex-direction: column;">
+                <h3 style="font-size: 1.3rem; margin-bottom: 15px; color: #fff; text-transform: uppercase;">Branding</h3>
+                <p style="color: #b0b0b0; line-height: 1.6; font-size: 0.95rem;">Comprehensive brand strategy and identity design to make your business an unstoppable market leader.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="final-cta">
+        <h2>Ready to dominate your market?</h2>
+        <p>Let's engineer a custom growth strategy for your brand.</p>
+        <a href="contact.html" class="cta-btn">Get Your Free Strategy Call</a>
     </section>
 
     <footer class="site-footer">
@@ -241,7 +119,9 @@
         </div>
     </footer>
 
-    <a href="https://wa.me/918850480687" class="whatsapp-float" target="_blank"><img src="wa.png" alt="WhatsApp Chat"></a>
+    <a href="https://wa.me/918850480687" class="whatsapp-float" target="_blank">
+        <img src="wa.png" alt="WhatsApp Chat" style="width: 100%; height: 100%; object-fit: contain;">
+    </a>
 
     <script src="script.js"></script>
 </body>
