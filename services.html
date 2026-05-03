@@ -4,26 +4,47 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Services | Gaurav Digital</title>
+    
     <link rel="icon" type="image/png" href="logo2.png">
+    
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    
     <style>
-        .bold-service-title {
-            font-size: 2rem;
-            font-weight: 900;
-            text-transform: uppercase;
-            letter-spacing: 1px;
+        /* Updated Service Box Styling to accommodate descriptions */
+        .service-box {
             text-align: center;
-            padding: 40px;
+            padding: 40px 30px;
             border: 1px solid rgba(0, 242, 254, 0.1);
             border-radius: 15px;
             background: rgba(255, 255, 255, 0.02);
             transition: 0.4s;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
         }
-        .bold-service-title:hover {
+        
+        .service-box:hover {
             border-color: #00f2fe;
             background: rgba(0, 242, 254, 0.05);
-            transform: scale(1.02);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 242, 254, 0.1);
+        }
+        
+        .service-box h3 {
+            font-size: 1.5rem;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 15px;
+            color: #fff;
+        }
+        
+        .service-box p {
+            color: #b0b0b0;
+            font-size: 0.95rem;
+            line-height: 1.6;
+            font-weight: 400;
         }
     </style>
 </head>
@@ -54,12 +75,47 @@
 
     <section style="padding: 60px 8% 100px;">
         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px;">
-            <div class="bold-service-title">Search Engine Optimization</div>
-            <div class="bold-service-title">Search Engine Marketing</div>
-            <div class="bold-service-title">Social Media Marketing</div>
-            <div class="bold-service-title">Website Development</div>
-            <div class="bold-service-title">Content Marketing</div>
-            <div class="bold-service-title">Lead Generation</div>
+            
+            <div class="service-box">
+                <h3>Search Engine Optimization</h3>
+                <p>Data-driven SEO strategies to dominate search rankings and drive high-intent organic traffic to your business.</p>
+            </div>
+            
+            <div class="service-box">
+                <h3>Search Engine Marketing</h3>
+                <p>High-conversion paid campaigns that maximize your ROI and put your brand right at the top of search results.</p>
+            </div>
+            
+            <div class="service-box">
+                <h3>Social Media Marketing</h3>
+                <p>Engaging social campaigns that build communities, elevate brand loyalty, and spark viral conversations.</p>
+            </div>
+            
+            <div class="service-box">
+                <h3>Website Development</h3>
+                <p>Cinematic, fast-loading, and conversion-optimized websites engineered to turn visitors into loyal clients.</p>
+            </div>
+            
+            <div class="service-box">
+                <h3>Content Marketing</h3>
+                <p>Compelling storytelling and valuable content pieces that establish your brand as an undeniable industry authority.</p>
+            </div>
+            
+            <div class="service-box">
+                <h3>Graphic Designing</h3>
+                <p>Striking visual identities, modern UI/UX elements, and thumb-stopping creatives tailored to your brand.</p>
+            </div>
+            
+            <div class="service-box">
+                <h3>Videography</h3>
+                <p>High-end cinematic video production that captures your brand's story and engages your audience deeply.</p>
+            </div>
+            
+            <div class="service-box">
+                <h3>Branding</h3>
+                <p>Comprehensive brand strategy and identity design to make your business visually unforgettable and unique.</p>
+            </div>
+
         </div>
     </section>
 
