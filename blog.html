@@ -3,16 +3,142 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insights & Articles | Gaurav Digital</title>
     
-    <title>Insights & Blog | Gaurav Digital</title>
-    <meta name="title" content="Insights & Blog | Gaurav Digital">
-    <meta name="description" content="Read the latest digital marketing insights, strategies, and case studies from Gaurav Digital.">
-    <meta name="author" content="Gaurav Digital">
-
     <link rel="icon" type="image/png" href="logo2.png">
-
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700;800;900&display=swap" rel="stylesheet">
+    
     <link rel="stylesheet" href="style.css">
+
+    <style>
+        .blog-hero {
+            /* FIX 1: Increased top padding to 240px to add line space before Insights */
+            padding: 240px 5% 60px;
+            text-align: center;
+            background: radial-gradient(circle at top center, rgba(0, 242, 254, 0.1), transparent 70%);
+        }
+
+        .blog-grid {
+            display: grid;
+            /* FIX 2: Dynamic auto-fit grid with 95% max-width forces the cards to stretch beautifully */
+            grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+            gap: 40px;
+            padding: 0 5% 100px;
+            max-width: 95%;
+            margin: 0 auto;
+        }
+
+        .blog-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            padding: 0; 
+            border-radius: 5px;
+            transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            overflow: hidden;
+            text-decoration: none;
+        }
+
+        .blog-cover-img {
+            width: 100%;
+            height: 220px;
+            overflow: hidden;
+            background: #000;
+        }
+
+        .blog-cover-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.6; 
+            transition: 0.6s ease;
+        }
+
+        .blog-card:hover .blog-cover-img img {
+            opacity: 1;
+            transform: scale(1.1);
+        }
+
+        .blog-content {
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+
+        .blog-card:hover {
+            transform: translateY(-10px);
+            border-color: #4facfe;
+            background: rgba(79, 172, 254, 0.05);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+        }
+
+        .blog-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(90deg, #00f2fe, #4facfe);
+            transform: scaleX(0);
+            transition: 0.4s;
+            transform-origin: left;
+            z-index: 2;
+        }
+
+        .blog-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .blog-date {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #4facfe;
+            margin-bottom: 15px;
+            display: block;
+            font-weight: 700;
+        }
+
+        .blog-card h3 {
+            font-size: 1.5rem;
+            color: #fff;
+            margin-bottom: 15px;
+            line-height: 1.3;
+            font-weight: 800;
+        }
+
+        .blog-card p {
+            color: var(--text-dim);
+            font-size: 0.95rem;
+            line-height: 1.7;
+            margin-bottom: 25px;
+        }
+
+        .read-link {
+            margin-top: auto;
+            text-decoration: none;
+            color: #fff;
+            font-weight: 700;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            transition: 0.3s;
+        }
+
+        .blog-card:hover .read-link {
+            color: #00f2fe;
+            gap: 15px;
+        }
+    </style>
 </head>
 <body>
 
@@ -34,53 +160,56 @@
         </ul>
     </nav>
 
-    <section style="padding: 200px 5% 100px; background: var(--dark-bg); min-height: 100vh;">
+    <header class="blog-hero">
+        <h1 class="gradient-text" style="font-size: clamp(3rem, 7vw, 5rem); font-weight: 900; margin-bottom: 20px;">INSIGHTS</h1>
+        <p style="color: var(--text-dim); letter-spacing: 3px; text-transform: uppercase; font-weight: 400;">Strategies for the digital age</p>
+    </header>
+
+    <section class="blog-grid">
         
-        <div class="section-heading">
-            <h2 style="font-size: clamp(3.5rem, 8vw, 5rem);" class="gradient-text">INSIGHTS</h2>
-            <span style="color: #666; letter-spacing: 4px; margin-top: 15px; display: block; text-transform: uppercase;">Strategies for the Digital Age</span>
-        </div>
-
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(380px, 1fr)); gap: 40px; max-width: 95%; margin: 0 auto;">
-
-            <div class="service-card" style="display: flex; flex-direction: column;">
-                <div class="card-img" style="height: 250px;">
-                    <img src="YOUR_FACEBOOK_IMAGE.png" alt="Facebook Lead Gen Ads">
-                </div>
-                <p style="color: #4facfe; font-size: 0.85rem; font-weight: 800; letter-spacing: 2px; margin-bottom: 10px;">JULY 30, 2024 - PAID MEDIA</p>
-                <h3 style="color: #fff; font-size: 1.6rem; margin-bottom: 15px; line-height: 1.3;">Advantages Of Facebook Lead Generation Ads</h3>
-                <p style="color: #b0b0b0; line-height: 1.6; margin-bottom: 25px; flex-grow: 1;">Learn how to capture high-intent leads natively within Facebook without the friction of external landing pages.</p>
-                <a href="advantages-of-facebook-lead-generation-ads.html" style="color: #fff; text-decoration: none; font-weight: 800; font-size: 0.9rem; letter-spacing: 2px; text-transform: uppercase; transition: color 0.3s ease;">READ FULL ARTICLE &rarr;</a>
+        <a href="advantages-of-facebook-lead-generation-ads.html" class="blog-card">
+            <div class="blog-cover-img">
+                <img src="Advantages Of Facebook Lead Generation Ads.webp" alt="Facebook Ads">
             </div>
-
-            <div class="service-card" style="display: flex; flex-direction: column;">
-                <div class="card-img" style="height: 250px;">
-                    <img src="YOUR_FREELANCER_IMAGE.png" alt="Digital Marketing Freelancer">
-                </div>
-                <p style="color: #4facfe; font-size: 0.85rem; font-weight: 800; letter-spacing: 2px; margin-bottom: 10px;">NOV 15, 2025 - LOCAL STRATEGY</p>
-                <h3 style="color: #fff; font-size: 1.6rem; margin-bottom: 15px; line-height: 1.3;">Digital Marketing Freelancer in Navi Mumbai</h3>
-                <p style="color: #b0b0b0; line-height: 1.6; margin-bottom: 25px; flex-grow: 1;">Unlocking local growth: How a dedicated freelancer can transform your Navi Mumbai business presence.</p>
-                <a href="digital-marketing-freelancer-in-navi-mumbai.html" style="color: #fff; text-decoration: none; font-weight: 800; font-size: 0.9rem; letter-spacing: 2px; text-transform: uppercase; transition: color 0.3s ease;">READ FULL ARTICLE &rarr;</a>
+            <div class="blog-content">
+                <span class="blog-date">July 30, 2024 • Paid Media</span>
+                <h3>Advantages Of Facebook Lead Generation Ads</h3>
+                <p>Learn how to capture high-intent leads natively within Facebook without the friction of external landing pages.</p>
+                <span class="read-link">Read Full Article <span>→</span></span>
             </div>
+        </a>
 
-            <div class="service-card" style="display: flex; flex-direction: column;">
-                <div class="card-img" style="height: 250px;">
-                    <img src="YOUR_MANUFACTURING_IMAGE.png" alt="Marketing for Manufacturing">
-                </div>
-                <p style="color: #4facfe; font-size: 0.85rem; font-weight: 800; letter-spacing: 2px; margin-bottom: 10px;">MAR 27, 2026 - B2B STRATEGY</p>
-                <h3 style="color: #fff; font-size: 1.6rem; margin-bottom: 15px; line-height: 1.3;">Digital Marketing Services for Manufacturing Company</h3>
-                <p style="color: #b0b0b0; line-height: 1.6; margin-bottom: 25px; flex-grow: 1;">Digital Strategies. Real Results. Stronger Brand. Higher Growth. Discover how we help manufacturers build visibility online.</p>
-                <a href="digital-marketing-services-for-manufacturing-company.html" style="color: #fff; text-decoration: none; font-weight: 800; font-size: 0.9rem; letter-spacing: 2px; text-transform: uppercase; transition: color 0.3s ease;">READ FULL ARTICLE &rarr;</a>
+        <a href="digital-marketing-freelancer-in-navi-mumbai.html" class="blog-card">
+            <div class="blog-cover-img">
+                <img src="Digital Marketing Freelancer in Navi Mumbai.webp" alt="Freelancer Navi Mumbai">
             </div>
+            <div class="blog-content">
+                <span class="blog-date">Nov 15, 2025 • Local Strategy</span>
+                <h3>Digital Marketing Freelancer in Navi Mumbai</h3>
+                <p>Unlocking local growth: How a dedicated freelancer can transform your Navi Mumbai business presence.</p>
+                <span class="read-link">Read Full Article <span>→</span></span>
+            </div>
+        </a>
 
-        </div>
+        <a href="digital-marketing-services-for-manufacturing-company.html" class="blog-card">
+            <div class="blog-cover-img">
+                <img src="Digital Marketing Services for Manufacturing Company.webp" alt="Manufacturing Digital Marketing">
+            </div>
+            <div class="blog-content">
+                <span class="blog-date">Mar 27, 2026 • B2B Strategy</span>
+                <h3>Digital Marketing for Manufacturing Companies</h3>
+                <p>How B2B industrial firms are using digital funnels to replace traditional trade shows and secure global clients.</p>
+                <span class="read-link">Read Full Article <span>→</span></span>
+            </div>
+        </a>
+
     </section>
 
     <footer class="site-footer">
         <div class="footer-grid">
             <div class="footer-logo-col">
                 <img src="logo.png" alt="Gaurav Digital" class="f-logo">
-                <p style="color: var(--text-dim); font-size: 1rem; line-height: 1.8;">
+                <p style="color: var(--text-dim); font-size: 0.85rem; line-height: 1.8;">
                     Defining the next era of digital marketing through cinematic excellence and technical dominance.
                 </p>
             </div>
@@ -96,8 +225,8 @@
             </div>
             <div class="footer-contact-col">
                 <p style="font-weight: 700; letter-spacing: 2px; font-size: 0.8rem; color: #fff; margin-bottom: 15px;">GET IN TOUCH</p>
-                <p><a href="tel:+918850480687" class="gradient-text" style="font-size: 1rem;">+91 88504 80687</a></p>
-                <p><a href="mailto:contact@gauravdeshmukh.co.in" class="gradient-text" style="font-size: 1rem;">contact@gauravdeshmukh.co.in</a></p>
+                <p><a href="tel:+918850480687" class="gradient-text">+91 88504 80687</a></p>
+                <p><a href="mailto:contact@gauravdeshmukh.co.in" class="gradient-text">contact@gauravdeshmukh.co.in</a></p>
             </div>
         </div>
         <div class="copyright">
@@ -105,9 +234,7 @@
         </div>
     </footer>
 
-    <a href="https://wa.me/918850480687" class="whatsapp-float" target="_blank">
-        <img src="wa.png" alt="WhatsApp Chat" style="width: 100%; height: 100%; object-fit: contain;">
-    </a>
+    <a href="https://wa.me/918850480687" class="whatsapp-float" target="_blank"><img src="wa.png" alt="WhatsApp Chat"></a>
 
     <script src="script.js"></script>
 </body>
