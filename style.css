@@ -139,14 +139,14 @@ body {
     padding: 220px 10% 120px; 
 }
 
-.hero span:first-child {
-    font-size: 1rem; 
-    letter-spacing: 12px; 
+.hero-tagline {
+    font-size: clamp(0.65rem, 2.5vw, 1rem); 
+    letter-spacing: clamp(1px, 2vw, 12px); 
     text-transform: uppercase;
-    color: #4facfe;
-    font-weight: 800;
+    font-weight: 900;
     display: block;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
+    white-space: nowrap; /* Forces the text to stay on one single line */
     animation: fadeUp 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
