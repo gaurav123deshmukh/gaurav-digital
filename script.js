@@ -1,34 +1,36 @@
-// Handle Watery Header Background and WhatsApp Float on Scroll
-window.onscroll = function() {
+document.addEventListener('DOMContentLoaded', () => {
+    // 1. Mobile Hamburger Menu Toggle
+    const mobileMenu = document.getElementById('mobile-menu');
+    const navLinks = document.querySelector('.nav-links');
+
+    if (mobileMenu) {
+        mobileMenu.addEventListener('click', () => {
+            mobileMenu.classList.toggle('is-active');
+            navLinks.classList.toggle('active');
+        });
+    }
+
+    // 2. Scroll Events (Navbar & WhatsApp)
     const nav = document.querySelector('.navbar');
     const waButton = document.querySelector('.whatsapp-float');
 
-    // Header Background Logic (Safeguarded)
-    if (nav) {
-        if (window.scrollY > 50) {
-            nav.style.background = "rgba(10, 10, 10, 0.9)"; 
-        } else {
-            nav.style.background = "rgba(10, 10, 10, 0.7)"; 
+    window.addEventListener('scroll', () => {
+        // Navbar Background Logic
+        if (nav) {
+            if (window.scrollY > 50) {
+                nav.style.background = "rgba(10, 10, 10, 0.95)"; 
+            } else {
+                nav.style.background = "rgba(10, 10, 10, 0.45)"; 
+            }
         }
-    }
 
-    // WhatsApp Reveal Logic (Safeguarded)
-    if (waButton) {
-        if (window.scrollY > 300) {
-            waButton.classList.add('show');
-        } else {
-            waButton.classList.remove('show');
+        // WhatsApp Reveal Logic (Appears after 100px of scrolling)
+        if (waButton) {
+            if (window.scrollY > 100) {
+                waButton.classList.add('show');
+            } else {
+                waButton.classList.remove('show');
+            }
         }
-    }
-};
-
-// Mobile Hamburger Menu Toggle
-const mobileMenu = document.getElementById('mobile-menu');
-const navLinks = document.querySelector('.nav-links');
-
-if (mobileMenu && navLinks) {
-    mobileMenu.addEventListener('click', () => {
-        mobileMenu.classList.toggle('is-active');
-        navLinks.classList.toggle('active');
     });
-}
+});
