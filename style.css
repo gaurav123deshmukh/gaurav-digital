@@ -174,7 +174,9 @@ body {
 
 .services-preview { padding: 100px 8%; background: var(--dark-bg); }
 .services-grid {
-    display: grid; grid-template-columns: repeat(3, 1fr);
+    display: grid; 
+    /* Strictly enforces exactly 3 columns */
+    grid-template-columns: repeat(3, 1fr);
     gap: 40px; padding-bottom: 60px;
 }
 
@@ -320,6 +322,7 @@ body {
 
     .services-preview, .testimonials-section, .final-cta { padding: 70px 5%; }
     .section-heading h2, .final-cta h2 { font-size: clamp(2rem, 7vw, 2.8rem); }
+    /* Services grid drops to 1 column on mobile screens automatically */
     .services-grid { grid-template-columns: 1fr; gap: 20px; }
     .testimonial-grid { grid-template-columns: 1fr; gap: 20px; }
     .site-footer { padding: 70px 5% 40px; }
