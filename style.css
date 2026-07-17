@@ -347,4 +347,12 @@ body {
     .footer-grid { grid-template-columns: 1fr; text-align: center; gap: 30px; }
     .footer-contact-col { text-align: center; }
     .f-logo { margin: 0 auto 15px; }
+
+    /* MOBILE FIX: Prevent WhatsApp button from overlapping Contact Form inputs */
+    .contact-wrapper {
+        padding-bottom: 120px !important; 
+    }
+    .contact-form {
+        padding: 30px 20px 80px !important;
+    }
 }
