@@ -68,10 +68,10 @@
         /* MOBILE FIXES */
         @media (max-width: 850px) {
             .contact-form {
-                padding: 30px 20px 80px; /* Added bottom padding to prevent overlap */
+                padding: 30px 20px 80px; 
             }
             .contact-wrapper {
-                padding-bottom: 120px; /* Gives scroll room for WhatsApp button */
+                padding-bottom: 120px; 
             }
         }
     </style>
@@ -106,7 +106,10 @@
         </div>
 
         <div class="contact-form">
-            <form action="https://formspree.io/f/mjgnywnd" method="POST">
+            <form action="https://api.web3forms.com/submit" method="POST">
+                
+                <input type="hidden" name="access_key" value="7caa0ea5-449f-40d5-9a41-41304d07a047">
+
                 <div class="form-group">
                     <label>Full Name</label>
                     <input type="text" name="name" placeholder="Your Name" required>
@@ -124,7 +127,7 @@
                     <textarea rows="5" name="message" placeholder="Tell us about your business goals..."></textarea>
                 </div>
                 
-                <input type="hidden" name="_next" value="https://www.gauravdeshmukh.co.in/thank-you.html">
+                <input type="hidden" name="redirect" value="https://www.gauravdeshmukh.co.in/thank-you.html">
                 
                 <button type="submit" class="cta-btn" style="width: 100%;">Send Message</button>
             </form>
