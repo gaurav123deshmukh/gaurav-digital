@@ -2,3 +2,13 @@ Redirect 301 /2024/08/23/digital-marketing-freelancer-in-navi-mumbai/ https://ww
 RewriteEngine On
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteRule ^([^\.]+)$ $1.html [NC,L]
+RewriteEngine On
+
+# 1. Trailing slash (/) 
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)/$ /$1 [L,R=301]
+
+# 2. Bina .html dikhaye files ko load karne ke liye
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^([^\.]+)$ $1.html [NC,L]
