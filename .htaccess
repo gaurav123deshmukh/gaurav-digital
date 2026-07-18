@@ -1,1 +1,4 @@
 Redirect 301 /2024/08/23/digital-marketing-freelancer-in-navi-mumbai/ https://www.gauravdeshmukh.co.in/digital-marketing-freelancer-in-navi-mumbai.html
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^([^\.]+)$ $1.html [NC,L]
