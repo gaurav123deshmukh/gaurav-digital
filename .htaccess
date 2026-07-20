@@ -1,13 +1,14 @@
 RewriteEngine On
 
-# 1. Purane Blog URL ko Naye Clean URL par bhejna
-Redirect 301 /2024/08/23/digital-marketing-freelancer-in-navi-mumbai/ https://www.gauravdeshmukh.co.in/digital-marketing-freelancer-in-navi-mumbai
+# 1. index.html ko URL se hamesha ke liye hide karne ke liye
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /index\.html\ HTTP/
+RewriteRule ^index\.html$ / [R=301,L]
 
-# 2. Trailing slash (/) automatically hatane ke liye
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^(.*)/$ /$1 [L,R=301]
+# 2. Baki saare pages se .html extension hide karne ke liye
+RewriteCond %{THE_REQUEST} /([^.]+)\.html [NC]
+RewriteRule ^ /%1 [NC,L,R=301]
 
-# 3. Bina .html dikhaye properly files ko load karne ke liye
-RewriteCond %{REQUEST_FILENAME} !-f
+# 3. Bina .html ke URL aane par background mein sahi file load karne ke liye
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^([^\.]+)$ $1.html [NC,L]
+RewriteCond %{REQUEST_FILENAME}\.html -f
+RewriteRule ^(.*)$ $1.html [NC,L]
