@@ -363,3 +363,8 @@ body {
         word-wrap: break-word;
     }
 }
+
+.service-box ul li a:hover {
+    color: #00f0ff !important;
+    text-shadow: 0 0 10px rgba(0, 240, 255, 0.5);
+}
